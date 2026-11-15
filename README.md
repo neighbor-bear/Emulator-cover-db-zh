@@ -336,8 +336,9 @@ git remote add origin git@github.com:<你的账号>/cover-db.git
 git push -u origin main
 ```
 
-体积参考（不含图片）：`index/` 约 8 MB，`mapping/` 约 40 MB（每平台一份），
-若嫌大可以只提交 `mapping/` 里常用的几个平台，或全部改成 Git LFS。
+体积参考（不含图片，实测）：`index/` 41.4 MB，`mapping/` 44.3 MB，`zh/` 0.1 MB，合计约 86 MB。
+GitHub 单文件上限 100 MB，最大的一份是 `mapping/mapping_nes.csv`（9.0 MB），可以直接推。
+若嫌仓库重，可以只提交 `mapping/` 里常用的几个平台，或全部走 Git LFS。
 
 ---
 

@@ -4,9 +4,9 @@
 封面仍然由 libretro 官方源托管，工具运行时按表里的 URL 去拉，或者用脚本提前拉到本地缓存。
 
 - **30 个平台 / 77 661 条**记录（含区域、版本、三种图 URL）
-- **中文名覆盖 88.5%**（exact 67 921 条 + series 822 条）；36 797 个唯一英文名里 80.6% 有中文（29 670 个）
-- **PSP、3DS、PS2、PS1、NDS、FC、Wii、GBA、SFC、MD 十个平台已 100% 中文**（PSP 1 774 条 / 3DS 2 148 条 / PS2 8 502 条 / PS1 9 301 条 / NDS 7 335 条 / FC 13 439 条 / Wii 6 668 条 / GBA 5 961 条 / SFC 3 689 条 / MD 2 352 条，全部 exact，无空名、无 series 半成品）
-- 中文名库 `zh/zh_titles.csv` 29 347 行（去重后 29 335 条参与匹配），系列词表 `zh/zh_series.csv` 171 条，可持续往上加
+- **中文名覆盖 90.1%**（exact 69 214 条 + series 764 条）；36 797 个唯一英文名里 82.6% 有中文（30 405 个）
+- **PSP、3DS、PS2、PS1、NDS、FC、Wii、GBA、SFC、MD、SS 十一个平台已 100% 中文**（PSP 1 774 条 / 3DS 2 148 条 / PS2 8 502 条 / PS1 9 301 条 / NDS 7 335 条 / FC 13 439 条 / Wii 6 668 条 / GBA 5 961 条 / SFC 3 689 条 / MD 2 352 条 / SS 2 294 条，全部 exact，无空名、无 series 半成品）
+- 中文名库 `zh/zh_titles.csv` 30 111 行（去重后 30 099 条参与匹配），系列词表 `zh/zh_series.csv` 171 条，可持续往上加
 
 > 数据来源：libretro-thumbnails（社区托管的封面索引）。封面版权归各游戏厂商，本项目只转发索引和 URL。
 
@@ -28,7 +28,7 @@ cover-db/
 ├── mapping/              # 成品映射表（中文名 + 首选区域标记）
 │   └── mapping_<平台>.csv
 ├── zh/
-│   ├── zh_titles.csv     # 精确中文名库（29 347 行 / 29 335 条）
+│   ├── zh_titles.csv     # 精确中文名库（30 111 行 / 30 099 条）
 │   └── zh_series.csv     # 系列名 / 关键词表（171 条）
 ├── cache/<平台>/         # 下载下来的封面 png（不进 git）
 ├── manifest/             # 下载清单：本地路径 / 状态
@@ -172,30 +172,30 @@ python3 zh_localize.py        # 重新生成，所有平台一起受益
 | gba | GBA | 5 961 | 5 961 | 0 | 0 | 0 | 100.0% |
 | snes | SFC | 3 689 | 3 689 | 0 | 0 | 0 | 100.0% |
 | md | MD | 2 352 | 2 352 | 0 | 0 | 0 | 100.0% |
-| saturn | SS | 2 294 | 1 056 | 58 | 0 | 1 180 | 48.6% |
+| saturn | SS | 2 294 | 2 294 | 0 | 0 | 0 | 100.0% |
 | 3ds | 3DS | 2 148 | 2 148 | 0 | 0 | 0 | 100.0% |
 | ngc | NGC | 1 954 | 1 389 | 129 | 0 | 436 | 77.7% |
 | psp | PSP | 1 774 | 1 774 | 0 | 0 | 0 | 100.0% |
-| gb | GB | 1 647 | 586 | 84 | 0 | 977 | 40.7% |
+| gb | GB | 1 647 | 587 | 84 | 0 | 976 | 40.7% |
 | gbc | GBC | 1 524 | 360 | 111 | 0 | 1 053 | 30.9% |
-| dc | DC | 1 332 | 454 | 45 | 0 | 833 | 37.5% |
+| dc | DC | 1 332 | 473 | 45 | 0 | 814 | 38.9% |
 | xbox | XBOX | 1 324 | 870 | 41 | 0 | 413 | 68.8% |
-| n64 | N64 | 1 115 | 374 | 69 | 0 | 672 | 39.7% |
-| gg | GG | 1 056 | 498 | 74 | 0 | 484 | 54.2% |
-| pcecd | PCE-CD | 946 | 168 | 10 | 0 | 768 | 18.8% |
-| segacd | MCD | 609 | 180 | 24 | 0 | 405 | 33.5% |
+| n64 | N64 | 1 115 | 376 | 69 | 0 | 670 | 39.9% |
+| gg | GG | 1 056 | 521 | 74 | 0 | 461 | 56.3% |
+| pcecd | PCE-CD | 946 | 172 | 10 | 0 | 764 | 19.2% |
+| segacd | MCD | 609 | 184 | 24 | 0 | 401 | 34.2% |
 | sms | SMS | 559 | 246 | 4 | 0 | 309 | 44.7% |
-| pce | PCE | 479 | 184 | 6 | 0 | 289 | 39.7% |
+| pce | PCE | 479 | 185 | 6 | 0 | 288 | 39.9% |
 | wiiu | WiiU | 454 | 187 | 77 | 0 | 190 | 58.1% |
 | ws | WS | 299 | 48 | 5 | 0 | 246 | 17.7% |
-| neogeo | NEOGEO | 257 | 67 | 43 | 0 | 147 | 42.8% |
+| neogeo | NEOGEO | 257 | 68 | 43 | 0 | 146 | 43.2% |
 | wsc | WSC | 239 | 33 | 5 | 0 | 201 | 15.9% |
 | 32x | 32X | 209 | 39 | 0 | 0 | 170 | 18.7% |
 | ngpc | NGPC | 118 | 5 | 15 | 0 | 98 | 16.9% |
 | ps3 | PS3 | 67 | 6 | 19 | 0 | 42 | 37.3% |
 | psvita | PSV | 9 | 2 | 3 | 0 | 4 | 55.6% |
 | ps3dl | PS3DL | 1 | 0 | 0 | 0 | 1 | 0.0% |
-| **合计** | **30 平台** | **77 661** | **67 921** | **822** | **0** | **8 918** | **88.5%** |
+| **合计** | **30 平台** | **77 661** | **69 214** | **764** | **0** | **7 683** | **90.1%** |
 
 表由 `python3 zh_coverage.py` 生成，改完词库后重跑一次就能刷新，不要手抄。
 
@@ -290,6 +290,7 @@ python3 zh_coverage.py
 - 欧版多语言条目（德/法/意/西/荷各一条）必须共用同一套中文名，只在末尾括号标语种；若各版本各造译名，同一款游戏在刮削结果里会分裂成多个名字。
 - e-Reader 卡带条目（`Pokemon-e TCG`、`Pokemon Card-e`、`Animal Crossing-e`、`Pokemon Battle-e`、`Mario Party-e`、`Super Mario Advance 4-e`）不要逐条意译，按「作品名 + 卡带e/卡带e+ + 系列或卡包 + 卡号 + 角色名」机械拼装，卡号原样保留；否则 2 000 多条既翻不完也无法保持同一格式。
 - 授权体育年货（`John Madden` / `NFL` / `NBA` / `World Series Baseball` / `F1 Circus`）要固定成「项目 + 年份」的统一格式，`'92` `'95` `Volume 2` 这类标记原样保留；否则同一系列逐年一条，刮削结果里会出现十几种写法。
+- Saturn 这类日本独占平台的主体是麻雀、柏青哥、赛马、将棋、偶像写真碟，标题里全是罗马字与片假名，译名要「按原名直译，不补意译副标」，`Private Idol Disc Vol. 1 - Yuu Kinoshita` 这类写真碟只做「私人偶像碟 第1卷 木下优」的对应，不要尝试加形容。
 - 跨平台同名的 123 条 MD 条目被 `norm()` 判定已存在而跳过，这不是漏译：词库是全平台共享的，前几个平台译过的名字会自动生效，统计时要按 `apply_key_cn.py` 输出的「新增 / 跳过」分开看。
 
 ### 本项目 PSP 平台的完整实操（可复用的模板）
@@ -633,6 +634,41 @@ Championship Edition、`NFL '94/95/98`、`NHL '94/95`、`NBA Action/Live/Showdow
 | `build_key_cn.py` | `python build_key_cn.py <key> <expect条数>` | 正则 `%s_cn_part\d+\.txt` 自动发现分片、按文件顺序重编号、断言条数、与英文清单 zip 成 `<key>_cn_all.tsv`、series 对齐成 `<key>_series_uniq.txt`，并抽查假名 / 拉丁字母 / 重复名 |
 | `apply_key_cn.py` | `python apply_key_cn.py <key> <expect_missing> <expect_series>` | 备份 `zh_titles.csv.bak<key>`、用 `zh_localize.norm()` 去重、追加进词库，打印「候选 / 新增 / 跳过 / 词库 before→after」 |
 
+### SS（Sega Saturn）全量中文化（2 294 / 2 294，100%）
+
+Saturn 是这批平台里**日式作品密度最高、类型最杂**的一块：麻雀、柏青哥、赛马、将棋、
+偶像写真碟、恋爱模拟、世嘉自家街机移植全挤在一张清单里。735 个唯一空名里有相当一部分
+是当年只在日本发行的片子，译名按作品原名直译（`Tokimeki Mahjong Paradise` → 心跳麻将乐园、
+`Private Idol Disc` → 私人偶像碟、`Jissen! Pachi-Slot Hisshou-hou!` → 实战！柏青嫂必胜法！）。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_saturn.csv` 2 294 行：exact 1 056 / series 58 / none 1 180（空名唯一 735 个，series 唯一 29 条） |
+| 导出清单 | `saturn_missing.txt`（735 个唯一空名，按字母序）+ `saturn_series.txt`（29 条 series 唯一名，带现有半成品中文） |
+| 译名文件 | 按行号对齐，3 片（`saturn_cn_part1..3.txt`：300 / 300 / 135 条） |
+| 校验 | `build_key_cn.py saturn 735`：断言条数、series 29 == 29、假名 0、含拉丁字母 72 条抽查、重复中文名 13 个 |
+| 并入词库 | `apply_key_cn.py saturn 735 29`：候选 764 条，新增 764（0 跳过）；词库 29 347 → 30 111 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 2 294 / series 0 / none 0**；全库 exact 67 921 → 69 214（89.1%），覆盖 90.1% |
+
+**Saturn 译名要点**
+
+- **世嘉自家品牌统一叫法**：`Sega Ages` → 世嘉世纪（`After Burner II` → 冲破火网2、
+  `Space Harrier` → 太空哈利、`Fantasy Zone` → 幻想空间、`Galaxy Force II` → 银河力量2）、
+  `Virtua Fighter` → VR战士、`Virtua Cop` → 虚拟警察、`Virtual On` → 虚拟战士 赛博骑兵、
+  `Daytona USA` → 戴通纳USA、`Sega Rally Championship` → 世嘉拉力锦标赛。
+- **同作多区域版本共用一套中文名，只用括号标语种**：`Manoir des Ames Perdues, Le` /
+  `Mansion de las Almas Ocultas, La` / `Mansion of Hidden Souls, The` 全部「隐藏灵魂的宅邸」；
+  `Dragon Ball Z - La Grande Legende des Boules de Cristal` → 龙珠Z 龙珠大传说（法版）。
+- **日文作品按原名直译、不加意译副标**：`Doukoku Soshite...` → 恸哭 然后…、
+  `Nanatsu Kaze no Shima Monogatari` → 七风岛物语、`Ousama Game` → 国王游戏、
+  `Ruriiro no Yuki` → 琉璃色的雪、`Strahl - Himerareshi Nanatsu no Hikari` → 修特拉尔 被解放的七道光。
+- **版本号与改版标记原样保留**：`v1.400` / `v1.000` / `v1.100` / `v1.003` / `Ver.9.7`
+  这类校验和标记不翻译，直接跟在中文名后面。
+- **series 侧重点**：`Shining Force III` 三个剧本（王都的巨神 / 被瞄准的巫女 / 冰壁的邪神殿）
+  + 特典碟、`Shin Megami Tensei - Devil Summoner` → 真·女神转生 恶魔召唤师、
+  `Dragon Force II` → 龙之力量2 神去之大地、`Grandia` 两份（序章 / 数字博物馆）、
+  29 条 `Virtua Fighter CG Portrait Series` 全部「VR战士 CG肖像系列 第N卷 角色名」。
+
 ---
 
 ## 六、传到 GitHub 的正确姿势
@@ -706,6 +742,9 @@ GitHub 单文件上限 100 MB，最大的一份是 `mapping/mapping_nes.csv`（9
 
 ## 九、更新日志
 
+- **2026-11**：SS（Sega Saturn）全量中文化（2 294 / 2 294，100%），29 个 series 半成品整行替换；
+  候选 764 条全部新增；词库 29 347 → 30 111 行；全量重建后 exact 67 921 → 69 214（89.1%），
+  中文覆盖 88.5% → 90.1%，唯一英文名有中文比例 80.6% → 82.6%；十一个平台 100%。
 - **2026-11**：MD 全量中文化（2 352 / 2 352，100%），46 个 series 半成品整行替换；候选 861 条新增 738 条
   （123 条跨平台同名已存在而跳过）；词库 28 609 → 29 347 行。
 - **2026-11**：SFC（snes）全量中文化（3 689 / 3 689，100%），58 个 series 半成品整行替换；

@@ -7,6 +7,10 @@
 - **中文名覆盖 100.0%**（exact 77 661 条 + series 0 条，全平台零空名）；36 797 个唯一英文名里 96.1% 有中文（35 368 个）
 - **全部 31 个平台 100% 中文**（FC 13 439 / PS1 9 301 / PS2 8 502 / NDS 7 335 / Wii 6 668 / GBA 5 961 / SFC 3 689 / MD 2 352 / SS 2 294 / 3DS 2 148 / NGC 1 954 / PSP 1 774 / GB 1 647 / GBC 1 524 / DC 1 332 / XBOX 1 324 / N64 1 115 / GG 1 056 / PCE-CD 946 / MCD 609 / SMS 559 / PCE 479 / WiiU 454 / WS 299 / NEOGEO 257 / WSC 239 / 32X 209 / NGPC 118 / PS3 67 / PSV 9 / PS3DL 1，全部 exact，无空名、无 series 半成品）
 - 中文名库 `zh/zh_titles.csv` 35 477 行（去重后 35 465 条参与匹配），系列词表 `zh/zh_series.csv` 171 条，可持续往上加
+- **中文多译**：`alias_cn` 列已铺满全库 —— 4 200 个词条、12 672 个别名（平均 3 个/条），
+  8 533 条映射带多译（宝可梦 = 精灵宝可梦 / 口袋妖怪 / 口袋怪兽 / 宠物小精灵 / 神奇宝贝，
+  马力欧 = 马里奥 / 玛莉欧 / 玛利欧，索尼克 = 音速小子 / 刺猬索尼克，
+  生化危机 = 恶灵古堡，合金装备 = 潜龙谍影，怪物猎人 = 魔物猎人 …）
 
 > 数据来源：libretro-thumbnails（社区托管的封面索引）。封面版权归各游戏厂商，本项目只转发索引和 URL。
 
@@ -22,14 +26,17 @@ cover-db/
 ├── cover_fetch.py        # 按映射表自动下载封面到本地（多区域回退）
 ├── match_rom.py          # 扫本地 ROM 文件夹，自动匹配出封面和中文名
 ├── promote_manual.py     # 把映射表里手填的中文名回收进主词库
+├── gen_alias.py          # 生成「中文多译」列 alias_cn（术语级替换）
 ├── run_all.sh            # 一键跑全流程
 ├── index/                # 原始索引（无中文名）
 │   └── libretro_<平台>.csv
 ├── mapping/              # 成品映射表（中文名 + 首选区域标记）
 │   └── mapping_<平台>.csv
 ├── zh/
-│   ├── zh_titles.csv     # 精确中文名库（35 477 行 / 35 465 条）
+│   ├── zh_titles.csv     # 精确中文名库（35 477 行 / 35 465 条，含 alias_cn 多译列）
 │   └── zh_series.csv     # 系列名 / 关键词表（171 条）
+├── terms/
+│   └── 术语多译表.csv    # 54 组同义叫法（生成 alias_cn 用的词源，可人工增改）
 ├── cache/<平台>/         # 下载下来的封面 png（不进 git）
 ├── manifest/             # 下载清单：本地路径 / 状态
 └── match/                # ROM 匹配结果
@@ -44,6 +51,7 @@ cover-db/
 | folder | libretro 平台目录名，拼 URL 用 |
 | game_name | 英文原名（已去掉区域标记） |
 | name_cn | 中文名（空着就是待补） |
+| alias_cn | 其它中文叫法，`|` 分隔（口袋妖怪 / 宠物小精灵 …），搜索和显示可用来兜底 |
 | match_type | `exact` 精确命中 / `series` 系列名回退（半成品，待校对）/ `manual` 人工填 / `none` 未匹配 |
 | region / revision | 区域、版本（USA、Japan、v1.01、Rev 1、Demo 等） |
 | preferred | `1` = 该游戏在这个平台的首选图（去重后每款一张） |
@@ -159,6 +167,27 @@ python3 zh_localize.py        # 重新生成，所有平台一起受益
 | 标点、大小写、多余空格 | 全部抹平 |
 
 四级匹配：**exact 精确 → series 系列名回退（中文系列名 + 原文副标题，待校对）→ manual 人工填 → none 留空**。
+
+### 中文多译（`alias_cn`）
+
+同一个作品在不同地区有几套中文叫法，全库只保留**一个主名**（`name_cn`），其余叫法进 `alias_cn`，
+用 `|` 分隔。生成方式是**术语级替换**，不是逐条机翻：
+
+| 主线名（name_cn） | 其它叫法（alias_cn） |
+|---|---|
+| 宝可梦 红 | 精灵宝可梦 红 / 口袋妖怪 红 / 口袋怪兽 红 / 宠物小精灵 红 / 神奇宝贝 红 |
+| 马力欧赛车64 | 马里奥赛车64 / 玛莉欧赛车64 / 玛利欧赛车64 |
+| 生化危机2 | 恶灵古堡2 |
+| 索尼克大冒险 | 音速小子大冒险 / 刺猬索尼克大冒险 |
+| 超级街头霸王2 X 对战服务版 | 超级街霸2 X 对战服务版 |
+| 合金装备5 原爆点 | 潜龙谍影5 原爆点 |
+
+规则：
+
+- 每组取「名字里出现的**最长**那个变体」当锚点再替换，短词不会吃掉长词（`宠物小精灵` 不会被拆成 `宠物吃豆人`）；
+- 两组同时命中（`超级机器人大战` + `高达`）时做组合，最多 2 组、每行 6 个别名，防止爆炸；
+- 同义词源在 `terms/术语多译表.csv`（54 组），改完跑 `python3 gen_alias.py` 就能全库重算；
+- `alias_cn` **不参与英文名匹配**：匹配只认 `search_key`，别名是给人看 / 给搜索框兜底用的，加错别名不会污染覆盖率。
 
 ### 各平台中文覆盖率
 
@@ -1044,48 +1073,10 @@ PS3 数字下载版只剩 1 条，顺手清掉。
 
 - `Far Cry 3` → 孤岛惊魂3（与 Xbox/PCE 等平台的同一作品共用词条）。
 
----
-
-## 六、传到 GitHub 的正确姿势
-
-**只传表和脚本，不传图片。**
-
-`.gitignore` 已经写好：
-
-```gitignore
-cache/                  # 下载下来的封面
-manifest/               # 下载清单
-match/                  # ROM 匹配结果
-logs/
-__pycache__/
-mapping/all_games.csv   # 45 MB 合并表，可重建，不入库
-index/all_games.csv
-```
-
-- 封面版权属于各游戏厂商，libretro 只是社区托管，**仓库不要再分发图片本体**；
-- 仓库里只放 URL + 中文名映射，运行时按 URL 拉，或让用户本地跑 `cover_fetch.py`；
-- README（本文件）已写明「封面版权归原厂商，本项目仅提供索引，供个人模拟器使用」；
-- 别拿这套东西做付费软件、内置广告或二次售卖；
-- 建议代码用 MIT，数据表用 CC BY 4.0（或直接 MIT），二选一写进 `LICENSE`。
-
-首次上传：
-
-```bash
-git init
-git add .
-git commit -m "cover-db: 30 platforms index + zh mapping (PSP 100%)"
-git branch -M main
-git remote add origin git@github.com:<你的账号>/cover-db.git
-git push -u origin main
-```
-
-体积参考（不含图片，实测）：`index/` 41.4 MB，`mapping/` 44.3 MB，`zh/` 0.1 MB，合计约 86 MB。
-GitHub 单文件上限 100 MB，最大的一份是 `mapping/mapping_nes.csv`（9.0 MB），可以直接推。
-若嫌仓库重，可以只提交 `mapping/` 里常用的几个平台，或全部走 Git LFS。
 
 ---
 
-## 七、已知限制
+## 六、已知限制
 
 - 中文名带英文字母是常态（FIFA、NBA、WWE、CLANNAD、Fate/Extra、DJMAX、.hack//Link
    这类品牌缩写按惯例保留原文），不算未翻译。
@@ -1097,7 +1088,7 @@ GitHub 单文件上限 100 MB，最大的一份是 `mapping/mapping_nes.csv`（9
 
 ---
 
-## 八、平台清单
+## 七、平台清单
 
 | key | 平台 | 条数 | key | 平台 | 条数 |
 |---|---|---:|---|---|---:|
@@ -1120,8 +1111,11 @@ GitHub 单文件上限 100 MB，最大的一份是 `mapping/mapping_nes.csv`（9
 
 ---
 
-## 九、更新日志
+## 八、更新日志
 
+- **2026-11**：新增「中文多译」`alias_cn` —— 54 组同义词源，4 200 个词条、12 672 个别名，
+  8 533 条映射带多译；`gen_alias.py` 生成、`terms/术语多译表.csv` 维护词源；
+  映射表新增 `alias_cn` 字段（31 个平台全量重建，exact 77 661 / 100.0% 不变）。
 - **2026-11**：剩余 20 个平台一次性全部中文化（gb / gbc / ngc / dc / pcecd / n64 / xbox / pce / sms / segacd / gg / wiiu / ws / neogeo / wsc / 32x / ngpc / ps3 / psvita / ps3dl），
   逐平台「导出空名 → 分批写译名 → 校验 → 并库」，候选 5 525 条、新增 5 166 条；
   词库 30 111 → 35 477 行；全量重建后 exact 69 214 → **77 661（100.0%）**，none 7 683 → **0**，
@@ -1155,4 +1149,5 @@ GitHub 单文件上限 100 MB，最大的一份是 `mapping/mapping_nes.csv`（9
 
 ---
 
-封面版权归各游戏厂商所有，本项目仅提供索引、URL 与中文名映射，供个人模拟器与 ROM 管理使用。
+封面版权归各游戏厂商所有，本项目仅提供索引、URL 与中文名映射，供个人模拟器与 ROM 管理使用，如有侵权请立即联系我删除！
+All cover art copyrights belong to their respective publishers. This project provides only index data, URLs, and name mappings, intended for personal emulator and ROM-management use. If you believe any content infringes your rights, please contact me and it will be removed promptly.

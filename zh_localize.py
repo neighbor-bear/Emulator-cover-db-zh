@@ -39,7 +39,7 @@ REGION_PRIORITY = ["USA", "World", "Europe", "Japan", "Asia", "Korea", "China", 
                    "Taiwan", "Australia", "Canada", "Brazil", "United Kingdom", "UK"]
 
 OUT_FIELDS = ["system", "system_key", "retroarch_system", "folder", "game_name", "name_cn",
-              "match_type", "region", "revision", "preferred", "search_key", "file",
+              "alias_cn", "match_type", "region", "revision", "preferred", "search_key", "file",
               "boxart", "snap", "title"]
 
 ROMAN = {"II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10,
@@ -69,6 +69,7 @@ def norm(s):
 
 
 def load_titles():
+    """返回 {归一化英文名: (中文名, 多译列)}"""
     m = {}
     dup = 0
     if not os.path.exists(ZH_TITLES):
@@ -77,11 +78,12 @@ def load_titles():
         for row in csv.DictReader(fp):
             k = norm(row["game_name"])
             cn = (row.get("name_cn") or "").strip()
+            al = (row.get("alias_cn") or "").strip()
             if not k or not cn:
                 continue
-            if k in m and m[k] != cn:
+            if k in m and m[k][0] != cn:
                 dup += 1
-            m[k] = cn
+            m[k] = (cn, al)
     return m, dup
 
 
@@ -172,9 +174,10 @@ def main():
         for r in rows:
             name = r["game_name"]
             sk = norm(name)
-            cn, mtype = "", "none"
+            cn, mtype, al = "", "none", ""
             if sk in titles:
-                cn, mtype = titles[sk], "exact"
+                cn, al = titles[sk]
+                mtype = "exact"
             else:
                 hit = series_match(name, series)
                 if hit:
@@ -190,6 +193,7 @@ def main():
                 "folder": r["folder"],
                 "game_name": name,
                 "name_cn": cn,
+                "alias_cn": al,
                 "match_type": mtype,
                 "region": r["region"],
                 "revision": r["revision"],

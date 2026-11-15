@@ -4,9 +4,9 @@
 封面仍然由 libretro 官方源托管，工具运行时按表里的 URL 去拉，或者用脚本提前拉到本地缓存。
 
 - **30 个平台 / 77 661 条**记录（含区域、版本、三种图 URL）
-- **中文名覆盖 83.2%**（exact 63 615 条 + series 1 028 条）；36 797 个唯一英文名里 74.1% 有中文（27 269 个）
-- **PSP、3DS、PS2、PS1、NDS、FC、Wii、GBA 八个平台已 100% 中文**（PSP 1 774 条 / 3DS 2 148 条 / PS2 8 502 条 / PS1 9 301 条 / NDS 7 335 条 / FC 13 439 条 / Wii 6 668 条 / GBA 5 961 条，全部 exact，无空名、无 series 半成品）
-- 中文名库 `zh/zh_titles.csv` 26 847 行（去重后 26 835 条参与匹配），系列词表 `zh/zh_series.csv` 171 条，可持续往上加
+- **中文名覆盖 88.5%**（exact 67 921 条 + series 822 条）；36 797 个唯一英文名里 80.6% 有中文（29 670 个）
+- **PSP、3DS、PS2、PS1、NDS、FC、Wii、GBA、SFC、MD 十个平台已 100% 中文**（PSP 1 774 条 / 3DS 2 148 条 / PS2 8 502 条 / PS1 9 301 条 / NDS 7 335 条 / FC 13 439 条 / Wii 6 668 条 / GBA 5 961 条 / SFC 3 689 条 / MD 2 352 条，全部 exact，无空名、无 series 半成品）
+- 中文名库 `zh/zh_titles.csv` 29 347 行（去重后 29 335 条参与匹配），系列词表 `zh/zh_series.csv` 171 条，可持续往上加
 
 > 数据来源：libretro-thumbnails（社区托管的封面索引）。封面版权归各游戏厂商，本项目只转发索引和 URL。
 
@@ -28,7 +28,7 @@ cover-db/
 ├── mapping/              # 成品映射表（中文名 + 首选区域标记）
 │   └── mapping_<平台>.csv
 ├── zh/
-│   ├── zh_titles.csv     # 精确中文名库（26 847 行 / 26 835 条）
+│   ├── zh_titles.csv     # 精确中文名库（29 347 行 / 29 335 条）
 │   └── zh_series.csv     # 系列名 / 关键词表（171 条）
 ├── cache/<平台>/         # 下载下来的封面 png（不进 git）
 ├── manifest/             # 下载清单：本地路径 / 状态
@@ -170,32 +170,32 @@ python3 zh_localize.py        # 重新生成，所有平台一起受益
 | nds | NDS | 7 335 | 7 335 | 0 | 0 | 0 | 100.0% |
 | wii | Wii | 6 668 | 6 668 | 0 | 0 | 0 | 100.0% |
 | gba | GBA | 5 961 | 5 961 | 0 | 0 | 0 | 100.0% |
-| snes | SFC | 3 689 | 1 116 | 100 | 0 | 2 473 | 33.0% |
-| md | MD | 2 352 | 939 | 89 | 0 | 1 324 | 43.7% |
-| saturn | SS | 2 294 | 1 033 | 60 | 0 | 1 201 | 47.6% |
+| snes | SFC | 3 689 | 3 689 | 0 | 0 | 0 | 100.0% |
+| md | MD | 2 352 | 2 352 | 0 | 0 | 0 | 100.0% |
+| saturn | SS | 2 294 | 1 056 | 58 | 0 | 1 180 | 48.6% |
 | 3ds | 3DS | 2 148 | 2 148 | 0 | 0 | 0 | 100.0% |
 | ngc | NGC | 1 954 | 1 389 | 129 | 0 | 436 | 77.7% |
 | psp | PSP | 1 774 | 1 774 | 0 | 0 | 0 | 100.0% |
-| gb | GB | 1 647 | 504 | 89 | 0 | 1 054 | 36.0% |
-| gbc | GBC | 1 524 | 357 | 112 | 0 | 1 055 | 30.8% |
+| gb | GB | 1 647 | 586 | 84 | 0 | 977 | 40.7% |
+| gbc | GBC | 1 524 | 360 | 111 | 0 | 1 053 | 30.9% |
 | dc | DC | 1 332 | 454 | 45 | 0 | 833 | 37.5% |
 | xbox | XBOX | 1 324 | 870 | 41 | 0 | 413 | 68.8% |
-| n64 | N64 | 1 115 | 372 | 69 | 0 | 674 | 39.6% |
-| gg | GG | 1 056 | 413 | 77 | 0 | 566 | 46.4% |
-| pcecd | PCE-CD | 946 | 129 | 12 | 0 | 805 | 14.9% |
-| segacd | MCD | 609 | 142 | 26 | 0 | 441 | 27.6% |
-| sms | SMS | 559 | 226 | 5 | 0 | 328 | 41.3% |
-| pce | PCE | 479 | 170 | 7 | 0 | 302 | 37.0% |
+| n64 | N64 | 1 115 | 374 | 69 | 0 | 672 | 39.7% |
+| gg | GG | 1 056 | 498 | 74 | 0 | 484 | 54.2% |
+| pcecd | PCE-CD | 946 | 168 | 10 | 0 | 768 | 18.8% |
+| segacd | MCD | 609 | 180 | 24 | 0 | 405 | 33.5% |
+| sms | SMS | 559 | 246 | 4 | 0 | 309 | 44.7% |
+| pce | PCE | 479 | 184 | 6 | 0 | 289 | 39.7% |
 | wiiu | WiiU | 454 | 187 | 77 | 0 | 190 | 58.1% |
-| ws | WS | 299 | 44 | 5 | 0 | 250 | 16.4% |
-| neogeo | NEOGEO | 257 | 63 | 43 | 0 | 151 | 41.2% |
-| wsc | WSC | 239 | 29 | 5 | 0 | 205 | 14.2% |
-| 32x | 32X | 209 | 37 | 0 | 0 | 172 | 17.7% |
+| ws | WS | 299 | 48 | 5 | 0 | 246 | 17.7% |
+| neogeo | NEOGEO | 257 | 67 | 43 | 0 | 147 | 42.8% |
+| wsc | WSC | 239 | 33 | 5 | 0 | 201 | 15.9% |
+| 32x | 32X | 209 | 39 | 0 | 0 | 170 | 18.7% |
 | ngpc | NGPC | 118 | 5 | 15 | 0 | 98 | 16.9% |
 | ps3 | PS3 | 67 | 6 | 19 | 0 | 42 | 37.3% |
 | psvita | PSV | 9 | 2 | 3 | 0 | 4 | 55.6% |
 | ps3dl | PS3DL | 1 | 0 | 0 | 0 | 1 | 0.0% |
-| **合计** | **30 平台** | **77 661** | **63 615** | **1 028** | **0** | **13 018** | **83.2%** |
+| **合计** | **30 平台** | **77 661** | **67 921** | **822** | **0** | **8 918** | **88.5%** |
 
 表由 `python3 zh_coverage.py` 生成，改完词库后重跑一次就能刷新，不要手抄。
 
@@ -289,6 +289,8 @@ python3 zh_coverage.py
 - 拼音标题的盗版条目（`Bao Qing Tian`、`Di Dao Zhan`、`San Guo Zhi - Qun Xiong Zheng Ba`）必须先按拼音还原成中文原意再落译名，直接照英文字面翻会译成一堆无意义音译。
 - 欧版多语言条目（德/法/意/西/荷各一条）必须共用同一套中文名，只在末尾括号标语种；若各版本各造译名，同一款游戏在刮削结果里会分裂成多个名字。
 - e-Reader 卡带条目（`Pokemon-e TCG`、`Pokemon Card-e`、`Animal Crossing-e`、`Pokemon Battle-e`、`Mario Party-e`、`Super Mario Advance 4-e`）不要逐条意译，按「作品名 + 卡带e/卡带e+ + 系列或卡包 + 卡号 + 角色名」机械拼装，卡号原样保留；否则 2 000 多条既翻不完也无法保持同一格式。
+- 授权体育年货（`John Madden` / `NFL` / `NBA` / `World Series Baseball` / `F1 Circus`）要固定成「项目 + 年份」的统一格式，`'92` `'95` `Volume 2` 这类标记原样保留；否则同一系列逐年一条，刮削结果里会出现十几种写法。
+- 跨平台同名的 123 条 MD 条目被 `norm()` 判定已存在而跳过，这不是漏译：词库是全平台共享的，前几个平台译过的名字会自动生效，统计时要按 `apply_key_cn.py` 输出的「新增 / 跳过」分开看。
 
 ### 本项目 PSP 平台的完整实操（可复用的模板）
 
@@ -558,6 +560,79 @@ GBA 的 5 961 行里有一块特别的东西：**e-Reader 卡带**。`Pokemon-e 
   连续两段都符合卡号样式，提取时要循环吃掉所有卡号段再取角色名/关卡名。
 
 
+### SFC（snes）全量中文化（3 689 / 3 689，100%）
+
+SFC 是这批平台里「日式冷门标题」密度最高的一块：`Koushien 2/3/4`（甲子园）、
+`Derby Stallion 96/98/II/III`（德比赛马）、`Parlor! Mini 1–7`（柏青哥）、
+`Picross NP Vol.1–8`（图片方块）、`Super F1 Circus`、`Super Fire Pro Wrestling`
+系列、`Super Formation Soccer 94/95/96`、`Super Famista 1–5`、`Super Power League 1–4`，
+以及一堆将棋、麻将、赛马、棒球作品。这些没有官方中文名，按作品原名直译；
+动画改编侧则集中了 `Dragon Ball Z` 十余条变体、`Sailor Moon` 七条、
+`Gundam` 系列、`Super Robot Taisen`；欧美授权侧是 NBA / NFL / NHL / NCAA /
+John Madden / Bill Walsh / Brett Hull / Cal Ripken，以及 `Tiny Toon`、`Looney Tunes`、
+`Mickey`、`Simpsons`、`Addams Family`。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_snes.csv` 3 689 行：exact 1 116 / series 100 / none 2 473（空名唯一 1 704 个，series 唯一 58 条） |
+| 导出清单 | `snes_missing.txt`（1 704 个唯一空名，按字母序）+ `snes_series.txt`（58 条 series 唯一名，带现有半成品中文） |
+| 译名文件 | 按行号对齐，6 片（`snes_cn_part1..6.txt`：300 / 300 / 300 / 300 / 300 / 204 条），格式 `序号<TAB>中文名` |
+| 校验 | `build_key_cn.py snes 1704`：自动找分片、按文件顺序重编号、断言条数、与英文清单 zip 成 TSV |
+| 并入词库 | `apply_key_cn.py snes 1704 58`：候选 1 762 条，新增 1 762（0 跳过）；词库 26 847 → 28 609 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 3 689 / series 0 / none 0**；全库 exact 63 615 → 67 921 |
+| 自检 | ① 条数断言 1 704 == 英文清单，series 58 == 58；② 假名残留 0 条；③ 172 条含拉丁字母的抽查（`F-1` / `RPG` / `Vol.` / `FIFA` / `CD` 等版本与系列标记）；④ 25 个重复中文名复查（均为多语言版或同作不同区域，正常） |
+
+**SFC 阶段 series 改写要点**
+
+`ActRaiser 2 - Chinmoku e no Seisen` → 创造者2 沉默的圣战、`Castlevania - Dracula X` → 恶魔城 德古拉X、
+`Contra IV - The Alien Wars` → 魂斗罗4 异形战争、`Fire Emblem - Monshou no Nazo` → 纹章之谜、
+`Seisen no Keifu / Genealogy of the Holy War` → 圣战之系谱、`Thracia 776` → 多拉基亚776、
+`Front Mission Series - Gun Hazard` → 前线任务系列 枪之危机、`Mother 2 - Gyiyg no Gyakushuu` → 地球冒险2 基格的逆袭、
+`Rockman 7 - Shukumei no Taiketsu!` → 洛克人7 宿命的对决！、
+`Super Mario RPG - Legend of the Seven Stars` → 超级马力欧RPG 七星传说、
+`Tetris _ Dr. Mario` → 俄罗斯方块与马力欧医生、`Kirby no Kirakira Kids` → 星之卡比 闪亮小朋友、
+`Kunio no Oden` → 国雄的关东煮、`FIFA - A Caminho Da Copa 98` → FIFA 98世界杯之路（巴西版）、
+`Legend of Zelda, The - A Link to the Past - Redux` → 塞尔达传说 众神的三角力量 重制版。
+
+### MD（Mega Drive / Genesis）全量中文化（2 352 / 2 352，100%）
+
+MD 这一轮的特点有三块：一是**授权体育年货**，`John Madden Football` 从 '92 排到
+Championship Edition、`NFL '94/95/98`、`NHL '94/95`、`NBA Action/Live/Showdown`、
+`NCAA Football`、`World Series Baseball '95/'96/98`，同一作品每年一条，译名必须保持
+「项目 + 年份」的统一格式；二是**中文 / 韩文盗版与地区改版**，`16 Zhang Ma Jiang`（16张麻将）、
+`San Guo Zhi Lie Zhuan - Luan Shi Qun Ying`（三国志列传 乱世群英）、`Shui Hu - Feng Yun Zhuan`（水浒 风云传）、
+`Barver Battle Saga - Tai Kong Zhan Shi`（巴贝尔战记 太空战士）、`Hua Mu Lan - Mulan`（花木兰）、
+`Xin Qi Gai Wang Zi`（新乞丐王子）、`Zhuo Gui Da Shi - Ghost Hunter`（捉鬼大师）、
+`On Dal Jang Goon`（温达将军）、`Uzu Keobukseon`（宇宙龟船）、`Dong Gu Ri Te Chi Jak Jeon`；
+三是**葡语巴西版**，`Show do Milhao`（百万富翁秀）、`Ferias Frustradas do Pica Pau`、
+`Turma da Monica na Terra dos Monstros`（莫妮卡小队在怪物之地）。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_md.csv` 2 352 行：exact 939 / series 89 / none 1 324（空名唯一 815 个，series 唯一 46 条） |
+| 导出清单 | `md_missing.txt`（815 个唯一空名）+ `md_series.txt`（46 条 series 唯一名，带现有半成品中文） |
+| 译名文件 | 按行号对齐，3 片（`md_cn_part1..3.txt`：300 / 300 / 215 条） |
+| 校验 | `build_key_cn.py md 815`：断言条数、series 46 == 46、假名 0、含拉丁字母 83 条抽查、重复中文名 11 个 |
+| 并入词库 | `apply_key_cn.py md 815 46`：候选 861 条，新增 738 条，**123 条因跨平台同名已存在而跳过**（Sonic、Landstalker 等在前几个平台已译过）；词库 28 609 → 29 347 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 2 352 / series 0 / none 0**；全库 exact 67 921 达成 87.5%，覆盖 88.5% |
+
+**MD 阶段译名要点**
+
+`Bare Knuckle / Streets of Rage` 统一「怒之铁拳」（2 代带副标 死斗的镇魂歌）、
+`Langrisser` → 梦幻模拟战、`Landstalker` → 陆地追踪者（德版 / 法版共用，括号标语种）、
+`Shining and the Darkness` → 光明与黑暗、`Ragnacenty` → 拉格纳森蒂（韩版同译）、
+`Puyo Puyo 2` → 魔法气泡2、`James Pond` 系列 → 水下特工 / 代号机器鳕鱼 / 星鱼作战、
+`Slime World` → 黏液世界、`Ballz 3D` 两条 → 3D球体格斗 / 3D球体之战。
+
+**两个通用脚本替代了逐平台脚本**
+
+这一轮起不再每平台复制一份 build / apply 脚本，改成两个参数化脚本，后续平台直接复用：
+
+| 脚本 | 用法 | 作用 |
+|---|---|---|
+| `build_key_cn.py` | `python build_key_cn.py <key> <expect条数>` | 正则 `%s_cn_part\d+\.txt` 自动发现分片、按文件顺序重编号、断言条数、与英文清单 zip 成 `<key>_cn_all.tsv`、series 对齐成 `<key>_series_uniq.txt`，并抽查假名 / 拉丁字母 / 重复名 |
+| `apply_key_cn.py` | `python apply_key_cn.py <key> <expect_missing> <expect_series>` | 备份 `zh_titles.csv.bak<key>`、用 `zh_localize.norm()` 去重、追加进词库，打印「候选 / 新增 / 跳过 / 词库 before→after」 |
+
 ---
 
 ## 六、传到 GitHub 的正确姿势
@@ -631,6 +706,12 @@ GitHub 单文件上限 100 MB，最大的一份是 `mapping/mapping_nes.csv`（9
 
 ## 九、更新日志
 
+- **2026-11**：MD 全量中文化（2 352 / 2 352，100%），46 个 series 半成品整行替换；候选 861 条新增 738 条
+  （123 条跨平台同名已存在而跳过）；词库 28 609 → 29 347 行。
+- **2026-11**：SFC（snes）全量中文化（3 689 / 3 689，100%），58 个 series 半成品整行替换；
+  词库 26 847 → 28 609 行；全量重建后 exact 63 615 → 67 921（87.5%），中文覆盖 83.2% → 88.5%，
+  唯一英文名有中文比例 74.1% → 80.6%；十个平台 100%。
+  新增通用脚本 `build_key_cn.py` / `apply_key_cn.py`，替代此后每平台各写一份的做法。
 - **2026-11**：GBA 全量中文化（5 961 / 5 961，100%），含 2 047 个 series 半成品整行替换（其中大半是 e-Reader 卡带条目）；
   词库 22 672 → 26 847 行；全量重建后 exact 58 406 → 63 615（81.9%），中文覆盖 79.5% → 83.2%。
 - **2026-11**：Wii 全量中文化（6 668 / 6 668，100%），含 195 个 series 半成品整行替换；

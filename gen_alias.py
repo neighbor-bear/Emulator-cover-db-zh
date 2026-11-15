@@ -94,6 +94,28 @@ TERM_GROUPS = [
 ]
 
 
+def filter_groups(groups):
+    """丢掉会串味的短变体：某个变体若是**别的组**的主名的子串，展开后就会出现
+    「怪物猎人 -> 怪物全职猎人」这类假名字（`猎人` 落在 `怪物猎人` 里）。
+    同一组自己的主名不算冲突（`柯南` 落在 `名侦探柯南` 里，是正常的缩短写法）。
+    """
+    mains = [g[0] for g in groups]
+    out, dropped = [], []
+    for g in groups:
+        keep = [g[0]]
+        for v in g[1:]:
+            if any(v in m for m in mains if m != g[0]):
+                dropped.append((v, g[0]))
+                continue
+            keep.append(v)
+        if len(keep) > 1:
+            out.append(keep)
+    return out, dropped
+
+
+GROUPS, DROPPED = filter_groups(TERM_GROUPS)
+
+
 def variants(name, groups):
     """返回该中文名可展开出的其它叫法（含多组组合）。"""
     hits = []          # [(anchor, [others])]
@@ -147,7 +169,7 @@ def main():
         cn = (r.get("name_cn") or "").strip()
         al = []
         if cn:
-            for v in variants(cn, TERM_GROUPS):
+            for v in variants(cn, GROUPS):
                 v = v.strip()
                 if v and v != cn and v not in al:
                     al.append(v)
@@ -181,9 +203,12 @@ def main():
         with io.open(OUT_TABLE, "w", encoding="utf-8-sig", newline="") as fp:
             w = csv.writer(fp, lineterminator="\r\n")
             w.writerow(["主线中文名", "其它叫法", "变体数"])
-            for g in TERM_GROUPS:
+            for g in GROUPS:
                 w.writerow([g[0], " / ".join(g[1:]) if len(g) > 1 else "（无其它叫法）", len(g)])
-        print("术语表：%s（%d 组）" % (OUT_TABLE, len(TERM_GROUPS)))
+        print("术语表：%s（%d 组，已剔除会串味的短变体 %d 个）"
+              % (OUT_TABLE, len(GROUPS), len(DROPPED)))
+        for v, g in DROPPED:
+            print("  剔除 %s（属于「%s」组）" % (v, g))
 
 
 if __name__ == "__main__":

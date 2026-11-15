@@ -348,17 +348,17 @@ Okami,大神,大神,,
 Viewtiful Joe,红侠乔伊,红侠乔伊,,
 Bayonetta,猎天使魔女,猎天使魔女,,
 Bayonetta 2,猎天使魔女2,猎天使魔女,,
-Monster Hunter,怪物猎人,怪物猎人,,怪物全职猎人|魔物猎人|魔物全职猎人
-Monster Hunter 2,怪物猎人2,怪物猎人,,怪物全职猎人2|魔物猎人2|魔物全职猎人2
-Monster Hunter 3,怪物猎人3,怪物猎人,,怪物全职猎人3|魔物猎人3|魔物全职猎人3
-Monster Hunter 4,怪物猎人4,怪物猎人,,怪物全职猎人4|魔物猎人4|魔物全职猎人4
-Monster Hunter X,怪物猎人X,怪物猎人,,怪物全职猎人X|魔物猎人X|魔物全职猎人X
-Monster Hunter Generations,怪物猎人 世代,怪物猎人,,怪物全职猎人 世代|魔物猎人 世代|魔物全职猎人 世代
-Monster Hunter Freedom,怪物猎人 携带版,怪物猎人,,怪物全职猎人 携带版|魔物猎人 携带版|魔物全职猎人 携带版
-Monster Hunter Freedom 2,怪物猎人 携带版2,怪物猎人,,怪物全职猎人 携带版2|魔物猎人 携带版2|魔物全职猎人 携带版2
-Monster Hunter Freedom Unite,怪物猎人 携带版2G,怪物猎人,,怪物全职猎人 携带版2G|魔物猎人 携带版2G|魔物全职猎人 携带版2G
-Monster Hunter Portable 3rd,怪物猎人 携带版3rd,怪物猎人,,怪物全职猎人 携带版3rd|魔物猎人 携带版3rd|魔物全职猎人 携带版3rd
-Monster Hunter Tri,怪物猎人3,怪物猎人,,怪物全职猎人3|魔物猎人3|魔物全职猎人3
+Monster Hunter,怪物猎人,怪物猎人,,魔物猎人
+Monster Hunter 2,怪物猎人2,怪物猎人,,魔物猎人2
+Monster Hunter 3,怪物猎人3,怪物猎人,,魔物猎人3
+Monster Hunter 4,怪物猎人4,怪物猎人,,魔物猎人4
+Monster Hunter X,怪物猎人X,怪物猎人,,魔物猎人X
+Monster Hunter Generations,怪物猎人 世代,怪物猎人,,魔物猎人 世代
+Monster Hunter Freedom,怪物猎人 携带版,怪物猎人,,魔物猎人 携带版
+Monster Hunter Freedom 2,怪物猎人 携带版2,怪物猎人,,魔物猎人 携带版2
+Monster Hunter Freedom Unite,怪物猎人 携带版2G,怪物猎人,,魔物猎人 携带版2G
+Monster Hunter Portable 3rd,怪物猎人 携带版3rd,怪物猎人,,魔物猎人 携带版3rd
+Monster Hunter Tri,怪物猎人3,怪物猎人,,魔物猎人3
 Patapon,啪嗒砰,啪嗒砰,,
 Patapon 2,啪嗒砰2,啪嗒砰,,
 Patapon 3,啪嗒砰3,啪嗒砰,,
@@ -512,7 +512,7 @@ ActRaiser,创造者,ARPG,,
 E.V.O.,进化,ARPG,,
 Chrono Trigger,时空之轮,时空,,超时空之轮
 Live A Live,时空勇士,时空,,
-Treasure Hunter G,寻宝猎人G,战棋,,寻宝全职猎人G
+Treasure Hunter G,寻宝猎人G,战棋,,
 Bahamut Lagoon,圣龙战记,战棋,,
 Romancing Saga,浪漫沙加,沙加,,
 SaGa Frontier,浪漫沙加 开拓者,沙加,,
@@ -934,7 +934,7 @@ Gradius Collection,宇宙巡航机 合集,,psp,
 Gradius Portable,宇宙巡航机 便携版,,psp,
 Grand Knight History,大骑士历史,,psp,
 Grand Knights History,大骑士历史,,psp,
-Grim the Bounty Hunter,死神赏金猎人,,psp,死神赏金全职猎人
+Grim the Bounty Hunter,死神赏金猎人,,psp,
 Gripshift,抓地甩尾,,psp,
 Grisaia no Kajitsu - Le Fruit de la Grisaia,灰色的果实,,psp,
 Growlanser,梦幻骑士,,psp,
@@ -1012,7 +1012,7 @@ Hot Shots Tennis - Get a Grip,大众网球 握紧球拍,,psp,
 Hot Wheels - Ultimate Racing,风火轮 终极赛车,,psp,
 Houkago Colorful-Step - Bunkabu!,放学后 彩色脚步 文化部！,,psp,
 Houkago Colorful-Step - Undoubu!,放学后 彩色脚步 运动部！,,psp,
-Hunter x Hunter - Wonder Adventure,全职猎人 奇妙冒险,,psp,猎人 奇妙冒险
+Hunter x Hunter - Wonder Adventure,全职猎人 奇妙冒险,,psp,
 Hyakki Yakou - Kaidan Romance,百鬼夜行 怪谈恋爱,,psp,
 Hyaku Monogatari - Kaidan Romance,百物语 怪谈恋爱,,psp,
 Hysteria Project,歇斯底里计划,,psp,
@@ -1027,7 +1027,7 @@ Innocent Life - Sin Mokjang Iyagi,纯真生活 新牧场的传说,,psp,
 Intelligent License,智能驾照,,psp,
 Intelligent License 2,智能驾照2,,psp,
 Invizimals,隐形生物,,psp,
-Irregular Hunter X,非正规猎人X,,psp,非正规全职猎人X
+Irregular Hunter X,非正规猎人X,,psp,
 Ishin Renka Ryoma Gaiden,维新恋华 龙马外传,,psp,
 Issho ni Gohan. Portable,一起吃饭 便携版,,psp,
 Isshou Asoberu Toudai Shogi - Tsumeshogi Dojo,终生可玩 东大将棋 诘将棋道场,,psp,
@@ -1111,7 +1111,7 @@ Kono Bushitsu wa Kitaku Shinai Bu ga Senkyo Shimashita. Portable - Gakuen Dog Ea
 Kono Bushitsu wa Kitaku Shinai Bu ga Senkyo Shimashita. Portable - Gakuen Summer Wars Hen,这个不回家的社团占据了教室 便携版 学园夏日战争篇,,psp,
 Koro Koro!! Kollon,滚来滚去!!Kollon,,psp,
 Koukaku Kidoutai - Stand Alone Complex,攻壳机动队 STAND ALONE COMPLEX,,psp,
-Koukaku Kidoutai - Stand Alone Complex - Kariudo no Ryouiki,攻壳机动队 STAND ALONE COMPLEX 猎人的领域,,psp,攻壳机动队 STAND ALONE COMPLEX 全职猎人的领域
+Koukaku Kidoutai - Stand Alone Complex - Kariudo no Ryouiki,攻壳机动队 STAND ALONE COMPLEX 猎人的领域,,psp,
 Kud Wafter - Converted Edition,Kud Wafter 移植版,,psp,
 Kurogane no Linebarrels,黑铁之Linebarrel,,psp,
 Kurohyou - Ryu ga Gotoku Shinshou,黑豹 如龙新章,,psp,黑豹 人中之龙新章
@@ -1200,7 +1200,7 @@ Medal of Honor - Heroes,荣誉勋章 英雄,,psp,
 Medal of Honor - Heroes 2,荣誉勋章 英雄2,,psp,
 MediEvil - Resurrection,骷髅骑士 复活,,psp,
 Medical91 for Portable,Medical91 便携版,,psp,
-Mega Man - Maverick Hunter X,洛克人 非正规猎人X,,psp,洛克人 非正规全职猎人X
+Mega Man - Maverick Hunter X,洛克人 非正规猎人X,,psp,
 Mega Man - Powered Up,洛克人 威力强化,,psp,
 Megami no Etsubo,女神的笑壶,,psp,
 Meiji Tokyo Renka,明治东京恋伽,,psp,
@@ -1253,9 +1253,9 @@ Moe Moe Daisensou - Gendaiban+,萌萌大作战 现代版+,,psp,
 Moeru Mahjong - Moejong,燃烧麻将 Moejong,,psp,
 Momotaro Dentetsu Tag Match - Yuujou Doryoku Shouri no Maki!,桃太郎电铁 标签对决 友情努力胜利之卷！,,psp,
 Monochrome,单色,,psp,
-Monster Hunter Portable,怪物猎人 携带版,,psp,怪物全职猎人 携带版|魔物猎人 携带版|魔物全职猎人 携带版
-Monster Hunter Portable 2nd,怪物猎人 携带版2nd,,psp,怪物全职猎人 携带版2nd|魔物猎人 携带版2nd|魔物全职猎人 携带版2nd
-Monster Hunter Portable 2nd G,怪物猎人 携带版2nd G,,psp,怪物全职猎人 携带版2nd G|魔物猎人 携带版2nd G|魔物全职猎人 携带版2nd G
+Monster Hunter Portable,怪物猎人 携带版,,psp,魔物猎人 携带版
+Monster Hunter Portable 2nd,怪物猎人 携带版2nd,,psp,魔物猎人 携带版2nd
+Monster Hunter Portable 2nd G,怪物猎人 携带版2nd G,,psp,魔物猎人 携带版2nd G
 Monster Kingdom - Jewel Summoner,怪物王国 宝石召唤者,,psp,
 Mortal Kombat - Unchained,真人快打 解禁,,psp,
 Moto GP,摩托GP,,psp,
@@ -1537,7 +1537,7 @@ Simple 2000 Series Portable!! Vol. 1 - The Mahjong,廉价2000系列 便携版!! 
 Simple 2000 Series Portable!! Vol. 2 - The Shogi,廉价2000系列 便携版!! Vol.2 将棋,,psp,
 Simple 2500 Series Portable!! Vol. 1 - The Table Game,廉价2500系列 便携版!! Vol.1 桌面游戏,,psp,
 "Simple 2500 Series Portable!! Vol. 12 - The Hohei 2 - Senyuu yo, Sakini Yuke",廉价2500系列 便携版!! Vol.12 步兵2 战友啊，先行一步,,psp,
-Simple 2500 Series Portable!! Vol. 13 - The Akuma Hunters - Exorsister,廉价2500系列 便携版!! Vol.13 恶魔猎人 Exorsister,,psp,廉价2500系列 便携版!! Vol.13 鬼泣 Exorsister|廉价2500系列 便携版!! Vol.13 恶魔全职猎人 Exorsister
+Simple 2500 Series Portable!! Vol. 13 - The Akuma Hunters - Exorsister,廉价2500系列 便携版!! Vol.13 恶魔猎人 Exorsister,,psp,廉价2500系列 便携版!! Vol.13 鬼泣 Exorsister
 Simple 2500 Series Portable!! Vol. 4 - The Unou Drill,廉价2500系列 便携版!! Vol.4 右脑训练,,psp,
 Simple 2500 Series Portable!! Vol. 5 - The Block Kuzushi Quest - Dragon Kingdom,廉价2500系列 便携版!! Vol.5 打砖块任务 龙之王国,,psp,
 Simple 2500 Series Portable!! Vol. 6 - The Sensha,廉价2500系列 便携版!! Vol.6 战车,,psp,
@@ -2088,7 +2088,7 @@ SimCity 2000,模拟城市2000,,,
 "Sims, The",模拟人生,,,
 "Smurfs Travel the World, The",蓝精灵环游世界,,,
 Spot Goes to Hollywood,斑点狗闯好莱坞,,,
-Spy Hunter,间谍猎人,,,间谍全职猎人
+Spy Hunter,间谍猎人,,,
 Star Wars,星球大战,,,
 Star Wars - Episode III - Revenge of the Sith,星球大战 第三集 西斯的复仇,,,
 Stargate,星际之门,,,
@@ -2111,7 +2111,7 @@ Tom Clancy's Rainbow Six,汤姆·克兰西 彩虹六号,,,
 "Tower of Druaga, The",德鲁亚加之塔,,,
 Transformers Prime - The Game,变形金刚 领袖之战 游戏版,,,
 True Lies,真实的谎言,,,
-Turok - Evolution,恐龙猎人 进化,,,恐龙全职猎人 进化
+Turok - Evolution,恐龙猎人 进化,,,
 Uchuu Senkan Yamato,宇宙战舰大和号,,,
 Ultraman,奥特曼,,,超人力霸王|咸蛋超人
 V-Rally 3,V拉力3,,,
@@ -2225,7 +2225,7 @@ Brothers in Arms - Earned in Blood,战火兄弟连 血战,,,
 Brothers in Arms - Road to Hill 30,战火兄弟连 通往30高地,,,
 Brutal - Paws of Fury,残暴 怒爪,,,
 Bubsy II,巴布西II,,,
-Buffy the Vampire Slayer - Chaos Bleeds,吸血鬼猎人巴菲 混沌之血,,,吸血鬼全职猎人巴菲 混沌之血
+Buffy the Vampire Slayer - Chaos Bleeds,吸血鬼猎人巴菲 混沌之血,,,
 Burai - Hachigyoku no Yuushi Densetsu,武雷 八玉之勇士传说,,,
 Bust-A-Move,泡泡龙,,,
 Bust-A-Move 3 DX,泡泡龙3 DX,,,
@@ -2356,7 +2356,7 @@ Godzilla,哥斯拉,,,
 GoldenEye 007,007 黄金眼,,,
 Goosebumps HorrorLand,鸡皮疙瘩 恐怖乐园,,,
 "Great Waldo Search, The",寻找威利,,,
-Green Lantern - Rise of the Manhunters,绿灯侠 猎人手崛起,,,绿灯侠 全职猎人手崛起
+Green Lantern - Rise of the Manhunters,绿灯侠 猎人手崛起,,,
 "Grinch, The",绿毛怪格林奇,,,
 Gun,枪,,,
 Gyakuten Saiban 2,逆转裁判2,,,
@@ -3396,7 +3396,7 @@ Moco Moco Friends,毛毛朋友,,3ds,
 Model Oshare Audition - Dream Girl,模特时尚选拔 梦想女孩,,3ds,
 Moe Moe Daisensou - Gendaiban 3D,萌萌大战 现代版3D,,3ds,
 Momotarou Dentetsu 2017 - Tachiagare Nippon!!,桃太郎电铁2017 站起来日本！！,,3ds,
-MonHun Nikki - Poka Poka Ailu Mura DX,怪物猎人日记 暖洋洋猫猫村DX,,3ds,怪物全职猎人日记 暖洋洋猫猫村DX|魔物猎人日记 暖洋洋猫猫村DX|魔物全职猎人日记 暖洋洋猫猫村DX
+MonHun Nikki - Poka Poka Ailu Mura DX,怪物猎人日记 暖洋洋猫猫村DX,,3ds,魔物猎人日记 暖洋洋猫猫村DX
 Monster 4x4 3D,怪物四驱3D,,3ds,
 Monster Strike,怪物弹珠,,3ds,
 Moshi Monsters - Katsuma Unleashed,莫西怪物 卡兹玛释放,,3ds,
@@ -3784,7 +3784,7 @@ Toriko - Gourmet Monsters!,美食的俘虏 美食怪物！,,3ds,
 Toriko - Ultimate Survival,美食的俘虏 终极生存,,3ds,
 Touch! Double Pen Sports,触摸！双笔运动,,3ds,
 Toushin Toshi - Girls Gift RPG,斗神都市 少女的礼物RPG,,3ds,
-Tousouchuu - Shijou Saikyou no Hunter-tachi Kara Nigekire!,逃走中 从史上最强猎人们手中逃脱！,,3ds,逃走中 从史上最强全职猎人们手中逃脱！
+Tousouchuu - Shijou Saikyou no Hunter-tachi Kara Nigekire!,逃走中 从史上最强猎人们手中逃脱！,,3ds,
 Transformers - Dark of the Moon - Stealth Force Edition,变形金刚 月黑之时 隐秘部队版,,3ds,
 Transformers - Rise of the Dark Spark,变形金刚 暗火崛起,,3ds,
 "Trash Pack, The",垃圾包,,3ds,
@@ -3951,12 +3951,12 @@ Metal Gear Solid 3D - Snake Eater,合金装备3D 食蛇者,,3ds,潜龙谍影3D �
 Metroid - Samus Returns,银河战士 萨姆斯归来,,3ds,密特罗德 萨姆斯归来
 Metroid Prime - Federation Force,银河战士Prime 联邦力量,,3ds,密特罗德Prime 联邦力量
 Metroid Prime Blast Ball,银河战士Prime 爆炸球,,3ds,密特罗德Prime 爆炸球
-Monster Hunter 3 Ultimate,怪物猎人3 终极版,,3ds,怪物全职猎人3 终极版|魔物猎人3 终极版|魔物全职猎人3 终极版
-Monster Hunter 3G,怪物猎人3G,,3ds,怪物全职猎人3G|魔物猎人3G|魔物全职猎人3G
-Monster Hunter 4 Ultimate,怪物猎人4 终极版,,3ds,怪物全职猎人4 终极版|魔物猎人4 终极版|魔物全职猎人4 终极版
-Monster Hunter 4G,怪物猎人4G,,3ds,怪物全职猎人4G|魔物猎人4G|魔物全职猎人4G
-Monster Hunter Stories,怪物猎人 物语,,3ds,怪物全职猎人 物语|魔物猎人 物语|魔物全职猎人 物语
-Monster Hunter XX - Double Cross,怪物猎人XX 双重交叉,,3ds,怪物全职猎人XX 双重交叉|魔物猎人XX 双重交叉|魔物全职猎人XX 双重交叉
+Monster Hunter 3 Ultimate,怪物猎人3 终极版,,3ds,魔物猎人3 终极版
+Monster Hunter 3G,怪物猎人3G,,3ds,魔物猎人3G
+Monster Hunter 4 Ultimate,怪物猎人4 终极版,,3ds,魔物猎人4 终极版
+Monster Hunter 4G,怪物猎人4G,,3ds,魔物猎人4G
+Monster Hunter Stories,怪物猎人 物语,,3ds,魔物猎人 物语
+Monster Hunter XX - Double Cross,怪物猎人XX 双重交叉,,3ds,魔物猎人XX 双重交叉
 Need for Speed - The Run,极品飞车 亡命狂飙,,3ds,极速快感 亡命狂飙
 Nintendogs + Cats - French Bulldog _ New Friends,任天堂狗狗+猫 法国斗牛犬 新朋友,,3ds,
 Nintendogs + Cats - Golden Retriever _ New Friends,任天堂狗狗+猫 金毛寻回犬 新朋友,,3ds,
@@ -4416,7 +4416,7 @@ CSI - Crime Scene Investigation,犯罪现场调查,,ps2,
 CSI - Crime Scene Investigation - 3 Dimensions of Murder,犯罪现场调查 谋杀的三个维度,,ps2,
 Cabela's African Safari,卡贝拉斯 非洲狩猎,,ps2,
 Cabela's Alaskan Adventures,卡贝拉斯 阿拉斯加冒险,,ps2,
-Cabela's Big Game Hunter 2008,卡贝拉斯 大型猎物猎人2008,,ps2,卡贝拉斯 大型猎物全职猎人2008
+Cabela's Big Game Hunter 2008,卡贝拉斯 大型猎物猎人2008,,ps2,
 Cabela's Dangerous Adventures,卡贝拉斯 危险冒险,,ps2,
 Cabela's Dangerous Hunts,卡贝拉斯 危险狩猎,,ps2,
 Cabela's Dangerous Hunts 2009,卡贝拉斯 危险狩猎2009,,ps2,
@@ -4755,7 +4755,7 @@ Digimon World - Data Squad,数码宝贝世界 数据小队,,ps2,数码暴龙世�
 Digimon World X,数码宝贝世界 X,,ps2,数码暴龙世界 X|数码怪兽世界 X
 Digital Hitz Factory,数字热曲工厂,,ps2,
 Digital Holmes,数码福尔摩斯,,ps2,
-Dino Stalker,恐龙猎人,,ps2,恐龙全职猎人
+Dino Stalker,恐龙猎人,,ps2,
 Dinosaur Adventure,恐龙冒险,,ps2,
 Dirt Track Devils,泥地赛道恶魔,,ps2,
 Disaster Report,灾害报告,,ps2,
@@ -5144,7 +5144,7 @@ Fruit Fall,水果落下,,ps2,
 Fruit Machine Mania,水果机狂热,,ps2,
 Fuga da Monkey Island,逃离猴子岛,,ps2,
 "Fuga de Monkey Island, La",逃离猴子岛,,ps2,
-Fugitive Hunter - War on Terror,逃亡猎人 反恐战争,,ps2,逃亡全职猎人 反恐战争
+Fugitive Hunter - War on Terror,逃亡猎人 反恐战争,,ps2,
 Fukakutei Sekai no Tantei Shinshi - Akugyou Souma no Jiken File,不确定世界的侦探绅士 恶行相马的事件档案,,ps2,
 Full House Kiss - Ren'ai Kaseifu Adventure,满屋之吻 恋爱家政冒险,,ps2,
 Full House Kiss 2,满屋之吻2,,ps2,
@@ -5259,7 +5259,7 @@ Getsumento Heiki Mina - Futatsu no Project M,月面兔兵器米娜 两个计划M
 Ghost Master - The Gravenville Chronicles,幽灵大师 格雷文维尔编年史,,ps2,
 Ghost Vibration,幽灵震动,,ps2,
 Ghost in the Shell - Stand Alone Complex,攻壳机动队 STAND ALONE COMPLEX,,ps2,
-Ghosthunter,幽灵猎人,,ps2,幽灵全职猎人
+Ghosthunter,幽灵猎人,,ps2,
 Giant Robo - The Animation - Chikyuu ga Seishi suru Hi,铁甲人 动画 地球静止之日,,ps2,
 Giants - Citizen Kabuto,巨人 卡布托公民,,ps2,
 Gidong Jeonsa Gundam - Haehu-ui Uju,机动战士高达 邂逅的宇宙,,ps2,机动战士钢弹 邂逅的宇宙|机动战士敢达 邂逅的宇宙
@@ -5519,8 +5519,8 @@ Hugo - Bukkazoom!,雨果 布卡祖！,,ps2,
 Hugo - CannonCruise,雨果 加农巡航,,ps2,
 Hummer Badlands,悍马 荒原,,ps2,
 Hungry Ghosts,饿鬼,,ps2,
-Hunter - The Reckoning - Wayward,猎人 赎罪 任性,,ps2,全职猎人 赎罪 任性
-Hunter x Hunter - Ryuumyaku no Saidan,全职猎人 龙脉的祭坛,,ps2,猎人 龙脉的祭坛
+Hunter - The Reckoning - Wayward,猎人 赎罪 任性,,ps2,
+Hunter x Hunter - Ryuumyaku no Saidan,全职猎人 龙脉的祭坛,,ps2,
 "Hustle, The - Detroit Streets",骗局 底特律街头,,ps2,
 Hyakko - Yorozuya Jikenbo!,百鬼 万事屋事件簿！,,ps2,
 Hype - The Time Quest,炒作 时光任务,,ps2,
@@ -5993,7 +5993,7 @@ MX World Tour,MX世界巡回,,ps2,
 MX World Tour featuring Jamie Little,MX世界巡回 杰米·利特尔版,,ps2,
 MX vs. ATV Unleashed,MX对ATV 释放,,ps2,
 Mabino x Style,Mabino x Style,,ps2,
-Mace Griffin - Bounty Hunter,梅斯·格里芬 赏金猎人,,ps2,梅斯·格里芬 赏金全职猎人
+Mace Griffin - Bounty Hunter,梅斯·格里芬 赏金猎人,,ps2,
 Mad Maestro!,疯狂指挥家！,,ps2,
 Made Man,造人,,ps2,
 Made Man - Confessions of the Family Blood,造人 家族血脉的告白,,ps2,
@@ -6084,7 +6084,7 @@ Memories Off - After Rain Vol. 2 - Souen,秋之回忆 After Rain 第2卷 双缘,
 Memories Off - After Rain Vol. 3 - Sotsugyou,秋之回忆 After Rain 第3卷 毕业,,ps2,
 Memories Off 5 Encore,秋之回忆5 安可,,ps2,
 Memories Off Mix,秋之回忆 Mix,,ps2,
-Men at Work! 3 - Ai to Seishun no Hunter Gakuen,上班族！3 爱和青春的猎人学园,,ps2,上班族！3 爱和青春的全职猎人学园
+Men at Work! 3 - Ai to Seishun no Hunter Gakuen,上班族！3 爱和青春的猎人学园,,ps2,
 Men in Black II - Alien Escape,黑衣人II 外星逃亡,,ps2,
 Mercenaries,雇佣兵,,ps2,
 Mercenaries 2 - Inferno di Fuoco,雇佣兵2 火之地狱,,ps2,
@@ -7316,7 +7316,7 @@ Star Trek - Encounters,星际迷航 遭遇,,ps2,
 Star Trek - Shattered Universe,星际迷航 破碎宇宙,,ps2,
 Star Trek - Voyager - Elite Force,星际迷航 航海家 精英部队,,ps2,
 Star Wars - Battlefront,星球大战 前线,,ps2,
-Star Wars - Bounty Hunter,星球大战 赏金猎人,,ps2,星球大战 赏金全职猎人
+Star Wars - Bounty Hunter,星球大战 赏金猎人,,ps2,
 Star Wars - Episode III - Die Rache der Sith,星球大战 第三部 西斯的复仇,,ps2,
 Star Wars - Episode III - La Revanche des Sith,星球大战 第三部 西斯的复仇,,ps2,
 Star Wars - Episode III - Sith no Fukushuu,星球大战 第三部 西斯的复仇,,ps2,
@@ -7817,7 +7817,7 @@ Zill O'll Infinite,齐尔·奥尔 无限,,ps2,
 Zipang,基邦,,ps2,
 Zoids - Struggle,索斯机械兽 挣扎,,ps2,
 Zombie Attack,僵尸袭击,,ps2,
-Zombie Hunters 2,僵尸猎人2,,ps2,僵尸全职猎人2
+Zombie Hunters 2,僵尸猎人2,,ps2,
 Zombie Virus,僵尸病毒,,ps2,
 Zombie Zone,僵尸地带,,ps2,
 Zombie Zone - Other Side,僵尸地带 另一边,,ps2,
@@ -7999,7 +7999,7 @@ Metal Slug 4,合金弹头4,,ps2,越南战役4
 Metal Slug 4 _ 5,合金弹头4与5,,ps2,越南战役4与5
 Metal Slug 5,合金弹头5,,ps2,越南战役5
 Metal Slug 6,合金弹头6,,ps2,越南战役6
-Monster Hunter G,怪物猎人G,,ps2,怪物全职猎人G|魔物猎人G|魔物全职猎人G
+Monster Hunter G,怪物猎人G,,ps2,魔物猎人G
 Need for Speed - Carbon - Collector's Edition,极品飞车 卡本峡谷 收藏版,,ps2,极速快感 卡本峡谷 收藏版
 Need for Speed - Hot Pursuit 2,极品飞车 热力追踪2,,ps2,极速快感 热力追踪2
 Need for Speed - Most Wanted - Black Edition,极品飞车 最高通缉 黑版,,ps2,极速快感 最高通缉 黑版
@@ -8112,7 +8112,7 @@ WipEout Fusion,反重力赛车 融合,,ps2,
 007 - Tomorrow Never Dies,007 明日帝国,,ps1,
 007 Racing,007 赛车,,ps1,
 1 on 1,一对一,,ps1,
-100 Man Yen Quiz Hunter,100万日元问答猎人,,ps1,100万日元问答全职猎人
+100 Man Yen Quiz Hunter,100万日元问答猎人,,ps1,
 100% Star,100%明星,,ps1,
 10101 - Will the Starship,10101 星际飞船,,ps1,
 10th Anniversary Memorial Save Data,十周年纪念存档数据,,ps1,
@@ -8399,8 +8399,8 @@ BackGuiner - Yomigaeru Yuusha-tachi - Service Disc,回归吉纳 苏醒的勇者�
 Backstreet Billiards,后街台球,,ps1,
 Backyard Soccer,后院足球,,ps1,
 Bakumatsu Roman - Gekka no Kenshi,幕末浪漫 月华剑士,,ps1,
-Bakuretsu Hunter - Mahjong Special,爆热猎人 麻将特别版,,ps1,爆热全职猎人 麻将特别版
-Bakuretsu Hunter - Sorezore no Omoi ... Nowaanchatte,爆热猎人 各自的思念…真是的,,ps1,爆热全职猎人 各自的思念…真是的
+Bakuretsu Hunter - Mahjong Special,爆热猎人 麻将特别版,,ps1,
+Bakuretsu Hunter - Sorezore no Omoi ... Nowaanchatte,爆热猎人 各自的思念…真是的,,ps1,
 Bakuretsu Soccer,爆热足球,,ps1,
 Bakuryuu,瀑龙,,ps1,
 Bakushou!! All Yoshimoto Quiz-ou Kettei-sen DX,爆笑！全吉本问答王决赛DX,,ps1,
@@ -8458,7 +8458,7 @@ Battle Athletess - Daiundoukai GTO,大运动会 GTO,,ps1,
 Battle Bombee 2 - Sukkiri Momoaji,战斗炸弹人2 爽快桃味,,ps1,
 Battle Bugs,虫子大战,,ps1,
 Battle Formation,战斗阵形,,ps1,
-Battle Hunter,战斗猎人,,ps1,战斗全职猎人
+Battle Hunter,战斗猎人,,ps1,
 Battle Konchuuden,战斗昆虫传,,ps1,
 Battle Master,战斗大师,,ps1,
 Battle Stations,战斗基地,,ps1,
@@ -8568,7 +8568,7 @@ Bottom of the 9th '99,九局下半'99,,ps1,
 Bottom of the 9th - Major League Heroes,九局下半 大联盟英雄,,ps1,
 "Boucliers de Quetzalcoatl, Les - Les Chevaliers de Baphomet II",羽蛇神之盾 巴风特骑士II,,ps1,
 Boundary Gate - Daughter of Kingdom,境界之门 王国之女,,ps1,
-Bounty Hunter Sara - Holy Mountain no Teiou,赏金猎人莎拉 圣山之帝王,,ps1,赏金全职猎人莎拉 圣山之帝王
+Bounty Hunter Sara - Holy Mountain no Teiou,赏金猎人莎拉 圣山之帝王,,ps1,
 Bounty Sword - Double Edge,赏金之剑 双刃,,ps1,
 Bounty Sword First,赏金之剑 初章,,ps1,
 Bowling,保龄球,,ps1,
@@ -8644,7 +8644,7 @@ C - The Contra Adventure,魂斗罗 冒险,,ps1,
 C-12 - Final Resistance,C-12 最终抵抗,,ps1,
 C1 - Circuit,C1 赛道,,ps1,
 C3 Racing - Car Constructors Championship,C3赛车 车厂锦标赛,,ps1,
-Cabela's Big Game Hunter - Ultimate Challenge,卡贝拉大猎物猎人 终极挑战,,ps1,卡贝拉大猎物全职猎人 终极挑战
+Cabela's Big Game Hunter - Ultimate Challenge,卡贝拉大猎物猎人 终极挑战,,ps1,
 Cabela's Ultimate Deer Hunt - Open Season,卡贝拉终极猎鹿 开放季,,ps1,
 Cadillac,凯迪拉克,,ps1,
 Caesars Palace 2000 - Millennium Gold Edition,凯撒宫2000 千禧黄金版,,ps1,
@@ -8944,8 +8944,8 @@ Dancing Stage featuring True Kiss Destination,舞动舞台 True Kiss Destination
 Dangan,弹丸,,ps1,
 Danger Girl,危险女孩,,ps1,
 Dare Devil Derby 3D,冒险德比3D,,ps1,
-Dark Hunter Ge - Youma no Mori,暗黑猎人 下 妖魔之森,,ps1,暗黑全职猎人 下 妖魔之森
-Dark Hunter Jou - Ijigen Gakuen,暗黑猎人 上 异次元学园,,ps1,暗黑全职猎人 上 异次元学园
+Dark Hunter Ge - Youma no Mori,暗黑猎人 下 妖魔之森,,ps1,
+Dark Hunter Jou - Ijigen Gakuen,暗黑猎人 上 异次元学园,,ps1,
 Dark Messiah,暗黑弥赛亚,,ps1,
 Dark Seed II,暗种II,,ps1,
 Dark Tales - From the Lost Soul,暗黑传说 来自失落的灵魂,,ps1,
@@ -9926,8 +9926,8 @@ Hot Shots Golf,大众高尔夫,,ps1,
 Hot Shots Golf 2,大众高尔夫2,,ps1,
 Hot Wheels - Extreme Racing,风火轮 极限赛车,,ps1,
 Hot Wheels - Turbo Racing,风火轮 涡轮赛车,,ps1,
-Houma Hunter Lime - Special Collection Vol. 1,妖魔猎人莱姆 特别收藏 第1卷,,ps1,妖魔全职猎人莱姆 特别收藏 第1卷
-Houma Hunter Lime - Special Collection Vol. 2,妖魔猎人莱姆 特别收藏 第2卷,,ps1,妖魔全职猎人莱姆 特别收藏 第2卷
+Houma Hunter Lime - Special Collection Vol. 1,妖魔猎人莱姆 特别收藏 第1卷,,ps1,
+Houma Hunter Lime - Special Collection Vol. 2,妖魔猎人莱姆 特别收藏 第2卷,,ps1,
 Houshin Engi,封神演义,,ps1,
 Houshin Engi - Aizouban,封神演义 爱藏版,,ps1,
 "Housoukyoku, The - SatelliTV",广播局 SatelliTV,,ps1,
@@ -9938,9 +9938,9 @@ Hugo - Frog Fighter,雨果 斗蛙,,ps1,
 Hugo - The Quest for the Sunstones,雨果 寻找太阳石,,ps1,
 Hugo 2,雨果2,,ps1,
 Hunchback of Notredame,巴黎圣母院敲钟人,,ps1,
-Hunter x Hunter - Maboroshi no Greed Island,全职猎人 幻之贪婪岛,,ps1,猎人 幻之贪婪岛
-Hunter x Hunter - Ubawareta Aura Stone,全职猎人 被夺走的气石,,ps1,猎人 被夺走的气石
-"Hunter, The",猎人,,ps1,全职猎人
+Hunter x Hunter - Maboroshi no Greed Island,全职猎人 幻之贪婪岛,,ps1,
+Hunter x Hunter - Ubawareta Aura Stone,全职猎人 被夺走的气石,,ps1,
+"Hunter, The",猎人,,ps1,
 Hvem Vil Vaere Millionaer,谁想当百万富翁,,ps1,
 Hyakujuu Sentai GaoRanger,百兽战队 牙吠连者,,ps1,
 Hybrid,混合,,ps1,
@@ -10116,7 +10116,7 @@ Jet Rider,喷气骑士,,ps1,
 Jet Rider 2,喷气骑士2,,ps1,
 JetMoto,喷气摩托,,ps1,
 Jetracer,喷气赛车,,ps1,
-Jewel Bem Hunter Lime with Paint Maker,宝石猎人莱姆 附涂装制作,,ps1,宝石全职猎人莱姆 附涂装制作
+Jewel Bem Hunter Lime with Paint Maker,宝石猎人莱姆 附涂装制作,,ps1,
 JGTC - All Japan Grand Touring Car Championship,JGTC 全日本房车锦标赛,,ps1,
 Jigoku Sensei Nube,地狱老师,,ps1,
 Jigsaw Island - Japan Graffiti,拼图岛 日本涂鸦,,ps1,
@@ -10310,7 +10310,7 @@ Kids Station - Ultraman Cosmos,儿童站 奥特曼高斯,,ps1,儿童站 超人�
 Kids Station - Unten Daisuki - Doki Doki - Norimono Daibouken,儿童站 最爱驾驶 心跳 交通工具大冒险,,ps1,
 Kids Station - Yancharu Moncha,儿童站 Yancharu Moncha,,ps1,
 Kiganjou,祈愿城,,ps1,
-Kikuni Masahiko Jirushi - Warau Fukei-san Pachi-Slot Hunter,菊池正美标记 笑的警官 柏青嫂猎人,,ps1,菊池正美标记 笑的警官 柏青嫂全职猎人
+Kikuni Masahiko Jirushi - Warau Fukei-san Pachi-Slot Hunter,菊池正美标记 笑的警官 柏青嫂猎人,,ps1,
 Kileak - The Blood,基利克 血,,ps1,
 Kileak - The DNA Imperative,基利克 DNA指令,,ps1,
 "Kileak, The Blood 2 - Reason in Madness",基利克 血2 疯狂中的理性,,ps1,
@@ -10558,7 +10558,7 @@ M_M's - Shell Shocked,M&M's 壳震,,ps1,
 Maboroshi Tsukiyo - Tsukiyono Kitan,幻月 月夜奇谭,,ps1,
 Mach GoGoGo,马赫GoGoGo,,ps1,
 Machine Head,机械头,,ps1,
-Machine Hunter,机械猎人,,ps1,机械全职猎人
+Machine Hunter,机械猎人,,ps1,
 Macross Digital Mission VF-X,超时空要塞 数字任务VF-X,,ps1,
 Macross Plus - Game Edition,超时空要塞Plus 游戏版,,ps1,
 Macross VF-X2,超时空要塞VF-X2,,ps1,
@@ -10730,7 +10730,7 @@ Minna no Golf 2,大众高尔夫2,,ps1,
 Minna no Kanji Kyoushitsu - Chousen! Kanji Kentei,大家的汉字教室 挑战！汉字检定,,ps1,
 Minna no Shiiku Kyoushitsu - Kuwagata-hen,大家的饲养教室 锹形虫篇,,ps1,
 Minna no Takaramono - Watashi no Licca-chan - Otetsudai o Shiyou,大家的宝物 我的莉卡娃娃 来帮忙吧,,ps1,
-Minnya de Ghost Hunter,大家一起 幽灵猎人,,ps1,大家一起 幽灵全职猎人
+Minnya de Ghost Hunter,大家一起 幽灵猎人,,ps1,
 Minton Keibu no Sousa File - Doukeshi Satsujin Jiken,明顿警部的搜查档案 小丑杀人事件,,ps1,
 Miracle Jim no Bassing Beat,奇迹吉姆的鲈钓节拍,,ps1,
 Miracle Jumpers,奇迹跳跃者,,ps1,
@@ -11066,7 +11066,7 @@ NOeL - Not Digital,NOeL 非数字,,ps1,
 NOeL 3 - Mission on the Line,NOeL 3 在线任务,,ps1,
 Noon,正午,,ps1,
 Norse by Norsewest - The Return of the Lost Vikings,北方人 失落维京人归来,,ps1,
-Not Treasure Hunter,不是寻宝猎人,,ps1,不是寻宝全职猎人
+Not Treasure Hunter,不是寻宝猎人,,ps1,
 "Note, The",笔记,,ps1,
 Novastorm,新星风暴,,ps1,
 Novels - Game Center Arashi R,小说 游戏中心阿岚R,,ps1,
@@ -12237,10 +12237,10 @@ Sub,潜艇,,ps1,
 Subete ga F ni Naru,一切变为F,,ps1,
 Subete ga F ni Naru - The Perfect Insider,一切变为F 完美内幕者,,ps1,
 Submarine Commander,潜艇指挥官,,ps1,
-Submarine Hunter Shachi,潜艇猎人 沙奇,,ps1,潜艇全职猎人 沙奇
+Submarine Hunter Shachi,潜艇猎人 沙奇,,ps1,
 Suchie-Pai Adventure - Doki Doki Nightmare,素知派冒险 心跳噩梦,,ps1,
 Suiko Enbu,水浒演武,,ps1,
-Suizokukan Project - Fish Hunter e no Michi,水族馆计划 通往鱼类猎人之道,,ps1,水族馆计划 通往鱼类全职猎人之道
+Suizokukan Project - Fish Hunter e no Michi,水族馆计划 通往鱼类猎人之道,,ps1,
 Summon Night,召唤之夜,,ps1,
 Summon Night 2,召唤之夜2,,ps1,
 Suna no Embrace - Edin no Sato no Navel,沙之拥抱 埃丁之村之脐,,ps1,
@@ -12288,7 +12288,7 @@ SuperLite 1500 Series - Ano Ko Doko no Ko - Endless Season,超级廉价1500系�
 SuperLite 1500 Series - Asteroids,超级廉价1500系列 小行星,,ps1,
 SuperLite 1500 Series - Asuka 120% Final - Burning Fest. Final,超级廉价1500系列 飞鸟120% 最终 燃烧祭典 最终,,ps1,
 SuperLite 1500 Series - Battle Qix,超级廉价1500系列 战斗Qix,,ps1,
-SuperLite 1500 Series - Battle Sugoroku the Hunter - A.R.0062,超级廉价1500系列 战斗双六 猎人 A.R.0062,,ps1,超级廉价1500系列 战斗双六 全职猎人 A.R.0062
+SuperLite 1500 Series - Battle Sugoroku the Hunter - A.R.0062,超级廉价1500系列 战斗双六 猎人 A.R.0062,,ps1,
 SuperLite 1500 Series - Bomboat,超级廉价1500系列 炸弹船,,ps1,
 SuperLite 1500 Series - Burn Out,超级廉价1500系列 燃尽,,ps1,
 SuperLite 1500 Series - Card II,超级廉价1500系列 纸牌II,,ps1,
@@ -12795,7 +12795,7 @@ Value 1500 - The Murasaki Kinshiro,超值1500 紫金四郎,,ps1,
 Value 1500 - The Shanghai,超值1500 上海,,ps1,
 Vampir - Kyuuketsuki Densetsu,吸血鬼 吸血鬼传说,,ps1,
 Vampire - The Night Warriors,吸血鬼 夜之战士,,ps1,
-Vampire Hunter D,吸血鬼猎人D,,ps1,吸血鬼全职猎人D
+Vampire Hunter D,吸血鬼猎人D,,ps1,
 Vampire Savior - EX Edition,吸血鬼救世主 EX版,,ps1,
 Vanark,瓦纳克,,ps1,
 Vandal Hearts - Ushinawareta Kodai Bunmei,光明战记 失落古代文明,,ps1,
@@ -13358,7 +13358,7 @@ Wipeout XL,反重力赛车 XL,,ps1,
 4 Kyouka Perfect Clear DS - Eigo Onsei Tsuki,4科满分通关DS 附英语发音,,nds,
 42 All-Time Classics,42款经典游戏,,nds,
 5-kyuu kara 1-kyuu Kanzen Taiou Saishin Kako Mondai - Nijishiken Taisaku - Eiken Kanzenban,从5级到1级完全对应最新真题 二次考试对策 英检完全版,,nds,
-5-Nen Kanji Keisan Nigate Hunter DS,五年级汉字计算弱项猎人DS,,nds,五年级汉字计算弱项全职猎人DS
+5-Nen Kanji Keisan Nigate Hunter DS,五年级汉字计算弱项猎人DS,,nds,
 50 Jeux Incontournables,50款必玩游戏,,nds,
 50 More Classic Games,50款更多经典游戏,,nds,
 7 Wonders - Treasures of Seven,七大奇迹 七之宝藏,,nds,
@@ -13687,7 +13687,7 @@ Bokujou Monogatari - KiraKira Taiyou to Nakama-tachi,牧场物语 闪亮太阳�
 Bokujou Monogatari - Youkoso! Kaze no Bazaar e,牧场物语 欢迎！来到风之集市,,nds,
 Bokura no Taiyou - Django _ Sabata,我们的太阳 强哥与萨巴塔,,nds,
 Bokura no Television Game Kentei - Pikotto! Udedameshi,我们的电视游戏检定 啪叽！手腕测试,,nds,
-Bokura wa Kaseki Horider,我们是化石猎人,,nds,我们是化石全职猎人
+Bokura wa Kaseki Horider,我们是化石猎人,,nds,
 Bolt,闪电狗,,nds,
 Bolt - Be-Awesome Edition,闪电狗 超棒版,,nds,
 Bomber Man,炸弹人,,nds,
@@ -13731,7 +13731,7 @@ Bubble Bobble - Double Shot,泡泡龙 双重射击,,nds,
 Bubble Bobble DS,泡泡龙DS,,nds,
 Bubble Bobble Revolution,泡泡龙 革命,,nds,
 Bubble Guppies,泡泡孔雀鱼,,nds,
-Buffy the Vampire Slayer - Sacrifice,吸血鬼猎人巴菲 牺牲,,nds,吸血鬼全职猎人巴菲 牺牲
+Buffy the Vampire Slayer - Sacrifice,吸血鬼猎人巴菲 牺牲,,nds,
 Build-A-Bear Workshop - Ou Se Font les Meilleurs Amis,做泰迪熊工坊 最好的朋友在这里诞生,,nds,
 Build-A-Bear Workshop - Welcome to Hugsville,做泰迪熊工坊 欢迎来到拥抱镇,,nds,
 Build-A-Bear Workshop - Where Best Friends Are Made,做泰迪熊工坊 最好的朋友在此诞生,,nds,
@@ -13821,7 +13821,7 @@ Chibi Maruko-chan DS - Maru-chan no Machi,樱桃小丸子DS 小丸子的街道,,
 Chibi-Robo! - Park Patrol,小小机器人！公园巡逻,,nds,
 Chicken Attack DS,小鸡攻击DS,,nds,
 Chicken Blaster,小鸡爆破,,nds,
-Chicken Hunter,小鸡猎人,,nds,小鸡全职猎人
+Chicken Hunter,小鸡猎人,,nds,
 Chicken Little - Ace in Action,四眼天鸡 行动王牌,,nds,
 Chicken Little - Uchuu Saikyou no Team,四眼天鸡 宇宙最强战队,,nds,
 "Chiffres et des Lettres, Des - L'Entrainement Cerebral Maximum!",数字与字母 大脑极限训练！,,nds,
@@ -14955,8 +14955,8 @@ Jackass - The Game DS,蠢蛋搞怪秀 游戏DS,,nds,
 Jacqueline Wilson's Tracy Beaker - The Game,杰奎琳·威尔逊的翠西·比克 游戏,,nds,
 Jagged Alliance,铁血联盟,,nds,
 Jaka Jaka Music! M09,加卡加卡音乐！M09,,nds,
-Jake Hunter - Detective Chronicles,杰克猎人 侦探编年史,,nds,杰克全职猎人 侦探编年史
-Jake Hunter Detective Story - Memories of the Past,杰克猎人侦探故事 往昔的记忆,,nds,杰克全职猎人侦探故事 往昔的记忆
+Jake Hunter - Detective Chronicles,杰克猎人 侦探编年史,,nds,
+Jake Hunter Detective Story - Memories of the Past,杰克猎人侦探故事 往昔的记忆,,nds,
 Jake Power - Firefighter,杰克·鲍尔 消防员,,nds,
 Jake Power - Fireman,杰克·鲍尔 消防员,,nds,
 Jake Power - Handyman,杰克·鲍尔 杂工,,nds,
@@ -16692,7 +16692,7 @@ Sega Presents - Touch Darts,世嘉呈献 触摸飞镖,,nds,
 Seitokai no Ichizon - DS Suru Seitokai,学生会的一存 DS学生会,,nds,
 Sekai Fushigi Hakken! DS - Densetsu no Hitoshi-kun Ningyou o Sagase!,世界不可思议发现！DS 去寻找传说中的艺人偶！,,nds,
 Sekai no Gohan - Shaberu! DS Oryouri Navi,世界的美食 会说话的！DS料理导航,,nds,
-Sekai no Hate made ItteQ! - Chinjuu Hunter Imoto no Daibouken,直到世界尽头ItteQ！ 珍兽猎人妹妹的大冒险,,nds,直到世界尽头ItteQ！ 珍兽全职猎人妹妹的大冒险
+Sekai no Hate made ItteQ! - Chinjuu Hunter Imoto no Daibouken,直到世界尽头ItteQ！ 珍兽猎人妹妹的大冒险,,nds,
 Sekai no Shougi,世界将棋,,nds,
 Sekai wa Atashi de Mawatteru,世界以我为中心转动,,nds,
 Sekaiju no Meikyuu,世界树迷宫,,nds,
@@ -16878,7 +16878,7 @@ So Blonde - Back to the Island,如此金发 重返岛屿,,nds,
 Sofie - Josefines Lillesoester - Hoensefoetter og Guleroetter,索菲 约瑟菲娜的小妹 小鸡与金鸡,,nds,
 "Sofie - Josefines Lillesoester - Syng, Lek og Laer",索菲 约瑟菲娜的小妹 唱、玩、学,,nds,
 Sokoban DS,推箱子DS,,nds,
-Solatorobo - Red the Hunter,索拉托罗波 红色猎人,,nds,索拉托罗波 红色全职猎人
+Solatorobo - Red the Hunter,索拉托罗波 红色猎人,,nds,
 Solatorobo - Sorekara Coda e,索拉托罗波 从那之后到终曲,,nds,
 Solitaire DS,接龙DS,,nds,
 Solitaire Mahjong - Ancient China Adventure,接龙麻将 古代中国冒险,,nds,
@@ -17030,7 +17030,7 @@ Super Dodgeball Brawlers,超级躲避球斗士,,nds,
 Super Fahrschule,超级驾校,,nds,
 Super Fun Chess,超级趣味国际象棋,,nds,
 Super Fun Sudoku,超级趣味数独,,nds,
-Super Kaseki Horider,超级化石猎人,,nds,超级化石全职猎人
+Super Kaseki Horider,超级化石猎人,,nds,
 Super Monkey Ball - Touch _ Roll,超级猴子球 触摸与滚动,,nds,
 Super Monkey Ball DS,超级猴子球DS,,nds,
 Super Princess Peach,超级碧琪公主,,nds,超级碧奇公主|超级桃花公主
@@ -17770,8 +17770,8 @@ Mega Man Zero Collection,洛克人Zero 合集,,nds,
 Mega Man ZX,洛克人ZX,,nds,
 Mega Man ZX - Advent,洛克人ZX 降临,,nds,
 Metal Slug 7,合金弹头7,,nds,越南战役7
-Metroid Prime - Hunters,银河战士Prime 猎人,,nds,银河战士Prime 全职猎人|密特罗德Prime 猎人|密特罗德Prime 全职猎人
-Metroid Prime - Hunters - First Hunt,银河战士Prime 猎人 首次狩猎,,nds,银河战士Prime 全职猎人 首次狩猎|密特罗德Prime 猎人 首次狩猎|密特罗德Prime 全职猎人 首次狩猎
+Metroid Prime - Hunters,银河战士Prime 猎人,,nds,密特罗德Prime 猎人
+Metroid Prime - Hunters - First Hunt,银河战士Prime 猎人 首次狩猎,,nds,密特罗德Prime 猎人 首次狩猎
 Metroid Prime Pinball,银河战士Prime 弹珠台,,nds,密特罗德Prime 弹珠台
 Need for Speed - Nitro,极品飞车 氮气,,nds,极速快感 氮气
 Ninja Gaiden - Dragon Sword,忍者龙剑传 龙剑,,nds,
@@ -19876,7 +19876,7 @@ Sou Setsu Ryuu - Double Dragon,双截龙,,nes,
 Sou Setsu Ryuu II - The Revenge,双截龙II 复仇,,nes,
 Sou Setsu Ryuu III - The Rosetta Stone,双截龙III 罗塞塔石,,nes,
 South Park Zelda,南方公园塞尔达,,nes,南方公园萨尔达
-Space Hunter,太空猎人,,nes,太空全职猎人
+Space Hunter,太空猎人,,nes,
 Space Shadow,太空之影,,nes,
 Space Shuttle Project,航天飞机计划,,nes,
 Spaceship Invasion,太空船入侵,,nes,
@@ -19911,7 +19911,7 @@ Starship Hector,星舰赫克托,,nes,
 StarTropics,星之热带,,nes,
 Stealth ATF,隐形战机ATF,,nes,
 STED - Iseki Wakusei no Yabou,STED 遗迹行星的野心,,nes,
-Stick Hunter - Exciting Ice Hockey,冰球杆猎人 刺激冰球,,nes,冰球杆全职猎人 刺激冰球
+Stick Hunter - Exciting Ice Hockey,冰球杆猎人 刺激冰球,,nes,
 Stinger,毒刺,,nes,
 Strange Mario Bros.,奇怪马力欧兄弟,,nes,奇怪马里奥兄弟|奇怪玛莉欧兄弟|奇怪玛利欧兄弟
 Strange Mario Bros. - Older - Levels Only,奇怪马力欧兄弟 旧版仅关卡,,nes,奇怪马里奥兄弟 旧版仅关卡|奇怪玛莉欧兄弟 旧版仅关卡|奇怪玛利欧兄弟 旧版仅关卡
@@ -19993,7 +19993,7 @@ Super Sports Challenge,超级运动挑战,,nes,
 Super Sports Challenge - Quattro Sports v2,超级运动挑战 夸特罗运动 v2,,nes,
 Super Sports Challenge - Quattro Sports v3,超级运动挑战 夸特罗运动 v3,,nes,
 Super Sprint,超级冲刺,,nes,
-Super Spy Hunter,超级侦察猎人,,nes,超级侦察全职猎人
+Super Spy Hunter,超级侦察猎人,,nes,
 Super Star Force,超级星际力量,,nes,
 Super Stick Bros. v2.1,超级棍棒兄弟 v2.1,,nes,
 Super Team Games,超级团队游戏,,nes,
@@ -20409,7 +20409,7 @@ Zoda's Revenge - StarTropics II,佐达的复仇 星之热带II,,nes,
 Zoids - Chuuou Tairiku no Tatakai,索伊德 中央大陆之战,,nes,
 Zoids 2 - Zenebas no Gyakushuu,索伊德2 泽内巴斯的逆袭,,nes,
 Zoids Mokushiroku,索伊德默示录,,nes,
-Zombie Hunter,僵尸猎人,,nes,僵尸全职猎人
+Zombie Hunter,僵尸猎人,,nes,
 Zombie Nation,僵尸国度,,nes,
 Zunou Senkan Galg,头脑战舰加尔格,,nes,
 Bomberman Collection,炸弹人合集,,nes,
@@ -20640,7 +20640,7 @@ Alex Kidd no Miracle World,阿莱克斯·基德的奇迹世界,,wii,
 Alien Crush,异形弹珠,,wii,
 Alien Crush Returns,异形弹珠 归来,,wii,
 Alien Monster Bowling League,外星怪物保龄球联盟,,wii,
-All Round Hunter,全能猎人,,wii,全能全职猎人
+All Round Hunter,全能猎人,,wii,
 All Star Cheer Squad 2,全明星啦啦队2,,wii,
 All Star Cheerleader 2,全明星啦啦队2,,wii,
 All Star Karate,全明星空手道,,wii,
@@ -20748,7 +20748,7 @@ Big Beach Sports,大型沙滩运动,,wii,
 Big Beach Sports 2,大型沙滩运动2,,wii,
 Big Brain Academy - Wii Degree,脑力学院 Wii学位,,wii,
 Big Brain Academy for Wii,脑力学院 Wii,,wii,
-Big Buck Hunter Pro,大鹿猎人专业版,,wii,大鹿全职猎人专业版
+Big Buck Hunter Pro,大鹿猎人专业版,,wii,
 Big Catch - Bass Fishing 2,大收获 鲈鱼钓2,,wii,
 Big Family Games,大家庭游戏,,wii,
 Big Kahuna Party,大卡胡纳派对,,wii,
@@ -20828,12 +20828,12 @@ Bust-A-Move Bash!,泡泡龙 狂欢！,,wii,
 Bust-a-Move Plus!,泡泡龙 Plus！,,wii,
 Cabela's Adventure Camp,卡贝拉斯探险营,,wii,
 Cabela's African Adventures,卡贝拉斯非洲探险,,wii,
-Cabela's Big Game Hunter 2010,卡贝拉斯大猎物猎人2010,,wii,卡贝拉斯大猎物全职猎人2010
-Cabela's Big Game Hunter 2012,卡贝拉斯大猎物猎人2012,,wii,卡贝拉斯大猎物全职猎人2012
+Cabela's Big Game Hunter 2010,卡贝拉斯大猎物猎人2010,,wii,
+Cabela's Big Game Hunter 2012,卡贝拉斯大猎物猎人2012,,wii,
 Cabela's Dangerous Hunts 2011 - Special Edition,卡贝拉斯危险狩猎2011 特别版,,wii,
 Cabela's Dangerous Hunts 2013,卡贝拉斯危险狩猎2013,,wii,
 Cabela's Hunting Expeditions,卡贝拉斯狩猎远征,,wii,
-Cabela's Monster Buck Hunter,卡贝拉斯巨鹿猎人,,wii,卡贝拉斯巨鹿全职猎人
+Cabela's Monster Buck Hunter,卡贝拉斯巨鹿猎人,,wii,
 Cabela's Survival - Shadows of Katmai,卡贝拉斯求生 卡特迈之影,,wii,
 Caduceus - New Blood,神使之杖 新血,,wii,
 Caduceus Z - Futatsu no Chou Shittou,神使之杖Z 双超执刀,,wii,
@@ -22269,9 +22269,9 @@ Tom Clancy's H.A.W.X. 2,汤姆·克兰西 鹰击长空2,,wii,
 Tomb Raider_ Anniversary,古墓丽影 周年纪念,,wii,
 Tomena Sanner,停不住先生,,wii,
 Tomena Sanner Wii,停不住先生 Wii,,wii,
-Top Hunter - Roddy & Cathy,顶级猎人 罗迪与凯茜,,wii,顶级全职猎人 罗迪与凯茜
+Top Hunter - Roddy & Cathy,顶级猎人 罗迪与凯茜,,wii,
 Top Shot Arcade,顶级射击 街机,,wii,
-Top Shot Dinosaur Hunter,顶级射击 恐龙猎人,,wii,顶级射击 恐龙全职猎人
+Top Shot Dinosaur Hunter,顶级射击 恐龙猎人,,wii,
 Top Spin 4,顶尖旋转4,,wii,
 Top Trumps Adventures,王牌卡冒险,,wii,
 Toribash,鸟肌格斗,,wii,
@@ -22580,9 +22580,9 @@ Mega Man 9,洛克人9,,wii,
 Mega Man X2,洛克人X2,,wii,
 Metroid Prime 2 - Dark Echoes,银河战士 究极2 黑暗回响,,wii,密特罗德 究极2 黑暗回响
 Metroid Prime Trilogy,银河战士 究极三部曲,,wii,密特罗德 究极三部曲
-Monster Hunter 3 Hunters Guild Card,怪物猎人3 猎人公会卡,,wii,怪物全职猎人3 全职猎人公会卡|魔物猎人3 猎人公会卡|魔物全职猎人3 全职猎人公会卡
-Monster Hunter 3 tri-,怪物猎人3 tri-,,wii,怪物全职猎人3 tri-|魔物猎人3 tri-|魔物全职猎人3 tri-
-Monster Hunter G Hunters Guild Card,怪物猎人G 猎人公会卡,,wii,怪物全职猎人G 全职猎人公会卡|魔物猎人G 猎人公会卡|魔物全职猎人G 全职猎人公会卡
+Monster Hunter 3 Hunters Guild Card,怪物猎人3 猎人公会卡,,wii,魔物猎人3 猎人公会卡
+Monster Hunter 3 tri-,怪物猎人3 tri-,,wii,魔物猎人3 tri-
+Monster Hunter G Hunters Guild Card,怪物猎人G 猎人公会卡,,wii,魔物猎人G 猎人公会卡
 NiGHTS - Hoshi Furu Yoru no Monogatari,飞天幽梦 星降之夜物语,,wii,
 NiGHTS_ Journey of Dreams,飞天幽梦 梦境之旅,,wii,
 Ogre Battle - The March of the Black Queen,奥伽战争 黑女王的进军,,wii,
@@ -22736,7 +22736,7 @@ Yoshi's Story,耀西物语,,wii,
 2 Games in One! - Gauntlet + Rampart,双合一！铁手套+堡垒,,gba,
 2 Games in One! - Marble Madness + Klax,双合一！疯狂弹珠+克拉克斯,,gba,
 2 Games in One! - Paperboy + Rampage,双合一！送报童+狂暴,,gba,
-2 Games in One! - Spy Hunter + Super Sprint,双合一！间谍猎人+超级冲刺,,gba,双合一！间谍全职猎人+超级冲刺
+2 Games in One! - Spy Hunter + Super Sprint,双合一！间谍猎人+超级冲刺,,gba,
 2 Great Games! - Pac-Man World + Ms. Pac-Man - Maze Madness,双佳作！吃豆人世界+吃豆人小姐 迷宫疯狂,,gba,
 2 in 1 - Asterix _ Obelix - Bash Them All! + Asterix _ Obelix XXL,二合一 阿斯特里克斯与奥贝利克斯 痛打一场！+阿斯特里克斯与奥贝利克斯 XXL,,gba,
 2 in 1 - V-Rally 3 + Stuntman,二合一 V拉力3+特技车手,,gba,
@@ -22896,9 +22896,9 @@ Broken Circle,破碎之环,,gba,
 Brother Bear,熊的传说,,gba,
 Bruce Lee - Return of the Legend,李小龙 传奇归来,,gba,
 Bubble Bobble - Old _ New,泡泡龙 新旧合集,,gba,
-Buffy - Im Bann der Daemonen - Koenig Darkhuls Zorn,吸血鬼猎人巴菲 恶魔的诅咒 达克胡尔王之怒（德版）,,gba,吸血鬼全职猎人巴菲 恶魔的诅咒 达克胡尔王之怒（德版）
-Buffy contre les Vampires - La Colere de Darkhul,吸血鬼猎人巴菲 达克胡尔之怒（法版）,,gba,吸血鬼全职猎人巴菲 达克胡尔之怒（法版）
-Buffy the Vampire Slayer - Wrath of the Darkhul King,吸血鬼猎人巴菲 达克胡尔王之怒,,gba,吸血鬼全职猎人巴菲 达克胡尔王之怒
+Buffy - Im Bann der Daemonen - Koenig Darkhuls Zorn,吸血鬼猎人巴菲 恶魔的诅咒 达克胡尔王之怒（德版）,,gba,
+Buffy contre les Vampires - La Colere de Darkhul,吸血鬼猎人巴菲 达克胡尔之怒（法版）,,gba,
+Buffy the Vampire Slayer - Wrath of the Darkhul King,吸血鬼猎人巴菲 达克胡尔王之怒,,gba,
 Bura Bura Donkey,摇摇晃晃大金刚,,gba,摇摇晃晃森喜刚
 Butt-Ugly Martians - B.K.M. Battles,丑火星人 BKM对战,,gba,
 Cabbage Patch Kids - The Patch Puppy Rescue,菜娃娃 救援小狗,,gba,
@@ -23032,8 +23032,8 @@ Disney's Party,迪士尼派对,,gba,
 Disneys Prinzessinnen,迪士尼公主（德版）,,gba,
 DK - King of Swing,大金刚 摇摆之王,,gba,森喜刚 摇摆之王
 Dogz - Fashion,狗狗 时尚,,gba,
-Dokapon - Monster Hunter,多卡邦 怪物猎人,,gba,多卡邦 怪物全职猎人|多卡邦 魔物猎人|多卡邦 魔物全职猎人
-Dokapon Q - Monster Hunter!,多卡邦Q 怪物猎人！,,gba,多卡邦Q 怪物全职猎人！|多卡邦Q 魔物猎人！|多卡邦Q 魔物全职猎人！
+Dokapon - Monster Hunter,多卡邦 怪物猎人,,gba,多卡邦 魔物猎人
+Dokapon Q - Monster Hunter!,多卡邦Q 怪物猎人！,,gba,多卡邦Q 魔物猎人！
 Dokidoki Cooking Series 1 - Komugi-chan no Happy Cake,心跳料理系列1 小麦酱的快乐蛋糕,,gba,
 Dokidoki Cooking Series 2 - Gourmet Kitchen - Suteki na Obentou,心跳料理系列2 美食厨房 美味便当,,gba,
 Dokodemo Taikyoku - Yakuman Advance,随时随地对战 役满 Advance,,gba,
@@ -23932,7 +23932,7 @@ Hudson Best Collection Vol. 5 - Shooting Collection,Hudson精选集 第5卷 射�
 Hudson Best Collection Vol. 6 - Bouken-jima Collection,Hudson精选集 第6卷 冒险岛合集,,gba,
 Hugo - The Evil Mirror Advance,雨果 邪恶之镜 Advance,,gba,
 Hugo 2 in 1,雨果 二合一,,gba,
-Hunter X Hunter - Minna Tomodachi Daisakusen!!,全职猎人 大家做好朋友大作战！！,,gba,猎人 大家做好朋友大作战！！
+Hunter X Hunter - Minna Tomodachi Daisakusen!!,全职猎人 大家做好朋友大作战！！,,gba,
 Huo-Wen Zhanji - Fengyin Zhi Jian,火纹战记 封印之剑（拼音版）,,gba,
 I Spy Challenger!,我爱找 挑战者！,,gba,
 Ice Age,冰川时代,,gba,
@@ -24456,7 +24456,7 @@ Samurai Jack - The Amulet of Time,武士杰克 时之护符,,gba,
 Sanrio Puroland - All Characters,三丽鸥彩虹乐园 全角色,,gba,
 Santa Claus Jr. Advance,小圣诞老人 Advance,,gba,
 "Santa Clause 3, The - The Escape Clause",圣诞老人3 逃生条款,,gba,
-Scan Hunter - Sennen Kaigyo o Oe!,扫描猎人 追寻千年怪鱼！,,gba,扫描全职猎人 追寻千年怪鱼！
+Scan Hunter - Sennen Kaigyo o Oe!,扫描猎人 追寻千年怪鱼！,,gba,
 Scooby-Doo,史酷比,,gba,
 Scooby-Doo 2 - Monsters Unleashed,史酷比2 怪兽横行,,gba,
 "Scorpion King, The - Sword of Osiris",蝎子王 奥西里斯之剑,,gba,
@@ -24537,7 +24537,7 @@ SpongeBob SquarePants and Friends in Freeze Frame Frenzy,海绵宝宝与朋友 �
 "SpongeBob SquarePants Movie, The",海绵宝宝电影版,,gba,
 Sports Illustrated for Kids - Baseball,儿童体育画报 棒球,,gba,
 Sports Illustrated for Kids - Football,儿童体育画报 橄榄球,,gba,
-Sportsmans Pack 2 in 1 - Cabela's Big Game Hunter + Rapala Pro Fishing,猎人双合一 卡贝拉大猎物猎人与拉帕拉职业钓鱼,,gba,全职猎人双合一 卡贝拉大猎物全职猎人与拉帕拉职业钓鱼
+Sportsmans Pack 2 in 1 - Cabela's Big Game Hunter + Rapala Pro Fishing,猎人双合一 卡贝拉大猎物猎人与拉帕拉职业钓鱼,,gba,
 Spy Kids 3-D - Game Over,间谍小子3-D 游戏结束,,gba,
 Spy Kids Challenger,间谍小子 挑战者,,gba,
 Spy Muppets - License to Croak,间谍布偶 杀蛙执照,,gba,
@@ -24665,7 +24665,7 @@ Trollz - Hair Affair!,巨魔娃娃 头发事件！,,gba,
 Tron 2.0 - Killer App,创2.0 杀手程序,,gba,
 Tsuukin Hitofude,通勤一笔,,gba,
 Turbo Turtle Adventure,涡轮龟冒险,,gba,
-Turok Advance,恐龙猎人 Advance,,gba,恐龙全职猎人 Advance
+Turok Advance,恐龙猎人 Advance,,gba,
 Tweety and the Magic Gems,翠儿与魔法宝石,,gba,
 Tweety no Hearty Party,翠儿的温馨派对,,gba,
 Twin Series 1 - Mezase Debut! - Fashion Designer Monogatari + Kawaii Pet Game Gallery 2,双系列1 目标是出道！时装设计师物语+可爱宠物游戏画廊2,,gba,
@@ -26610,7 +26610,7 @@ Pokemon-e TCG - Skyridge - F-42-# - Noctowl,宝可梦-e 集换卡 天空山脊 F
 Pokemon-e TCG - Skyridge - F-43-# - Fast Ball,宝可梦-e 集换卡 天空山脊 F-43-# 疾速球,,gba,精灵宝可梦-e 集换卡 天空山脊 F-43-# 疾速球|口袋妖怪-e 集换卡 天空山脊 F-43-# 疾速球|口袋怪兽-e 集换卡 天空山脊 F-43-# 疾速球|宠物小精灵-e 集换卡 天空山脊 F-43-# 疾速球|神奇宝贝-e 集换卡 天空山脊 F-43-# 疾速球
 Pokemon-e TCG - Skyridge - F-44-# - Friend Ball,宝可梦-e 集换卡 天空山脊 F-44-# 友友球,,gba,精灵宝可梦-e 集换卡 天空山脊 F-44-# 友友球|口袋妖怪-e 集换卡 天空山脊 F-44-# 友友球|口袋怪兽-e 集换卡 天空山脊 F-44-# 友友球|宠物小精灵-e 集换卡 天空山脊 F-44-# 友友球|神奇宝贝-e 集换卡 天空山脊 F-44-# 友友球
 Pokemon-e TCG - Skyridge - F-45-# - Lure Ball,宝可梦-e 集换卡 天空山脊 F-45-# 诱饵球,,gba,精灵宝可梦-e 集换卡 天空山脊 F-45-# 诱饵球|口袋妖怪-e 集换卡 天空山脊 F-45-# 诱饵球|口袋怪兽-e 集换卡 天空山脊 F-45-# 诱饵球|宠物小精灵-e 集换卡 天空山脊 F-45-# 诱饵球|神奇宝贝-e 集换卡 天空山脊 F-45-# 诱饵球
-Pokemon-e TCG - Skyridge - F-46-# - Relic Hunter,宝可梦-e 集换卡 天空山脊 F-46-# 遗物猎人,,gba,宝可梦-e 集换卡 天空山脊 F-46-# 遗物全职猎人|精灵宝可梦-e 集换卡 天空山脊 F-46-# 遗物猎人|精灵宝可梦-e 集换卡 天空山脊 F-46-# 遗物全职猎人|口袋妖怪-e 集换卡 天空山脊 F-46-# 遗物猎人|口袋妖怪-e 集换卡 天空山脊 F-46-# 遗物全职猎人
+Pokemon-e TCG - Skyridge - F-46-# - Relic Hunter,宝可梦-e 集换卡 天空山脊 F-46-# 遗物猎人,,gba,精灵宝可梦-e 集换卡 天空山脊 F-46-# 遗物猎人|口袋妖怪-e 集换卡 天空山脊 F-46-# 遗物猎人|口袋怪兽-e 集换卡 天空山脊 F-46-# 遗物猎人|宠物小精灵-e 集换卡 天空山脊 F-46-# 遗物猎人|神奇宝贝-e 集换卡 天空山脊 F-46-# 遗物猎人
 Pokemon-e TCG - Skyridge - F-47-# - Fisherman,宝可梦-e 集换卡 天空山脊 F-47-# 渔夫,,gba,精灵宝可梦-e 集换卡 天空山脊 F-47-# 渔夫|口袋妖怪-e 集换卡 天空山脊 F-47-# 渔夫|口袋怪兽-e 集换卡 天空山脊 F-47-# 渔夫|宠物小精灵-e 集换卡 天空山脊 F-47-# 渔夫|神奇宝贝-e 集换卡 天空山脊 F-47-# 渔夫
 Pokemon-e TCG - Skyridge - F-48-# - Apricorn Maker,宝可梦-e 集换卡 天空山脊 F-48-# 圆柑工匠,,gba,精灵宝可梦-e 集换卡 天空山脊 F-48-# 圆柑工匠|口袋妖怪-e 集换卡 天空山脊 F-48-# 圆柑工匠|口袋怪兽-e 集换卡 天空山脊 F-48-# 圆柑工匠|宠物小精灵-e 集换卡 天空山脊 F-48-# 圆柑工匠|神奇宝贝-e 集换卡 天空山脊 F-48-# 圆柑工匠
 Pokemon-e TCG - Skyridge - F-49-# - Miracle Sphere Alpha,宝可梦-e 集换卡 天空山脊 F-49-# 奇迹球α,,gba,精灵宝可梦-e 集换卡 天空山脊 F-49-# 奇迹球α|口袋妖怪-e 集换卡 天空山脊 F-49-# 奇迹球α|口袋怪兽-e 集换卡 天空山脊 F-49-# 奇迹球α|宠物小精灵-e 集换卡 天空山脊 F-49-# 奇迹球α|神奇宝贝-e 集换卡 天空山脊 F-49-# 奇迹球α
@@ -28942,7 +28942,7 @@ Madou Monogatari I,魔法物语1,,md,
 Magical Hat no Buttobi Turbo! Daibouken,魔法帽的飞跃涡轮！大冒险,,md,
 Mahjong Cop Ryuu - Shiro Ookami no Yabou,麻将警察 龙 白狼之野望,,md,
 Mallet Legend's Whac-a-Critter ~ Mallet Legend,木槌传奇 打地鼠,,md,
-Mamono Hunter Youko - Dai 7 no Keishou,魔物猎人 妖子 第7的继承,,md,魔物全职猎人 妖子 第7的继承|怪物猎人 妖子 第7的继承|怪物全职猎人 妖子 第7的继承
+Mamono Hunter Youko - Dai 7 no Keishou,魔物猎人 妖子 第7的继承,,md,怪物猎人 妖子 第7的继承
 Man Overboard!,有人落水！,,md,
 Maou Renjishi,魔王连狮子,,md,
 Marko,马尔科,,md,
@@ -29391,8 +29391,8 @@ Ayakashi Ninden Kunoichiban Plus,妖华忍传 女忍一号 Plus,,saturn,
 Azel - Panzer Dragoon RPG,阿泽尔 铁甲飞龙RPG,,saturn,
 Baku Baku Animal - Sekai Shiiku Gakari Senshuken,巴库巴库动物 世界饲养员锦标赛,,saturn,
 Baku Baku Animal - World Zookeeper Contest,巴库巴库动物 世界饲养员大赛,,saturn,
-Bakuretsu Hunter,爆烈猎人,,saturn,爆烈全职猎人
-Bakuretsu Hunter R,爆烈猎人R,,saturn,爆烈全职猎人R
+Bakuretsu Hunter,爆烈猎人,,saturn,
+Bakuretsu Hunter R,爆烈猎人R,,saturn,
 Baroque Report - CD Data File,巴洛克报告 CD数据文件,,saturn,
 Batsugun,拔群,,saturn,
 Battle Arena Toshinden Remix,斗神传 竞技场 重混版,,saturn,
@@ -29614,7 +29614,7 @@ Hop Step Idol,跳步偶像,,saturn,
 "Horde, The",部落,,saturn,
 Horror Tour,恐怖之旅,,saturn,
 Houkago Ren'ai Club - Koi no Etude,放学后恋爱俱乐部 恋爱练习曲,,saturn,
-Houma Hunter Lime Perfect Collection,宝魔猎人莱姆 完美合集,,saturn,宝魔全职猎人莱姆 完美合集
+Houma Hunter Lime Perfect Collection,宝魔猎人莱姆 完美合集,,saturn,
 "House of the Dead, The",死亡之屋,,saturn,
 Hyper 3-D Pinball,超级3D弹珠台,,saturn,
 Hyper Duel,超级对决,,saturn,
@@ -30017,8 +30017,8 @@ Ultraman Zukan 3,奥特曼图鉴3,,saturn,超人力霸王图鉴3|咸蛋超人图
 Uno DX,UNO DX,,saturn,
 "Unsolved, The",未解决,,saturn,
 Valora Valley Golf,瓦洛拉山谷高尔夫,,saturn,
-Vampire Hunter - Darkstalkers' Revenge,吸血鬼猎人 恶魔战士的复仇,,saturn,吸血鬼全职猎人 恶魔战士的复仇
-Vampire Hunter - Darkstalkers' Revenge v1.000,吸血鬼猎人 恶魔战士的复仇 v1.000,,saturn,吸血鬼全职猎人 恶魔战士的复仇 v1.000
+Vampire Hunter - Darkstalkers' Revenge,吸血鬼猎人 恶魔战士的复仇,,saturn,
+Vampire Hunter - Darkstalkers' Revenge v1.000,吸血鬼猎人 恶魔战士的复仇 v1.000,,saturn,
 Vampire Savior,吸血鬼救世主,,saturn,
 Vampire Savior - The Lord of Vampire v1.000,吸血鬼救世主 吸血鬼之王 v1.000,,saturn,
 Vatlva,瓦特拉,,saturn,
@@ -31098,7 +31098,7 @@ Bomber Man Max - Yami no Senshi,炸弹人Max 暗之战士,,gbc,
 Bomber Man Quest,炸弹人任务,,gbc,
 Bouken! Dondoko Shima,冒险！咚咚岛,,gbc,
 Brave Saga - Shinshou Astaria,勇者战记 新章阿斯塔利亚,,gbc,
-Buffy the Vampire Slayer,吸血鬼猎人巴菲,,gbc,吸血鬼全职猎人巴菲
+Buffy the Vampire Slayer,吸血鬼猎人巴菲,,gbc,
 "Bug's Life, A",虫虫危机,,gbc,
 Bugs Bunny - Crazy Castle 3,兔八哥 疯狂城堡3,,gbc,
 Bugs Bunny - Crazy Castle 4,兔八哥 疯狂城堡4,,gbc,
@@ -31130,9 +31130,9 @@ Cool Bricks,酷砖块,,gbc,
 Crazy Bikers,疯狂骑手,,gbc,
 Croc,鳄鱼,,gbc,
 Cross Country Racing,越野赛跑,,gbc,
-Cross Hunter - Monster Hunter Version,交叉猎人 怪物猎人版,,gbc,交叉全职猎人 怪物全职猎人版|交叉猎人 魔物猎人版|交叉全职猎人 魔物全职猎人版
-Cross Hunter - Treasure Hunter Version,交叉猎人 宝物猎人版,,gbc,交叉全职猎人 宝物全职猎人版
-Cross Hunter - X Hunter Version,交叉猎人 X猎人版,,gbc,交叉全职猎人 X全职猎人版
+Cross Hunter - Monster Hunter Version,交叉猎人 怪物猎人版,,gbc,交叉猎人 魔物猎人版
+Cross Hunter - Treasure Hunter Version,交叉猎人 宝物猎人版,,gbc,
+Cross Hunter - X Hunter Version,交叉猎人 X猎人版,,gbc,
 Cruis'n Exotica,巡航异域,,gbc,
 Cyborg Kuro-chan - Devil Fukkatsu,赛博黑猫 恶魔复活,,gbc,
 Cyborg Kuro-chan 2 - White Woods no Gyakushuu,赛博黑猫2 白森林的逆袭,,gbc,
@@ -31303,8 +31303,8 @@ Hot Wheels - Stunt Track Driver,风火轮 特技赛道车手,,gbc,
 Hoyle Card Games,霍伊尔纸牌游戏,,gbc,
 Hoyle Casino,霍伊尔赌场,,gbc,
 Hugo 2 1-2,雨果2 1-2,,gbc,
-Hunter x Hunter - Hunter no Keifu,全职猎人 猎人的系谱,,gbc,猎人 猎人的系谱
-Hunter x Hunter - Kindan no Hihou,全职猎人 禁断的秘宝,,gbc,猎人 禁断的秘宝
+Hunter x Hunter - Hunter no Keifu,全职猎人 猎人的系谱,,gbc,
+Hunter x Hunter - Kindan no Hihou,全职猎人 禁断的秘宝,,gbc,
 Hyper Olympic - Winter 2000,超级奥运会 冬季2000,,gbc,
 Hyper Olympic Series - Track _ Field GB,超级奥运会系列 田径 GB,,gbc,
 Ide Yousuke no Mahjong Kyoushitsu GB,井出洋介的麻将教室 GB,,gbc,
@@ -31450,7 +31450,7 @@ Microsoft - The 6 in 1 Puzzle Collection Entertainment Pack,微软 6合1解谜�
 Microsoft - The Best of Entertainment Pack,微软 娱乐包精选,,gbc,
 Microsoft Pinball Arcade,微软弹珠台街机,,gbc,
 Midway presents Arcade Hits - Joust _ Defender,Midway街机精选 长枪与防御者,,gbc,
-Midway presents Arcade Hits - Moon Patrol _ Spy Hunter,Midway街机精选 月球巡逻与间谍猎人,,gbc,Midway街机精选 月球巡逻与间谍全职猎人
+Midway presents Arcade Hits - Moon Patrol _ Spy Hunter,Midway街机精选 月球巡逻与间谍猎人,,gbc,
 Millennium Winter Sports,千禧冬季运动,,gbc,
 Minna no Shougi - Shokyuu Hen,大家的将棋 初级篇,,gbc,
 Minnie _ Friends - Yume no Kuni o Sagashite,米妮与朋友们 寻找梦之国,,gbc,
@@ -31613,7 +31613,7 @@ Robot Poncots - Sun Version,机器人宝贝 太阳版,,gbc,
 Robot Wars - Metal Mayhem,机器人大战 金属狂潮,,gbc,超级机器人大战 金属狂潮|机战 金属狂潮
 Rocket Power - Gettin' Air,火箭动力 起飞,,gbc,
 Rocket Power - La Glisse de l'Extreme,火箭动力 极限滑行（法版）,,gbc,
-Rocky Mountain - Trophy Hunter,落基山 战利品猎人,,gbc,落基山 战利品全职猎人
+Rocky Mountain - Trophy Hunter,落基山 战利品猎人,,gbc,
 "Roi Lion, Le - La Formidable Aventure de Simba",狮子王 辛巴的惊人冒险（法版）,,gbc,
 Rokumon Tengai Mon-Colle-Knight GB,六门天外 Mon-Colle-Knight GB,,gbc,
 Roland Garros French Open,罗兰·加洛斯法国公开赛,,gbc,
@@ -31964,8 +31964,8 @@ Bokujou Monogatari - Shiawase no Uta,牧场物语 幸福之歌,,ngc,
 Bokujou Monogatari - Shiawase no Uta for World,牧场物语 幸福之歌 for World,,ngc,
 Bokujou Monogatari - Wonderful Life,牧场物语 美好生活,,ngc,
 Bokujou Monogatari - Wonderful Life for Girl,牧场物语 美好生活 for Girl,,ngc,
-Buffy contre les Vampires - Chaos Bleeds,吸血鬼猎人巴菲 混沌出血（法版）,,ngc,吸血鬼全职猎人巴菲 混沌出血（法版）
-Buffy im Bann der Daemonen - Chaos Bleeds,吸血鬼猎人巴菲 混沌出血（德版）,,ngc,吸血鬼全职猎人巴菲 混沌出血（德版）
+Buffy contre les Vampires - Chaos Bleeds,吸血鬼猎人巴菲 混沌出血（法版）,,ngc,
+Buffy im Bann der Daemonen - Chaos Bleeds,吸血鬼猎人巴菲 混沌出血（德版）,,ngc,
 Bust-A-Move 3000,泡泡龙3000,,ngc,
 Capcom vs. SNK 2 EO,CAPCOM对SNK 2 EO,,ngc,
 Capcom vs. SNK 2 EO - Millionaire Fighting 2001,CAPCOM对SNK 2 EO 百万富翁格斗2001,,ngc,
@@ -32055,7 +32055,7 @@ Harvest Moon - Another Wonderful Life,牧场物语 又一个美好生活,,ngc,
 Hikaru no Go 3,棋魂3,,ngc,
 Home Run King,本垒打王,,ngc,
 Homeland,家园,,ngc,
-Hunter - The Reckoning,猎人 清算,,ngc,全职猎人 清算
+Hunter - The Reckoning,猎人 清算,,ngc,
 Kaijuu no Shima - Amazing Island,怪兽岛 惊奇岛,,ngc,
 Kero Kero King DX,青蛙王者DX,,ngc,
 Kidou Senshi Gundam - Senshi-tachi no Kiseki,机动战士高达 战士们的轨迹,,ngc,机动战士钢弹 战士们的轨迹|机动战士敢达 战士们的轨迹
@@ -32810,7 +32810,7 @@ Avenger,复仇者,,pcecd,
 Babel,巴别塔,,pcecd,
 Baby Jo - The Super Hero,宝贝乔 超级英雄,,pcecd,
 Bakuden - Unbalance Zone,炸弹电 失衡地带,,pcecd,
-Bakuretsu Hunter - Duo Comic,爆裂猎人 双人漫画,,pcecd,爆裂全职猎人 双人漫画
+Bakuretsu Hunter - Duo Comic,爆裂猎人 双人漫画,,pcecd,
 Bakushou Yoshimoto Shinkigeki,爆笑吉本新喜剧,,pcecd,
 Basted,巴斯特德,,pcecd,
 Battle Shanghai - Dragon's Eye ~ Shanghai III - Dragon's Eye,战斗上海 龙之眼,,pcecd,
@@ -32879,7 +32879,7 @@ Dragon Knight III,龙骑士3,,pcecd,
 Dragon Slayer - The Legend of Heroes,屠龙战记 英雄传说,,pcecd,
 Dragon Slayer - The Legend of Heroes II,屠龙战记 英雄传说2,,pcecd,
 Dungeon Master - Theron's Quest,迷宫大师 塞隆的任务,,pcecd,
-Duo Comic - Bakuretsu Hunter,双人漫画 爆裂猎人,,pcecd,双人漫画 爆裂全职猎人
+Duo Comic - Bakuretsu Hunter,双人漫画 爆裂猎人,,pcecd,
 Efera _ Jiliora - The Emblem from Darkness,艾菲拉与吉莉欧拉 来自黑暗的纹章,,pcecd,
 Eikan wa Kimi ni - Koukou Yakyuu Zenkoku Taikai,荣冠归于你 高中棒球全国大会,,pcecd,
 Eiyuu Sangokushi,英雄三国志,,pcecd,
@@ -32902,7 +32902,7 @@ Far East of Eden - Tengai Makyou - Ziria,远东伊甸 天外魔境 自来也,,pc
 Far East of Eden - Tengai Makyou II - Manji Maru,远东伊甸 天外魔境2 万字丸,,pcecd,
 Farjius no Jakoutei - Neo Metal Fantasy,法吉乌斯的邪皇帝 新金属幻想,,pcecd,
 Faussete Amour,虚伪之爱,,pcecd,
-Fiend Hunter,恶魔猎人,,pcecd,鬼泣|恶魔全职猎人
+Fiend Hunter,恶魔猎人,,pcecd,鬼泣
 Final Zone II,最终地带2,,pcecd,
 Flash Hiders,闪光猎手,,pcecd,
 Force Gear,力量齿轮,,pcecd,
@@ -33014,9 +33014,9 @@ Mahjong on the Beach,沙滩麻将,,pcecd,
 Mahjong Sword - Princess Quest Gaiden,麻将剑 公主任务外传,,pcecd,
 Mahjong Vanilla Syndrome,麻将香草症候群,,pcecd,
 Makai Eiyuuden - Shape Shifter,魔界英雄传 变形者,,pcecd,
-Mamono Hunter Youko - Makai Kara no Tenkousei,魔物猎人妖子 来自魔界的转校生,,pcecd,魔物全职猎人妖子 来自魔界的转校生|怪物猎人妖子 来自魔界的转校生|怪物全职猎人妖子 来自魔界的转校生
-Mamono Hunter Youko - Tooki Yobigoe,魔物猎人妖子 遥远的呼唤,,pcecd,魔物全职猎人妖子 遥远的呼唤|怪物猎人妖子 遥远的呼唤|怪物全职猎人妖子 遥远的呼唤
-Mamono Hunter Youko - Touki Yobigoe,魔物猎人妖子 斗气呼唤,,pcecd,魔物全职猎人妖子 斗气呼唤|怪物猎人妖子 斗气呼唤|怪物全职猎人妖子 斗气呼唤
+Mamono Hunter Youko - Makai Kara no Tenkousei,魔物猎人妖子 来自魔界的转校生,,pcecd,怪物猎人妖子 来自魔界的转校生
+Mamono Hunter Youko - Tooki Yobigoe,魔物猎人妖子 遥远的呼唤,,pcecd,怪物猎人妖子 遥远的呼唤
+Mamono Hunter Youko - Touki Yobigoe,魔物猎人妖子 斗气呼唤,,pcecd,怪物猎人妖子 斗气呼唤
 "Manhole, The",井盖,,pcecd,
 Martial Champion,格斗冠军,,pcecd,
 Mashou Denki - La Valeur,魔将电器 价值,,pcecd,
@@ -33363,7 +33363,7 @@ Hyper Olympics in Nagano 64,长野超级奥运会64,,n64,
 Ide Yosuke no Mahjong Juku,井出洋介的麻将塾,,n64,
 Iggy's Reckin' Balls,伊吉的滚球,,n64,
 Iggy-kun no Bura Bura Poyon,伊吉君的晃荡蹦,,n64,
-In-Fisherman - Bass Hunter 64,钓鱼人 鲈鱼猎人64,,n64,钓鱼人 鲈鱼全职猎人64
+In-Fisherman - Bass Hunter 64,钓鱼人 鲈鱼猎人64,,n64,
 Indy Racing 2000,印地赛车2000,,n64,
 International Superstar Soccer '98,国际超级明星足球'98,,n64,
 International Superstar Soccer 64,国际超级明星足球64,,n64,
@@ -33512,7 +33512,7 @@ Toy Story 2 - Buzz l'Eclair a la Rescousse!,玩具总动员2 巴斯光年救援�
 Toy Story 2 - Buzz Lightyear to the Rescue!,玩具总动员2 巴斯光年救援！,,n64,
 Toy Story 2 - Captain Buzz Lightyear auf Rettungsmission!,玩具总动员2 巴斯光年队长救援任务！（德版）,,n64,
 Transformers - Beast Wars Metals 64,变形金刚 野兽战争 金属版64,,n64,
-Turok - Dinosaur Hunter,图洛克 恐龙猎人,,n64,图洛克 恐龙全职猎人
+Turok - Dinosaur Hunter,图洛克 恐龙猎人,,n64,
 Turok - Legenden des Verlorenen Landes,图洛克 失落之地的传说（德版）,,n64,
 Twisted Edge - Extreme Snowboarding,扭曲边缘 极限单板滑雪,,n64,
 Twisted Edge - Snowboarding,扭曲边缘 单板滑雪,,n64,
@@ -33591,7 +33591,7 @@ Arx Fatalis,阿克斯致命,,xbox,
 Azurik,阿祖里克,,xbox,
 Azurik - Rise of Perathia,阿祖里克 佩拉西亚的崛起,,xbox,
 Bass Pro Shops - Trophy Bass 2007,Bass Pro商店 战利品鲈鱼2007,,xbox,
-Bass Pro Shops - Trophy Hunter 2007,Bass Pro商店 战利品猎人2007,,xbox,Bass Pro商店 战利品全职猎人2007
+Bass Pro Shops - Trophy Hunter 2007,Bass Pro商店 战利品猎人2007,,xbox,
 Beyond Good & Evil,超越善恶,,xbox,
 Bicycle Casino,自行车牌 赌场,,xbox,
 Bicycle Casino Includes - Texas Hold'em,自行车牌赌场 含德州扑克,,xbox,
@@ -33606,7 +33606,7 @@ Break Nine - World Billiards Tournament,突破九号 世界台球锦标赛,,xbox
 Breakdown,崩溃,,xbox,
 Bruce Lee - Quest of the Dragon,李小龙 龙之追寻,,xbox,
 Brute Force,蛮力,,xbox,
-Buffy the Vampire Slayer - Chaos Bleed's,吸血鬼猎人巴菲 混沌出血,,xbox,吸血鬼全职猎人巴菲 混沌出血
+Buffy the Vampire Slayer - Chaos Bleed's,吸血鬼猎人巴菲 混沌出血,,xbox,
 C.A.T. - Cyber Attack Team,C.A.T. 赛博攻击队,,xbox,
 C.A.T. - Cyber Team Attack,C.A.T. 赛博队伍攻击,,xbox,
 Call of Cthulhu - Dark Corners of the Earth,克苏鲁的呼唤 地球的黑暗角落,,xbox,
@@ -33713,7 +33713,7 @@ Gunvalkyrie,枪之女武神,,xbox,
 Half-Life 2,半条命2,,xbox,
 "Hobbit, The",霍比特人,,xbox,
 "House of the Dead III, The",死亡之屋3,,xbox,
-Hunter - The Reckoning Redeemer,猎人 清算 救赎者,,xbox,全职猎人 清算 救赎者
+Hunter - The Reckoning Redeemer,猎人 清算 救赎者,,xbox,
 IHRA Drag Racing 2004,IHRA直线加速赛2004,,xbox,
 Innocent Tears,无罪之泪,,xbox,
 Inside Pitch 2003,内角球2003,,xbox,
@@ -33951,7 +33951,7 @@ Champions Forever Boxing,永远冠军拳击,,pce,
 Chibi Maruko-chan - Quiz de Piihyara,樱桃小丸子 问答咿呀,,pce,
 Chikudenya Toubei - Kubikiri Yakata Yori,竹田屋藤兵卫 自斩首馆,,pce,
 Circus Lido,马戏团利多,,pce,
-City Hunter,城市猎人,,pce,城市全职猎人
+City Hunter,城市猎人,,pce,
 Coryoon - Child of Dragon,科里昂 龙之子,,pce,
 Cross Wiber - Cyber Combat Police,十字维伯 赛博战斗警察,,pce,
 Cyber Core,赛博核心,,pce,
@@ -34210,7 +34210,7 @@ Cloud Master,云上大师,,sms,
 Columns _ Shapes and Columns,宝石方块与形状宝石方块,,sms,
 Comical Machine Gun Joe,滑稽机枪乔,,sms,
 "Cyber Shinobi, The",赛博忍者,,sms,
-Cyborg Hunter,赛博格猎人,,sms,赛博格全职猎人
+Cyborg Hunter,赛博格猎人,,sms,
 Cyborg Z,赛博格Z,,sms,
 Dallyeora Pigu-Wang,飞吧 皮古王（韩版）,,sms,
 Danan - The Jungle Fighter,达南 丛林斗士,,sms,
@@ -34291,7 +34291,7 @@ Marksman Shooting _ Trap Shooting,神枪射击与飞碟射击,,sms,
 Marksman Shooting _ Trap Shooting _ Safari Hunt,神枪射击 三合一套装,,sms,
 Master of Darkness,黑暗之主,,sms,
 Masters of Combat,格斗大师,,sms,
-Maze Hunter 3-D,迷宫猎人3D,,sms,迷宫全职猎人3D
+Maze Hunter 3-D,迷宫猎人3D,,sms,
 Maze Walker,迷宫行者,,sms,
 Megumi Rescue,惠美救援,,sms,
 Miracle Warriors - Seal of The Dark Lord,奇迹战士 暗黑之王的封印,,sms,
@@ -34525,7 +34525,7 @@ RDF - Global Conflict,RDF 全球冲突,,segacd,
 Revenge of the Ninja,忍者复仇,,segacd,
 Revengers of Vengeance,复仇者的复仇,,segacd,
 Rise of the Dragon,龙之崛起,,segacd,
-Rise of the Dragon - A Blade Hunter Mystery,龙之崛起 刀锋猎人疑案,,segacd,龙之崛起 刀锋全职猎人疑案
+Rise of the Dragon - A Blade Hunter Mystery,龙之崛起 刀锋猎人疑案,,segacd,
 Road Avenger,公路复仇者,,segacd,
 Road Blaster FX,公路爆破 FX,,segacd,
 Robo Aleste,机器人阿雷斯特,,segacd,
@@ -34793,7 +34793,7 @@ Batman - Arkham City - Armored Edition,蝙蝠侠 阿卡姆之城 装甲版,,wiiu
 Batman - Arkham City - Armoured Edition,蝙蝠侠 阿卡姆之城 装甲版,,wiiu,
 Batman - Arkham Origins,蝙蝠侠 阿卡姆起源,,wiiu,
 "Book of Unwritten Tales 2, The",无名故事书2,,wiiu,
-Cabela's Big Game Hunter - Pro Hunts,卡贝拉大猎物猎人 职业狩猎,,wiiu,卡贝拉大猎物全职猎人 职业狩猎
+Cabela's Big Game Hunter - Pro Hunts,卡贝拉大猎物猎人 职业狩猎,,wiiu,
 Cocoto Magic Circus 2,可可托魔法马戏团2,,wiiu,
 Dairantou Smash Brothers for Wii U,大乱斗 斯马什兄弟 for Wii U,,wiiu,
 Darksiders - Warmastered Edition,暗黑血统 战神版,,wiiu,
@@ -34827,7 +34827,7 @@ Ginsei Shougi - Kyoutendo Toufuu Raijin,银星将棋 京都 雷神,,wiiu,
 Gotouchi Tetsudou - Gotouchi Chara to Nippon Zenkoku no Tabi,当地铁道 当地角色与日本全国之旅,,wiiu,
 Guitar Hero Live,吉他英雄 Live,,wiiu,
 Hello Kitty Kruisers,Hello Kitty 巡游者,,wiiu,
-Hunter's Trophy 2 - Europa,猎人奖杯2 欧洲,,wiiu,全职猎人奖杯2 欧洲
+Hunter's Trophy 2 - Europa,猎人奖杯2 欧洲,,wiiu,
 Injustice - Gods Among Us,不义联盟 人间之神,,wiiu,
 Injustice - Hero no Gekitotsu,不义联盟 英雄的激突,,wiiu,
 Jett Tailfin,杰特尾鳍,,wiiu,
@@ -34911,15 +34911,15 @@ Mario & Sonic at the Sochi 2014 Olympic Winter Games,马力欧与索尼克 2014�
 Mario & Sonic at the Sochi Olympic,马力欧与索尼克 索契冬奥,,wiiu,马力欧与音速小子 索契冬奥|马力欧与刺猬索尼克 索契冬奥|马里奥与索尼克 索契冬奥|马里奥与音速小子 索契冬奥|马里奥与刺猬索尼克 索契冬奥
 Mario Party 10,马力欧派对10,,wiiu,马里奥派对10|玛莉欧派对10|玛利欧派对10
 Mario Tennis - Ultra Smash,马力欧网球 终极扣杀,,wiiu,马里奥网球 终极扣杀|玛莉欧网球 终极扣杀|玛利欧网球 终极扣杀
-Monster Hunter 3G - HD Ver.,怪物猎人3G HD版,,wiiu,怪物全职猎人3G HD版|魔物猎人3G HD版|魔物全职猎人3G HD版
-Monster Hunter Frontier G - Beginner's Package,怪物猎人 Frontier G 新手包,,wiiu,怪物全职猎人 Frontier G 新手包|魔物猎人 Frontier G 新手包|魔物全职猎人 Frontier G 新手包
-Monster Hunter Frontier G - Memorial Package,怪物猎人 Frontier G 纪念包,,wiiu,怪物全职猎人 Frontier G 纪念包|魔物猎人 Frontier G 纪念包|魔物全职猎人 Frontier G 纪念包
-Monster Hunter Frontier G5 - Premium Package,怪物猎人 Frontier G5 高级包,,wiiu,怪物全职猎人 Frontier G5 高级包|魔物猎人 Frontier G5 高级包|魔物全职猎人 Frontier G5 高级包
-Monster Hunter Frontier G6 - Premium Package,怪物猎人 Frontier G6 高级包,,wiiu,怪物全职猎人 Frontier G6 高级包|魔物猎人 Frontier G6 高级包|魔物全职猎人 Frontier G6 高级包
-Monster Hunter Frontier G7 - Premium Package,怪物猎人 Frontier G7 高级包,,wiiu,怪物全职猎人 Frontier G7 高级包|魔物猎人 Frontier G7 高级包|魔物全职猎人 Frontier G7 高级包
-Monster Hunter Frontier G8 - Premium Package,怪物猎人 Frontier G8 高级包,,wiiu,怪物全职猎人 Frontier G8 高级包|魔物猎人 Frontier G8 高级包|魔物全职猎人 Frontier G8 高级包
-Monster Hunter Frontier G9 - Premium Package,怪物猎人 Frontier G9 高级包,,wiiu,怪物全职猎人 Frontier G9 高级包|魔物猎人 Frontier G9 高级包|魔物全职猎人 Frontier G9 高级包
-Monster Hunter Frontier GG - Premium Package,怪物猎人 Frontier GG 高级包,,wiiu,怪物全职猎人 Frontier GG 高级包|魔物猎人 Frontier GG 高级包|魔物全职猎人 Frontier GG 高级包
+Monster Hunter 3G - HD Ver.,怪物猎人3G HD版,,wiiu,魔物猎人3G HD版
+Monster Hunter Frontier G - Beginner's Package,怪物猎人 Frontier G 新手包,,wiiu,魔物猎人 Frontier G 新手包
+Monster Hunter Frontier G - Memorial Package,怪物猎人 Frontier G 纪念包,,wiiu,魔物猎人 Frontier G 纪念包
+Monster Hunter Frontier G5 - Premium Package,怪物猎人 Frontier G5 高级包,,wiiu,魔物猎人 Frontier G5 高级包
+Monster Hunter Frontier G6 - Premium Package,怪物猎人 Frontier G6 高级包,,wiiu,魔物猎人 Frontier G6 高级包
+Monster Hunter Frontier G7 - Premium Package,怪物猎人 Frontier G7 高级包,,wiiu,魔物猎人 Frontier G7 高级包
+Monster Hunter Frontier G8 - Premium Package,怪物猎人 Frontier G8 高级包,,wiiu,魔物猎人 Frontier G8 高级包
+Monster Hunter Frontier G9 - Premium Package,怪物猎人 Frontier G9 高级包,,wiiu,魔物猎人 Frontier G9 高级包
+Monster Hunter Frontier GG - Premium Package,怪物猎人 Frontier GG 高级包,,wiiu,魔物猎人 Frontier GG 高级包
 Need for Speed - Most Wanted U,极品飞车 最高通缉U,,wiiu,极速快感 最高通缉U
 Ninja Gaiden 3 - Razor's Edge,忍者龙剑传3 刀锋边缘,,wiiu,
 Sonic & All-Stars Racing Transformed,索尼克 全明星赛车 变形,,wiiu,音速小子 全明星赛车 变形|刺猬索尼克 全明星赛车 变形
@@ -34974,9 +34974,9 @@ Gomoku Narabe _ Reversi - Touryuumon,五子棋与黑白棋 登龙门,,ws,
 Hanafuda Shiyouyo,来玩花札吧,,ws,
 Harobots,哈罗机器人,,ws,
 Harobots Rev 1,哈罗机器人 修订1,,ws,
-Hunter X Hunter - Ishi o Tsugu Mono,全职猎人 承石者,,ws,猎人 承石者
-Hunter X Hunter - Ishi wo Tsugu Mono Rev 1,全职猎人 承石者 修订1,,ws,猎人 承石者 修订1
-Hunter X Hunter - Ishi wo Tsugu Mono Rev 2,全职猎人 承石者 修订2,,ws,猎人 承石者 修订2
+Hunter X Hunter - Ishi o Tsugu Mono,全职猎人 承石者,,ws,
+Hunter X Hunter - Ishi wo Tsugu Mono Rev 1,全职猎人 承石者 修订1,,ws,
+Hunter X Hunter - Ishi wo Tsugu Mono Rev 2,全职猎人 承石者 修订2,,ws,
 Itou Junji Uzumaki - Noroi Simulation,伊藤润二 旋涡 诅咒模拟,,ws,
 Kakutou Ryouri Densetsu Bistro Recipe - Wonder Battle Hen,格斗料理传说 小餐馆食谱 神奇战斗篇,,ws,
 Kaze no Klonoa - Moonlight Museum,风之克罗诺亚 月光博物馆,,ws,
@@ -35163,7 +35163,7 @@ The Last Soldier,最后士兵,,neogeo,
 The Super Spy,超级间谍,,neogeo,
 The Ultimate 11 - The SNK Football Championship _ Tokuten Ou - Honoo no Libero,终极十一人 SNK足球锦标赛 得点王 火焰自由人,,neogeo,
 Thrash Rally,狂猛拉力,,neogeo,
-Top Hunter - Roddy _ Cathy,顶级猎人 罗迪与凯茜,,neogeo,顶级全职猎人 罗迪与凯茜
+Top Hunter - Roddy _ Cathy,顶级猎人 罗迪与凯茜,,neogeo,
 Top Player's Golf,顶级选手高尔夫,,neogeo,
 Treasure of the Caribbean,加勒比宝藏,,neogeo,
 V-Liner,V班轮,,neogeo,
@@ -35238,9 +35238,9 @@ Guilty Gear Petit,罪恶装备 小不点,,wsc,
 Guilty Gear Petit 2,罪恶装备 小不点2,,wsc,
 GunPey EX,枪平EX,,wsc,
 Hataraku Chocobo,工作的陆行鸟,,wsc,
-Hunter X Hunter - Greed Island,全职猎人 贪婪之岛,,wsc,猎人 贪婪之岛
-Hunter X Hunter - Michibikareshi Mono,全职猎人 被引导者,,wsc,猎人 被引导者
-Hunter X Hunter - Sorezore no Ketsui,全职猎人 各自的决意,,wsc,猎人 各自的决意
+Hunter X Hunter - Greed Island,全职猎人 贪婪之岛,,wsc,
+Hunter X Hunter - Michibikareshi Mono,全职猎人 被引导者,,wsc,
+Hunter X Hunter - Sorezore no Ketsui,全职猎人 各自的决意,,wsc,
 Inuyasha - Fuuun Emaki,犬夜叉 风云绘卷,,wsc,
 Inuyasha - Kagome no Sengoku Nikki,犬夜叉 戈薇的战国日记,,wsc,
 Inuyasha - Kagome no Yume Nikki,犬夜叉 戈薇的梦日记,,wsc,

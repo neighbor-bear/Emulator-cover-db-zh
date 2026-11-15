@@ -7,10 +7,12 @@
 - **中文名覆盖 100.0%**（exact 77 661 条 + series 0 条，全平台零空名）；36 797 个唯一英文名里 96.1% 有中文（35 368 个）
 - **全部 31 个平台 100% 中文**（FC 13 439 / PS1 9 301 / PS2 8 502 / NDS 7 335 / Wii 6 668 / GBA 5 961 / SFC 3 689 / MD 2 352 / SS 2 294 / 3DS 2 148 / NGC 1 954 / PSP 1 774 / GB 1 647 / GBC 1 524 / DC 1 332 / XBOX 1 324 / N64 1 115 / GG 1 056 / PCE-CD 946 / MCD 609 / SMS 559 / PCE 479 / WiiU 454 / WS 299 / NEOGEO 257 / WSC 239 / 32X 209 / NGPC 118 / PS3 67 / PSV 9 / PS3DL 1，全部 exact，无空名、无 series 半成品）
 - 中文名库 `zh/zh_titles.csv` 35 477 行（去重后 35 465 条参与匹配），系列词表 `zh/zh_series.csv` 171 条，可持续往上加
-- **中文多译**：`alias_cn` 列已铺满全库 —— 4 200 个词条、12 672 个别名（平均 3 个/条），
-  8 533 条映射带多译（宝可梦 = 精灵宝可梦 / 口袋妖怪 / 口袋怪兽 / 宠物小精灵 / 神奇宝贝，
+- **中文多译**：`alias_cn` 列已铺满全库 —— 4 094 个词条、12 478 个别名（平均 3.05 个/条），
+  8 296 条映射带多译（合计 19 627 个别名，29 个平台命中）；宝可梦 = 精灵宝可梦 / 口袋妖怪 / 口袋怪兽 / 宠物小精灵 / 神奇宝贝，
   马力欧 = 马里奥 / 玛莉欧 / 玛利欧，索尼克 = 音速小子 / 刺猬索尼克，
   生化危机 = 恶灵古堡，合金装备 = 潜龙谍影，怪物猎人 = 魔物猎人 …）
+- **可直接接入**：`python3 db_to_sqlite.py` 生成 22.5 MB 的 `cover-db.sqlite`（三张表），
+  `scrape_demo.py` 是刮削参考实现；第六节给出 SQL、C++/Kotlin 代码和挑图规则
 
 > 数据来源：libretro-thumbnails（社区托管的封面索引）。封面版权归各游戏厂商，本项目只转发索引和 URL。
 
@@ -27,6 +29,8 @@ cover-db/
 ├── match_rom.py          # 扫本地 ROM 文件夹，自动匹配出封面和中文名
 ├── promote_manual.py     # 把映射表里手填的中文名回收进主词库
 ├── gen_alias.py          # 生成「中文多译」列 alias_cn（术语级替换）
+├── db_to_sqlite.py       # mapping/*.csv -> cover-db.sqlite（给模拟器接入用）
+├── scrape_demo.py        # 刮削参考实现：ROM 文件名 -> 中文名 / 多译 / 封面 URL
 ├── run_all.sh            # 一键跑全流程
 ├── index/                # 原始索引（无中文名）
 │   └── libretro_<平台>.csv
@@ -36,7 +40,8 @@ cover-db/
 │   ├── zh_titles.csv     # 精确中文名库（35 477 行 / 35 465 条，含 alias_cn 多译列）
 │   └── zh_series.csv     # 系列名 / 关键词表（171 条）
 ├── terms/
-│   └── 术语多译表.csv    # 54 组同义叫法（生成 alias_cn 用的词源，可人工增改）
+│   └── 术语多译表.csv    # 53 组同义叫法（生成 alias_cn 用的词源，可人工增改）
+├── cover-db.sqlite       # db_to_sqlite.py 生成的成品库（不进 git，自己跑一条命令）
 ├── cache/<平台>/         # 下载下来的封面 png（不进 git）
 ├── manifest/             # 下载清单：本地路径 / 状态
 └── match/                # ROM 匹配结果
@@ -80,6 +85,10 @@ python3 cover_fetch.py --platforms psp --limit 20
 
 # 5. 扫自己的 ROM 目录，输出「文件 -> 封面」
 python3 match_rom.py --dir /你的/rom目录 --platform psp
+
+# 6. 打成 SQLite，给模拟器 / 前端接入（22.5 MB，见第六节）
+python3 db_to_sqlite.py
+python3 scrape_demo.py --db cover-db.sqlite --platform psp --dir /你的/rom目录 --limit 10
 ```
 
 一键版：`bash run_all.sh`
@@ -151,6 +160,33 @@ python3 promote_manual.py     # 回收进 zh/zh_titles.csv
 python3 zh_localize.py        # 重新生成，所有平台一起受益
 ```
 
+### db_to_sqlite.py
+
+把 31 个 `mapping_*.csv` 打成单文件 SQLite，给模拟器 / 前端直接用（详见第六节）：
+
+```bash
+python3 db_to_sqlite.py                # 生成 cover-db.sqlite，22.5 MB
+python3 db_to_sqlite.py --with-urls    # 额外存三种完整 URL，58 MB
+python3 db_to_sqlite.py --no-index     # 不建中文反查表 zh_index，更小
+python3 db_to_sqlite.py --out x.db     # 指定输出路径
+```
+
+### scrape_demo.py
+
+刮削参考实现，四个函数（`clean_stem` / `norm` / 查表 / 拼 URL）就是给 C++、Kotlin 抄的样板：
+
+```bash
+python3 scrape_demo.py --db cover-db.sqlite --platform psp --name "Game (USA).iso"
+python3 scrape_demo.py --db cover-db.sqlite --platform psp --dir D:\roms\psp --limit 20
+python3 scrape_demo.py --db cover-db.sqlite --dir D:\roms\psp --download covers\psp
+python3 scrape_demo.py --db cover-db.sqlite --search 口袋妖怪     # 中文 / 多译反查
+--threshold 0.72        # 模糊匹配阈值（默认 0.72）
+--no-fuzzy              # 关掉模糊匹配，只认精确 key
+--out result.csv        # 把结果写成 CSV
+```
+
+输出：本地文件 / 中文名 / 区域 / 置信度 / 封面 URL，命中中文名的行会额外打印一行多译。
+
 ---
 
 ## 四、匹配策略
@@ -186,7 +222,9 @@ python3 zh_localize.py        # 重新生成，所有平台一起受益
 
 - 每组取「名字里出现的**最长**那个变体」当锚点再替换，短词不会吃掉长词（`宠物小精灵` 不会被拆成 `宠物吃豆人`）；
 - 两组同时命中（`超级机器人大战` + `高达`）时做组合，最多 2 组、每行 6 个别名，防止爆炸；
-- 同义词源在 `terms/术语多译表.csv`（54 组），改完跑 `python3 gen_alias.py` 就能全库重算；
+- 同义词源在 `terms/术语多译表.csv`（53 组），改完跑 `python3 gen_alias.py` 就能全库重算；
+- **变体不能是别组主名的子串**，否则会串味：`猎人` 落在 `怪物猎人` 里就会生成「怪物全职猎人」，
+  所以 `gen_alias.py` 会先把这类短变体剔掉（本轮剔掉「全职猎人」组的 `猎人`，4 200 → 4 094 词条）；
 - `alias_cn` **不参与英文名匹配**：匹配只认 `search_key`，别名是给人看 / 给搜索框兜底用的，加错别名不会污染覆盖率。
 
 ### 各平台中文覆盖率
@@ -228,7 +266,7 @@ python3 zh_localize.py        # 重新生成，所有平台一起受益
 
 表由 `python3 zh_coverage.py` 生成，改完词库后重跑一次就能刷新，不要手抄。
 
-2026-11 起 31 个平台的**未匹配归零**：连 Action Replay 作弊卡、2-in-1 合卡、光枪合辑、
+2026-11-15 起 31 个平台的**未匹配归零**：连 Action Replay 作弊卡、2-in-1 合卡、光枪合辑、
 杂志附录碟、开发用示例程序这种「本来没有官方中文名」的条目，也都给了可用的中文名。
 热门作品（最终幻想、勇者斗恶龙、塞尔达、马力欧、宝可梦、怪物猎人、合金装备、生化危机、
 鬼泣、战神、皇牌空战、实况、无双、传说、女神异闻录等）全部走既有官方中文名。
@@ -1076,7 +1114,376 @@ PS3 数字下载版只剩 1 条，顺手清掉。
 
 ---
 
-## 六、已知限制
+## 六、在模拟器里调用（刮削接入）
+
+仓库交付的是**数据**，模拟器要做的只有三步：**清文件名 → 归一化 → 查表拿 URL**。
+下面三套代码都对着 `cover-db.sqlite`，照抄即可跑通。
+
+### 1. 先建库（一条命令）
+
+```bash
+python3 db_to_sqlite.py               # 22.5 MB，三张表，推荐
+python3 db_to_sqlite.py --with-urls   # 58 MB，额外把 boxart/snap/title 三种完整 URL 也存进去
+python3 db_to_sqlite.py --no-index    # 不要中文反查表，再小一圈
+```
+
+| 表 | 行数 | 内容 |
+|---|---:|---|
+| `titles` | 35 368 | `search_key`（主键）、`game_name`、`name_cn`、`alias_cn` |
+| `covers` | 77 661 | `search_key`、`system_key`、`region`、`revision`、`preferred`、`folder`、`file` |
+| `zh_index` | 47 721 | `term`（中文名或任一别名）、`search_key`，用于「输中文反查游戏」 |
+
+封面 URL 不用存，由 `folder` + `file` 按模板拼：
+
+```
+https://thumbnails.libretro.com/{folder}/Named_Boxarts/{file}
+https://thumbnails.libretro.com/{folder}/Named_Snaps/{file}
+https://thumbnails.libretro.com/{folder}/Named_Titles/{file}
+```
+
+`folder` 和 `file` 都要 percent-encode（空格 `%20`、括号 `%28%29`、逗号 `%2C`），
+`file` 本身已经带 `(USA).png` 这类后缀，**不要再二次拼接**。
+
+### 2. 四步调用链
+
+```
+ROM 文件名  "Crisis Core - Final Fantasy VII (Europe).cso"
+   │  ① clean_stem：去扩展名、(Europe)、(Disc 1)、[!]、(Rev 1)、(v1.02)
+   ├─> "Crisis Core - Final Fantasy VII"
+   │  ② norm()：NFKD 去变音符 → 罗马数字转阿拉伯 → 小写 → & 变 and
+   │             → 只留 [a-z0-9] 与空格 → 抹掉独立的 the
+   ├─> search_key = "crisis core final fantasy 7"
+   │  ③ SELECT name_cn, alias_cn FROM titles WHERE search_key=?
+   ├─> "核心危机 最终幻想7" + "核心危机 太空战士7"
+   │  ④ SELECT region, revision, preferred, folder, file FROM covers
+   │             WHERE search_key=? AND system_key='psp'
+   └─> 拼 URL，落缓存
+```
+
+### 3. `norm()` 必须逐条对齐（关键）
+
+`search_key` 是唯一的 join 键，**归一化差一个字符就查不到**。Python 版真值：
+
+```python
+def norm(s):
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(c for c in s if not unicodedata.combining(c))   # é→e、ö→o
+    s = roman_to_arabic(s)                                        # VII→7、X→10
+    s = s.lower()
+    s = s.replace("&", " and ")                                   # Mario & Luigi
+    s = re.sub(r"[^a-z0-9]+", " ", s)
+    s = re.sub(r"\bthe\b", " ", s)                                # Zelda, The
+    return re.sub(r"\s+", " ", s).strip()
+```
+
+罗马数字表就是 `I` 到 `XX`（`I` 单独不转，避免把英文单词 `I` 误转），
+替换只认独立词（`\b`）：`Mega Man X` → `mega man 10`、`Ace Combat X` → `ace combat 10`。
+
+对照表（照这个抄，别自己发挥）：
+
+| 步骤 | Python | C++ / Kotlin 注意 |
+|---|---|---|
+| 去变音符 | `NFKD` + 去 combining | C++ 无内置，用 `é→e ö→o ñ→n ß→ss æ→ae œ→oe` 等 30 来对替换表；Kotlin 用 `java.text.Normalizer` 的 NFKD 再剔 `\p{M}` |
+| 罗马数字 | 大写到小写前替换 | 只认两边界都是非字母的独立词；表里最大 `XX` |
+| 小写 | `.lower()` | 只按 ASCII 小写即可，中文名不参与归一化 |
+| `&` | `" and "` | 先替换再滤字符，顺序不能反 |
+| 字符过滤 | `[^a-z0-9]+` → 空格 | 中文、日文假名会一起被抹掉，这正常：中文名只走 `name_cn` 列 |
+| `the` | 独立词抹掉 | 必须在过滤之后做，否则 `The-` 这类残留会漏 |
+
+### 4. SQL（三条就够）
+
+```sql
+-- ① 中文名 + 多译
+SELECT game_name, name_cn, alias_cn FROM titles WHERE search_key = ?;
+
+-- ② 该平台有哪些区域/版本（按客户端偏好挑一行）
+SELECT region, revision, preferred, folder, file
+  FROM covers WHERE search_key = ? AND system_key = ?;
+
+-- ③ 中文反查（用户输「口袋妖怪」也能搜到「宝可梦 红」）
+SELECT t.name_cn, t.alias_cn, c.system_key, c.folder, c.file
+  FROM zh_index z
+  JOIN titles t ON t.search_key = z.search_key
+  JOIN covers c ON c.search_key = z.search_key AND c.preferred = 1
+ WHERE z.term LIKE '%' || ? || '%';
+```
+
+77 661 行的库上这三条都是毫秒级，`search_key` 和 `zh_index.term` 都建了索引。
+
+### 5. C++ 参考实现（只依赖 sqlite3）
+
+```cpp
+// scrape.h —— NDK / Windows / Linux 通用，链接 sqlite3 即可
+#include <sqlite3.h>
+#include <string>
+#include <vector>
+#include <cctype>
+#include <cstdio>
+
+struct Cover { std::string name_cn, alias_cn, region, folder, file, key; bool hit = false; };
+
+// ① 罗马数字：只认独立词，表到 XX；I 不转
+static std::string romanToArabic(std::string s) {
+    static const std::vector<std::pair<std::string,int>> T = {
+        {"XX",20},{"XIX",19},{"XVIII",18},{"XVII",17},{"XVI",16},{"XV",15},{"XIV",14},
+        {"XIII",13},{"XII",12},{"XI",11},{"X",10},{"IX",9},{"VIII",8},{"VII",7},{"VI",6},
+        {"V",5},{"IV",4},{"III",3},{"II",2}};                  // 长的先匹配，等价 Python 的 | 顺序
+    std::string out; size_t i = 0;
+    while (i < s.size()) {
+        bool alphaBefore = i > 0 && std::isalnum((unsigned char)s[i-1]);
+        bool done = false;
+        if (!alphaBefore) {
+            for (auto& p : T) {
+                size_t n = p.first.size();
+                if (i + n <= s.size() && s.compare(i, n, p.first) == 0 &&
+                    (i + n == s.size() || !std::isalnum((unsigned char)s[i+n]))) {
+                    out += std::to_string(p.second); i += n; done = true; break;
+                }
+            }
+        }
+        if (!done) out += s[i++];
+    }
+    return out;
+}
+
+// ② 去变音符（覆盖拉丁扩展，够用）
+static std::string foldAccents(std::string s) {
+    static const std::vector<std::pair<std::string,std::string>> M = {
+        {"À","a"},{"Á","a"},{"Â","a"},{"Ã","a"},{"Ä","a"},{"Å","a"},{"Æ","ae"},
+        {"Ç","c"},{"È","e"},{"É","e"},{"Ê","e"},{"Ë","e"},{"Ì","i"},{"Í","i"},{"Î","i"},{"Ï","i"},
+        {"Ð","d"},{"Ñ","n"},{"Ò","o"},{"Ó","o"},{"Ô","o"},{"Õ","o"},{"Ö","o"},{"Ø","o"},
+        {"Ù","u"},{"Ú","u"},{"Û","u"},{"Ü","u"},{"Ý","y"},{"Þ","th"},{"ß","ss"},
+        {"à","a"},{"á","a"},{"â","a"},{"ã","a"},{"ä","a"},{"å","a"},{"æ","ae"},
+        {"ç","c"},{"è","e"},{"é","e"},{"ê","e"},{"ë","e"},{"ì","i"},{"í","i"},{"î","i"},{"ï","i"},
+        {"ð","d"},{"ñ","n"},{"ò","o"},{"ó","o"},{"ô","o"},{"õ","o"},{"ö","o"},{"ø","o"},
+        {"ù","u"},{"ú","u"},{"û","u"},{"ü","u"},{"ý","y"},{"þ","th"},{"Ā","a"},{"ā","a"},
+        {"Ē","e"},{"ē","e"},{"Ī","i"},{"ī","i"},{"Ō","o"},{"ō","o"},{"Ū","u"},{"ū","u"}
+    };
+    for (auto& p : M) {
+        size_t pos = 0;
+        while ((pos = s.find(p.first, pos)) != std::string::npos) {
+            s.replace(pos, p.first.size(), p.second); pos += p.second.size();
+        }
+    }
+    return s;
+}
+
+// ③ norm：和 zh_localize.py 的 norm() 完全一致
+static std::string norm(std::string s) {
+    s = foldAccents(s);
+    s = romanToArabic(s);
+    for (auto& c : s) c = (char)std::tolower((unsigned char)c);
+    // & -> " and "（先替换，再滤字符）
+    std::string t; for (char c : s) { if (c == '&') t += " and "; else t += c; }
+    std::string kept;
+    for (char c : t) kept += (std::isalnum((unsigned char)c) && (unsigned char)c < 128) ? c : ' ';
+    // 抹独立词 the
+    // 逐词处理（空格已统一成 ' '）
+    std::string out;
+    size_t i = 0;
+    while (i < kept.size()) {
+        if (kept[i] == ' ') { out += ' '; ++i; continue; }
+        size_t j = i; while (j < kept.size() && kept[j] != ' ') ++j;
+        std::string word = kept.substr(i, j - i);
+        if (word != "the") { out += word; out += ' '; }
+        i = j;
+    }
+    // 压缩空格、去首尾
+    std::string res; bool sp = false;
+    for (char c : out) { if (c == ' ') { if (!sp && !res.empty()) res += ' '; sp = true; } else { res += c; sp = false; } }
+    while (!res.empty() && res.back() == ' ') res.pop_back();
+    return res;
+}
+
+// ④ 文件名清洗
+static std::string cleanStem(std::string fname) {
+    size_t slash = fname.find_last_of("/\\"); if (slash != std::string::npos) fname = fname.substr(slash + 1);
+    size_t dot = fname.find_last_of('.'); if (dot != std::string::npos) fname = fname.substr(0, dot);
+    // 去掉 (...) 与 [...] 里的区域/版本噪声（跟 match_rom.py 的 NOISE 表一致）
+    static const char* keepWords[] = {"usa","europe","japan","world","asia","korea","china","taiwan",
+        "hong kong","australia","brazil","canada","france","germany","spain","italy","netherlands",
+        "sweden","russia","portugal","disc","disk","side","rev","en","ja","fr","de","es","it","zh",
+        "ko","beta","proto","demo","sample","trainer"};
+    std::string out;
+    for (size_t i = 0; i < fname.size(); ) {
+        char c = fname[i];
+        if (c == '(' || c == '[') {
+            char close = (c == '(') ? ')' : ']';
+            size_t j = fname.find(close, i);
+            if (j == std::string::npos) { out += ' '; break; }
+            std::string inner = fname.substr(i + 1, j - i - 1);
+            std::string low; for (auto& ch : inner) low += (char)std::tolower((unsigned char)ch);
+            bool noise = false;
+            for (auto& w : keepWords) if (low.find(w) != std::string::npos) { noise = true; break; }
+            if (!noise) out += c + inner + close;      // 不是噪声就留着，如 (English Translation)
+            else out += ' ';
+            i = j + 1;
+        } else { out += (c == '_' || c == '.') ? ' ' : c; ++i; }
+    }
+    return out;
+}
+
+// ⑤ 查库 + 拼 URL
+static std::string urlEncode(const std::string& s) {
+    static const char* hex = "0123456789ABCDEF";
+    std::string o;
+    for (unsigned char c : s) {
+        if (std::isalnum(c) || c == '-' || c == '_' || c == '.' || c == '~') o += c;
+        else if (c == ' ') o += "%20";
+        else { o += '%'; o += hex[c >> 4]; o += hex[c & 15]; }   // 括号、逗号等
+    }
+    return o;
+}
+
+static Cover scrape(sqlite3* db, const std::string& romPath, const std::string& platform) {
+    Cover cv;
+    cv.key = norm(cleanStem(romPath));
+    sqlite3_stmt* st = nullptr;
+
+    sqlite3_prepare_v2(db, "SELECT name_cn,alias_cn FROM titles WHERE search_key=?", -1, &st, nullptr);
+    sqlite3_bind_text(st, 1, cv.key.c_str(), -1, SQLITE_TRANSIENT);
+    if (sqlite3_step(st) == SQLITE_ROW) {
+        cv.name_cn  = (const char*)sqlite3_column_text(st, 0);
+        cv.alias_cn = (const char*)sqlite3_column_text(st, 1);
+        cv.hit = true;
+    }
+    sqlite3_finalize(st);
+    if (!cv.hit) return cv;
+
+    // 区域优先级：USA 0 > Europe 1 > Japan 2 > 其它 3；同区先 preferred=1，再取修订号小的
+    sqlite3_prepare_v2(db,
+        "SELECT region, folder, file, preferred FROM covers "
+        "WHERE search_key=? AND system_key=? "
+        "ORDER BY preferred DESC, CASE region WHEN 'USA' THEN 0 WHEN 'Europe' THEN 1 "
+        "WHEN 'Japan' THEN 2 ELSE 3 END, revision LIMIT 1", -1, &st, nullptr);
+    sqlite3_bind_text(st, 1, cv.key.c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(st, 2, platform.c_str(), -1, SQLITE_TRANSIENT);
+    if (sqlite3_step(st) == SQLITE_ROW) {
+        cv.region = (const char*)sqlite3_column_text(st, 0);
+        cv.folder = (const char*)sqlite3_column_text(st, 1);
+        cv.file   = (const char*)sqlite3_column_text(st, 2);
+    }
+    sqlite3_finalize(st);
+    return cv;
+}
+
+// boxart = "https://thumbnails.libretro.com/" + urlEncode(folder) + "/Named_Boxarts/" + urlEncode(file)
+```
+
+真实调用：
+
+```cpp
+sqlite3* db; sqlite3_open("cover-db.sqlite", &db);
+Cover c = scrape(db, "/roms/psp/Crisis Core - Final Fantasy VII (Europe).cso", "psp");
+// c.name_cn  = "核心危机 最终幻想7"
+// c.alias_cn = "核心危机 太空战士7"
+// c.file     = "Crisis Core - Final Fantasy VII (Europe).png"
+```
+
+### 6. Kotlin / Android 参考实现
+
+把 `cover-db.sqlite` 放 `assets/`，首次启动拷到 `getDatabasePath("cover-db.sqlite")`，
+别直接用 `SQLiteDatabase.openDatabase` 打开 assets 里的流（只读且被压缩会读不了）。
+
+```kotlin
+object CoverDb {
+    private fun norm(s0: String): String {
+        val s = java.text.Normalizer.normalize(s0, java.text.Normalizer.Form.NFKD)
+            .replace(Regex("\\p{M}+"), "")
+        val roman = mapOf("XX" to "20","XVIII" to "18","XVII" to "17","XVI" to "16","XV" to "15",
+            "XIV" to "14","XIII" to "13","XII" to "12","XI" to "11","X" to "10","IX" to "9",
+            "VIII" to "8","VII" to "7","VI" to "6","V" to "5","IV" to "4","III" to "3","II" to "2")
+        var s1 = s
+        for ((k, v) in roman) s1 = Regex("(?<![A-Za-z])$k(?![A-Za-z])").replace(s1, v)
+        s1 = s1.lowercase().replace("&", " and ")
+        s1 = Regex("[^a-z0-9]+").replace(s1, " ")
+        s1 = Regex("\\bthe\\b").replace(s1, " ")
+        return Regex("\\s+").replace(s1, " ").trim()
+    }
+
+    fun scrape(db: SQLiteDatabase, romFile: String, platform: String): Cover? {
+        val key = norm(cleanStem(romFile))
+        db.rawQuery("SELECT name_cn,alias_cn FROM titles WHERE search_key=?", arrayOf(key)).use { c ->
+            if (!c.moveToFirst()) return null
+            val nameCn = c.getString(0); val alias = c.getString(1)
+            db.rawQuery(
+                "SELECT folder,file,region FROM covers WHERE search_key=? AND system_key=? " +
+                "ORDER BY preferred DESC, CASE region WHEN 'USA' THEN 0 WHEN 'Europe' THEN 1 " +
+                "WHEN 'Japan' THEN 2 ELSE 3 END, revision LIMIT 1",
+                arrayOf(key, platform)).use { p ->
+                if (!p.moveToFirst()) return Cover(nameCn, alias, "", "", "")
+                return Cover(nameCn, alias, p.getString(2), p.getString(0), p.getString(1))
+            }
+        }
+    }
+
+    fun url(folder: String, file: String, kind: String = "Boxarts") =
+        "https://thumbnails.libretro.com/${Uri.encode(folder)}/Named_$kind/${Uri.encode(file)}"
+}
+```
+
+`Uri.encode` 的输出和 Python 的 `urllib.parse.quote` 一致（空格 `%20`、括号 `%28`/`%29`）。
+
+### 7. 选择封面时按什么顺序挑
+
+`covers` 里同一款游戏常有 USA / Europe / Japan / Asia 多行，还可能带 `(Rev 1)`、`(v1.02)`。建议：
+
+1. **跟文件名里的区域标记一致**最优先（ROM 是 `(Europe)` 就优先 Europe 图）；
+2. 没有同区，就取 `preferred = 1`（该平台去重后的那一张，库里每款游戏最多一行）；
+3. 再按区域优先级 `USA > Europe > Japan > World > 其它`；
+4. 同区多条时选 `revision` 最小的（原版优先，别默认拿修订版）。
+
+`scrape_demo.py` 就是这么做的：
+
+```bash
+python scrape_demo.py --db cover-db.sqlite --platform psp \
+  --name "Crisis Core - Final Fantasy VII (Europe).cso"
+# Crisis Core - Final Fantasy VII (Europe).cso | 核心危机 最终幻想7 | Europe | 1.00 | https://…(Europe).png
+#                                             |   多译：核心危机 太空战士7
+```
+
+### 8. 中文名怎么显示
+
+| 位置 | 用哪个字段 | 说明 |
+|---|---|---|
+| 主标题 | `name_cn` | 全库唯一主名，31 平台 100% 有值 |
+| 副标题 / 备选 | `alias_cn` | `|` 分隔，如「口袋妖怪 红 \| 宠物小精灵 红」 |
+| 搜索框 | `zh_index.term` | 中文名 + 全部别名都建了索引，输哪个叫法都能搜到 |
+| 匹配失败 | `game_name` | 英文原名，永远有值，别把界面留空 |
+
+界面只显示一个中文名时用 `name_cn`；想兼容老玩家的叫法，取 `alias_cn` 的第一个挂成副标题即可。
+
+### 9. 三种取数通道怎么选
+
+| 通道 | 体积 / 成本 | 适合 |
+|---|---|---|
+| **SQLite**（推荐） | 22.5 MB 单文件，查询毫秒级 | 模拟器 / Launcher 随身带库，离线可用 |
+| 直接读 `mapping/*.csv` | 31 个文件、约 45 MB | 只想接一两个平台，或要做二次加工 |
+| `raw.githubusercontent.com` 远程拉 | 零体积、需联网 | 首次启动下载一次再落本地缓存 |
+
+远程地址（把 `<key>` 换成平台 key）：
+
+```
+https://raw.githubusercontent.com/neighbor-bear/Emulator-cover-db-zh/main/mapping/mapping_<key>.csv
+https://raw.githubusercontent.com/neighbor-bear/Emulator-cover-db-zh/main/zh/zh_titles.csv
+```
+
+### 10. 接入时最容易踩的五个坑
+
+- **归一化没对齐**。`norm()` 少做一步（尤其是 `&`→`and` 和抹 `the`），`search_key` 就对不上，
+  查出来全是空；先用 `scrape_demo.py --name <你的文件名>` 确认 key 一致，再写 C++。
+- **拿 `game_name` 直接拼 URL**。文件名里的区域在 `file` 列里是带 `(USA)` 的，`game_name` 已经被去掉了区域；
+  拼 URL 只能用 `folder` + `file`。
+- **`file` 二次 encode**。`file` 是原文（`Crisis Core - Final Fantasy VII (Europe).png`），
+  只做一次 percent-encode；对已 encode 过的字符串再 encode 会变成 `%2520`。
+- **`preferred` 的语义**。`preferred = 1` 是「每款游戏一张」的去重标记，不是「这张最好看」；
+  想全量抓图时加它能把 77 661 张压到 35 000 量级。
+- **Android 上直接读 assets**。assets 里的文件是压缩流，必须拷到 `getDatabasePath()` 再用；
+  iOS 同理，先把库 copy 到 Documents 目录。
+
+---
+
+## 七、已知限制
 
 - 中文名带英文字母是常态（FIFA、NBA、WWE、CLANNAD、Fate/Extra、DJMAX、.hack//Link
    这类品牌缩写按惯例保留原文），不算未翻译。
@@ -1088,7 +1495,7 @@ PS3 数字下载版只剩 1 条，顺手清掉。
 
 ---
 
-## 七、平台清单
+## 八、平台清单
 
 | key | 平台 | 条数 | key | 平台 | 条数 |
 |---|---|---:|---|---|---:|
@@ -1111,41 +1518,45 @@ PS3 数字下载版只剩 1 条，顺手清掉。
 
 ---
 
-## 八、更新日志
+## 九、更新日志
 
-- **2026-11**：新增「中文多译」`alias_cn` —— 54 组同义词源，4 200 个词条、12 672 个别名，
-  8 533 条映射带多译；`gen_alias.py` 生成、`terms/术语多译表.csv` 维护词源；
+> 下面每一条后面的日期就是 `git log` 里的真实提交时间（全部发生在 2026-11-15 这一天，时间按提交先后排列，不是估写的月份）。
+
+- **2026-11-15 22:22**：新增接入层 —— `db_to_sqlite.py` 把 31 个映射表打成 22.5 MB 的 `cover-db.sqlite`（titles 35 368 / covers 77 661 / zh_index 47 721），`scrape_demo.py` 提供「ROM 文件名 → 中文名 + 多译 + 封面 URL」的参考实现；README 新增第六节「在模拟器里调用」（四步链路、norm 对照表、SQL、C++/Kotlin 代码、挑图规则、五个坑）。
+  同时修掉多译串味：变体若是别组主名的子串就丢弃（`猎人` 落在 `怪物猎人` 里会生成「怪物全职猎人」），词条 4 200 → 4 094、别名 12 672 → 12 478、组数 54 → 53，映射表全量重算后 exact 仍 77 661 / 100.0%。
+- **2026-11-15 22:13**：新增「中文多译」`alias_cn` —— 54 组同义词源，4 200 个词条、12 672 个别名，
+  8 533 条映射带多译（这一版随后在 22:22 那轮收敛为 4 094 词条 / 12 478 别名 / 53 组）；`gen_alias.py` 生成、`terms/术语多译表.csv` 维护词源；
   映射表新增 `alias_cn` 字段（31 个平台全量重建，exact 77 661 / 100.0% 不变）。
-- **2026-11**：剩余 20 个平台一次性全部中文化（gb / gbc / ngc / dc / pcecd / n64 / xbox / pce / sms / segacd / gg / wiiu / ws / neogeo / wsc / 32x / ngpc / ps3 / psvita / ps3dl），
+- **2026-11-15 22:03**：剩余 20 个平台一次性全部中文化（gb / gbc / ngc / dc / pcecd / n64 / xbox / pce / sms / segacd / gg / wiiu / ws / neogeo / wsc / 32x / ngpc / ps3 / psvita / ps3dl），
   逐平台「导出空名 → 分批写译名 → 校验 → 并库」，候选 5 525 条、新增 5 166 条；
   词库 30 111 → 35 477 行；全量重建后 exact 69 214 → **77 661（100.0%）**，none 7 683 → **0**，
   中文覆盖 90.1% → **100.0%**，唯一英文名有中文比例 82.6% → 96.1%；**31 个平台全部 100%**。
-- **2026-11**：SS（Sega Saturn）全量中文化（2 294 / 2 294，100%），29 个 series 半成品整行替换；
+- **2026-11-15 21:24**：SS（Sega Saturn）全量中文化（2 294 / 2 294，100%），29 个 series 半成品整行替换；
   候选 764 条全部新增；词库 29 347 → 30 111 行；全量重建后 exact 67 921 → 69 214（89.1%），
   中文覆盖 88.5% → 90.1%，唯一英文名有中文比例 80.6% → 82.6%；十一个平台 100%。
-- **2026-11**：MD 全量中文化（2 352 / 2 352，100%），46 个 series 半成品整行替换；候选 861 条新增 738 条
+- **2026-11-15 21:18**：MD 全量中文化（2 352 / 2 352，100%），46 个 series 半成品整行替换；候选 861 条新增 738 条
   （123 条跨平台同名已存在而跳过）；词库 28 609 → 29 347 行。
-- **2026-11**：SFC（snes）全量中文化（3 689 / 3 689，100%），58 个 series 半成品整行替换；
+- **2026-11-15 21:18**：SFC（snes）全量中文化（3 689 / 3 689，100%），58 个 series 半成品整行替换；
   词库 26 847 → 28 609 行；全量重建后 exact 63 615 → 67 921（87.5%），中文覆盖 83.2% → 88.5%，
   唯一英文名有中文比例 74.1% → 80.6%；十个平台 100%。
   新增通用脚本 `build_key_cn.py` / `apply_key_cn.py`，替代此后每平台各写一份的做法。
-- **2026-11**：GBA 全量中文化（5 961 / 5 961，100%），含 2 047 个 series 半成品整行替换（其中大半是 e-Reader 卡带条目）；
+- **2026-11-15 20:58**：GBA 全量中文化（5 961 / 5 961，100%），含 2 047 个 series 半成品整行替换（其中大半是 e-Reader 卡带条目）；
   词库 22 672 → 26 847 行；全量重建后 exact 58 406 → 63 615（81.9%），中文覆盖 79.5% → 83.2%。
-- **2026-11**：Wii 全量中文化（6 668 / 6 668，100%），含 195 个 series 半成品整行替换；
+- **2026-11-15 20:40**：Wii 全量中文化（6 668 / 6 668，100%），含 195 个 series 半成品整行替换；
   词库 20 580 → 22 672 行；全量重建后 exact 53 899 → 58 406（75.2%），中文覆盖 74.5% → 79.5%。
-- **2026-11**：FC（NES）全量中文化（13 439 / 13 439，100%），含 167 个 series 半成品整行替换；
+- **2026-11-15 20:28**：FC（NES）全量中文化（13 439 / 13 439，100%），含 167 个 series 半成品整行替换；
   词库 17 921 → 20 580 行；全量重建后 exact 42 611 → 53 899（69.4%），中文覆盖 60.8% → 74.5%。
-- **2026-11**：NDS 全量中文化（7 335 / 7 335，100%），含 243 个 series 半成品整行替换；
+- **2026-11-15 20:04**：NDS 全量中文化（7 335 / 7 335，100%），含 243 个 series 半成品整行替换；
   词库 13 284 → 17 921 行；全量重建后 exact 35 351 → 42 611（54.9%），中文覆盖 52.2% → 60.8%。
-- **2026-11**：PS1 全量中文化（9 301 / 9 301，100%），含 174 个 series 半成品整行替换；
+- **2026-11-15 19:45**：PS1 全量中文化（9 301 / 9 301，100%），含 174 个 series 半成品整行替换；
   词库 8 099 → 13 284 行；全量重建后 exact 25 836 → 35 351（45.5%），中文覆盖 40.8% → 52.2%。
-- **2026-11**：PS2 全量中文化（8 502 / 8 502，100%），含 269 个 series 半成品整行替换；
+- **2026-11-15 19:11**：PS2 全量中文化（8 502 / 8 502，100%），含 269 个 series 半成品整行替换；
   词库 4 027 → 8 099 行；全量重建后 exact 17 303 → 25 836（33.3%），中文覆盖 31.1% → 40.8%。
-- **2026-11**：3DS 全量中文化（2 148 / 2 148，100%），含 170 个 series 半成品整行替换；
+- **2026-11-15 18:50**：3DS 全量中文化（2 148 / 2 148，100%），含 170 个 series 半成品整行替换；
   词库 2 809 → 4 027 行；全量重建后 exact 15 136 → 17 303（22.3%），中文覆盖 28.8% → 31.1%。
-- **2026-11**：PSP 全量中文化（1 774 / 1 774，100%）；词库 581 → 2 809 条；
+- **2026-11-15 18:24**：PSP 全量中文化（1 774 / 1 774，100%）；词库 581 → 2 809 条；
   补 1 000+ 跨平台经典标题；新增 `zh_coverage.py`；README 重写（含覆盖率表与补名流程）。
-- 之前：从 libretro-thumbnails 抓 30 平台索引，建立 exact / series 两级匹配与三图 URL 结构。
+- **2026-11-15 18:18**（初始提交 `4fb39b9`）：从 libretro-thumbnails 抓 30 平台索引，建立 exact / series 两级匹配与三图 URL 结构。
 
 ---
 

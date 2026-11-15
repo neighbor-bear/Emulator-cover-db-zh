@@ -7,3 +7,5 @@ __pycache__/
 mapping/all_games.csv
 index/all_games.csv
 zh/*.bak*
+cover-db.sqlite
+cover-db*.sqlite

@@ -89,9 +89,9 @@ def main():
             c["key"], c["name"], c["total"], c["exact"], c["series"],
             c["manual"], c["none"], pct(cn, c["total"])))
     cn = tot["exact"] + tot["series"] + tot["manual"]
-    print("| **合计** | **30 平台** | **%d** | **%d** | **%d** | **%d** | **%d** | **%s** |" % (
-        tot["total"], tot["exact"], tot["series"], tot["manual"], tot["none"],
-        pct(cn, tot["total"])))
+    print(("| **合计** | **%d 平台** | **%d** | **%d** | **%d** | **%d** | **%d** | **%s** |" % (
+        len(rows), tot["total"], tot["exact"], tot["series"], tot["manual"], tot["none"],
+        pct(cn, tot["total"]))))
 
 
 if __name__ == "__main__":

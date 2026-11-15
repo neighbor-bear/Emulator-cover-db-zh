@@ -3,10 +3,10 @@
 本项目由AI制作给模拟器启动器、ROM 整理工具做刮削用的**纯 CSV 方案**：仓库里只放表和数据，不放图片。
 封面仍然由 libretro 官方源托管，工具运行时按表里的 URL 去拉，或者用脚本提前拉到本地缓存。
 
-- **30 个平台 / 77 661 条**记录（含区域、版本、三种图 URL）
-- **中文名覆盖 90.1%**（exact 69 214 条 + series 764 条）；36 797 个唯一英文名里 82.6% 有中文（30 405 个）
-- **PSP、3DS、PS2、PS1、NDS、FC、Wii、GBA、SFC、MD、SS 十一个平台已 100% 中文**（PSP 1 774 条 / 3DS 2 148 条 / PS2 8 502 条 / PS1 9 301 条 / NDS 7 335 条 / FC 13 439 条 / Wii 6 668 条 / GBA 5 961 条 / SFC 3 689 条 / MD 2 352 条 / SS 2 294 条，全部 exact，无空名、无 series 半成品）
-- 中文名库 `zh/zh_titles.csv` 30 111 行（去重后 30 099 条参与匹配），系列词表 `zh/zh_series.csv` 171 条，可持续往上加
+- **31 个平台 / 77 661 条**记录（含区域、版本、三种图 URL）
+- **中文名覆盖 100.0%**（exact 77 661 条 + series 0 条，全平台零空名）；36 797 个唯一英文名里 96.1% 有中文（35 368 个）
+- **全部 31 个平台 100% 中文**（FC 13 439 / PS1 9 301 / PS2 8 502 / NDS 7 335 / Wii 6 668 / GBA 5 961 / SFC 3 689 / MD 2 352 / SS 2 294 / 3DS 2 148 / NGC 1 954 / PSP 1 774 / GB 1 647 / GBC 1 524 / DC 1 332 / XBOX 1 324 / N64 1 115 / GG 1 056 / PCE-CD 946 / MCD 609 / SMS 559 / PCE 479 / WiiU 454 / WS 299 / NEOGEO 257 / WSC 239 / 32X 209 / NGPC 118 / PS3 67 / PSV 9 / PS3DL 1，全部 exact，无空名、无 series 半成品）
+- 中文名库 `zh/zh_titles.csv` 35 477 行（去重后 35 465 条参与匹配），系列词表 `zh/zh_series.csv` 171 条，可持续往上加
 
 > 数据来源：libretro-thumbnails（社区托管的封面索引）。封面版权归各游戏厂商，本项目只转发索引和 URL。
 
@@ -28,7 +28,7 @@ cover-db/
 ├── mapping/              # 成品映射表（中文名 + 首选区域标记）
 │   └── mapping_<平台>.csv
 ├── zh/
-│   ├── zh_titles.csv     # 精确中文名库（30 111 行 / 30 099 条）
+│   ├── zh_titles.csv     # 精确中文名库（35 477 行 / 35 465 条）
 │   └── zh_series.csv     # 系列名 / 关键词表（171 条）
 ├── cache/<平台>/         # 下载下来的封面 png（不进 git）
 ├── manifest/             # 下载清单：本地路径 / 状态
@@ -174,35 +174,37 @@ python3 zh_localize.py        # 重新生成，所有平台一起受益
 | md | MD | 2 352 | 2 352 | 0 | 0 | 0 | 100.0% |
 | saturn | SS | 2 294 | 2 294 | 0 | 0 | 0 | 100.0% |
 | 3ds | 3DS | 2 148 | 2 148 | 0 | 0 | 0 | 100.0% |
-| ngc | NGC | 1 954 | 1 389 | 129 | 0 | 436 | 77.7% |
+| ngc | NGC | 1 954 | 1 954 | 0 | 0 | 0 | 100.0% |
 | psp | PSP | 1 774 | 1 774 | 0 | 0 | 0 | 100.0% |
-| gb | GB | 1 647 | 587 | 84 | 0 | 976 | 40.7% |
-| gbc | GBC | 1 524 | 360 | 111 | 0 | 1 053 | 30.9% |
-| dc | DC | 1 332 | 473 | 45 | 0 | 814 | 38.9% |
-| xbox | XBOX | 1 324 | 870 | 41 | 0 | 413 | 68.8% |
-| n64 | N64 | 1 115 | 376 | 69 | 0 | 670 | 39.9% |
-| gg | GG | 1 056 | 521 | 74 | 0 | 461 | 56.3% |
-| pcecd | PCE-CD | 946 | 172 | 10 | 0 | 764 | 19.2% |
-| segacd | MCD | 609 | 184 | 24 | 0 | 401 | 34.2% |
-| sms | SMS | 559 | 246 | 4 | 0 | 309 | 44.7% |
-| pce | PCE | 479 | 185 | 6 | 0 | 288 | 39.9% |
-| wiiu | WiiU | 454 | 187 | 77 | 0 | 190 | 58.1% |
-| ws | WS | 299 | 48 | 5 | 0 | 246 | 17.7% |
-| neogeo | NEOGEO | 257 | 68 | 43 | 0 | 146 | 43.2% |
-| wsc | WSC | 239 | 33 | 5 | 0 | 201 | 15.9% |
-| 32x | 32X | 209 | 39 | 0 | 0 | 170 | 18.7% |
-| ngpc | NGPC | 118 | 5 | 15 | 0 | 98 | 16.9% |
-| ps3 | PS3 | 67 | 6 | 19 | 0 | 42 | 37.3% |
-| psvita | PSV | 9 | 2 | 3 | 0 | 4 | 55.6% |
-| ps3dl | PS3DL | 1 | 0 | 0 | 0 | 1 | 0.0% |
-| **合计** | **30 平台** | **77 661** | **69 214** | **764** | **0** | **7 683** | **90.1%** |
+| gb | GB | 1 647 | 1 647 | 0 | 0 | 0 | 100.0% |
+| gbc | GBC | 1 524 | 1 524 | 0 | 0 | 0 | 100.0% |
+| dc | DC | 1 332 | 1 332 | 0 | 0 | 0 | 100.0% |
+| xbox | XBOX | 1 324 | 1 324 | 0 | 0 | 0 | 100.0% |
+| n64 | N64 | 1 115 | 1 115 | 0 | 0 | 0 | 100.0% |
+| gg | GG | 1 056 | 1 056 | 0 | 0 | 0 | 100.0% |
+| pcecd | PCE-CD | 946 | 946 | 0 | 0 | 0 | 100.0% |
+| segacd | MCD | 609 | 609 | 0 | 0 | 0 | 100.0% |
+| sms | SMS | 559 | 559 | 0 | 0 | 0 | 100.0% |
+| pce | PCE | 479 | 479 | 0 | 0 | 0 | 100.0% |
+| wiiu | WiiU | 454 | 454 | 0 | 0 | 0 | 100.0% |
+| ws | WS | 299 | 299 | 0 | 0 | 0 | 100.0% |
+| neogeo | NEOGEO | 257 | 257 | 0 | 0 | 0 | 100.0% |
+| wsc | WSC | 239 | 239 | 0 | 0 | 0 | 100.0% |
+| 32x | 32X | 209 | 209 | 0 | 0 | 0 | 100.0% |
+| ngpc | NGPC | 118 | 118 | 0 | 0 | 0 | 100.0% |
+| ps3 | PS3 | 67 | 67 | 0 | 0 | 0 | 100.0% |
+| psvita | PSV | 9 | 9 | 0 | 0 | 0 | 100.0% |
+| ps3dl | PS3DL | 1 | 1 | 0 | 0 | 0 | 100.0% |
+| **合计** | **31 平台** | **77 661** | **77 661** | **0** | **0** | **0** | **100.0%** |
 
 表由 `python3 zh_coverage.py` 生成，改完词库后重跑一次就能刷新，不要手抄。
 
-剩下的未匹配基本是三类：日本冷门作 / 同人作、欧美儿童与体育授权游戏、
-以及 Action Replay 作弊卡、2-in-1 合卡、光枪合辑这种本来就没有中文名的条目。
-**热门作品基本都已在表里**（最终幻想、勇者斗恶龙、塞尔达、马力欧、宝可梦、怪物猎人、
-合金装备、生化危机、鬼泣、战神、皇牌空战、实况、无双、传说、女神异闻录等）。
+2026-11 起 31 个平台的**未匹配归零**：连 Action Replay 作弊卡、2-in-1 合卡、光枪合辑、
+杂志附录碟、开发用示例程序这种「本来没有官方中文名」的条目，也都给了可用的中文名。
+热门作品（最终幻想、勇者斗恶龙、塞尔达、马力欧、宝可梦、怪物猎人、合金装备、生化危机、
+鬼泣、战神、皇牌空战、实况、无双、传说、女神异闻录等）全部走既有官方中文名。
+需要说明的是，冷门日系、韩版、巴西葡版的标题**不是官方中文名，而是按作品原名直译**，
+可读性优先、检索可用，但不要当作发行商官方译名引用。
 
 ---
 
@@ -290,6 +292,8 @@ python3 zh_coverage.py
 - 欧版多语言条目（德/法/意/西/荷各一条）必须共用同一套中文名，只在末尾括号标语种；若各版本各造译名，同一款游戏在刮削结果里会分裂成多个名字。
 - e-Reader 卡带条目（`Pokemon-e TCG`、`Pokemon Card-e`、`Animal Crossing-e`、`Pokemon Battle-e`、`Mario Party-e`、`Super Mario Advance 4-e`）不要逐条意译，按「作品名 + 卡带e/卡带e+ + 系列或卡包 + 卡号 + 角色名」机械拼装，卡号原样保留；否则 2 000 多条既翻不完也无法保持同一格式。
 - 授权体育年货（`John Madden` / `NFL` / `NBA` / `World Series Baseball` / `F1 Circus`）要固定成「项目 + 年份」的统一格式，`'92` `'95` `Volume 2` 这类标记原样保留；否则同一系列逐年一条，刮削结果里会出现十几种写法。
+- 写译名分片时 `序号<TAB>中文名` 的 TAB 极易被打成空格，`build_key_cn.py` 会直接报「第 N 行没有 TAB」；写完先跑一行 python 扫描无 TAB 行，能省一次返工（本轮 GBC 第 22 行、NGC 第 237 行都中过这个坑）。
+- 分片文件名必须严格是 `<key>_cn_partN.txt` 才会被自动发现；本轮 NGC 首片曾误存成 `ngc_cn_all_src.txt`，改名后才通过。没有 series 的平台（32X、PS3DL）要放一个**空的** `<key>_series_cn.txt`，否则 `apply_key_cn.py` 找不到对齐文件。
 - Saturn 这类日本独占平台的主体是麻雀、柏青哥、赛马、将棋、偶像写真碟，标题里全是罗马字与片假名，译名要「按原名直译，不补意译副标」，`Private Idol Disc Vol. 1 - Yuu Kinoshita` 这类写真碟只做「私人偶像碟 第1卷 木下优」的对应，不要尝试加形容。
 - 跨平台同名的 123 条 MD 条目被 `norm()` 判定已存在而跳过，这不是漏译：词库是全平台共享的，前几个平台译过的名字会自动生效，统计时要按 `apply_key_cn.py` 输出的「新增 / 跳过」分开看。
 
@@ -669,6 +673,377 @@ Saturn 是这批平台里**日式作品密度最高、类型最杂**的一块：
   `Dragon Force II` → 龙之力量2 神去之大地、`Grandia` 两份（序章 / 数字博物馆）、
   29 条 `Virtua Fighter CG Portrait Series` 全部「VR战士 CG肖像系列 第N卷 角色名」。
 
+### GB（Game Boy）全量中文化（1 647 / 1 647，100%）
+
+GB 是这批里**日本应试学习软件与冷门独占作最密集**的一块：836 个唯一空名里有约 30 条是「Goukaku Boy Series / Goukaku Boy GOLD」出的考学软件，其余多为日本独占的麻雀、柏青哥、赛马、将棋、偶像写真与玩具衍生作。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_gb.csv` 1 647 行：exact 811 / series 65 / none 771（空名唯一 836 个，series 唯一 65 条） |
+| 导出清单 | `gb_missing.txt`（836 个唯一空名）+ `gb_series.txt`（65 条 series 唯一名，带现有半成品中文） |
+| 译名文件 | 按行号对齐 3 片（`gb_cn_part1..3.txt`：280 / 280 / 276 条）+ `gb_series_cn.txt` 65 条 |
+| 校验 | `build_key_cn.py gb 836`：断言条数、series 65 == 65、假名 0、含拉丁字母抽查、重复中文名核对 |
+| 并入词库 | `apply_key_cn.py gb 836 65`：候选 901 条，新增 901（0 跳过）；词库 30 111 → 31 012 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 1 647 / series 0 / none 0** |
+
+**GB（Game Boy） 译名要点**
+
+- **Goukaku Boy 系列统一叫法**：`Goukaku Boy Series - ...` 一律「应试小子系列 + 学科 + 目标数」，`Goukaku Boy GOLD - ...` 一律「应试小子 GOLD + 学科」，不逐条造新词。
+- **冷门日本独占作按原名直译**：麻雀 / 柏青哥 / 赛马 / 将棋 / 偶像写真 / 育儿玩具衍生一律直译，不补意译副标（`Nakajima Miho - Fantasy Zone` → 中岛美穗 幻想地带）。
+- **已覆盖的系列线**：`Nettou` 热斗系列 8 条、`Mani 4 in 1` 四合一合辑 5 条（逐作中文名串联）、`Little Master` / `Sa-Ga` / `Wizardry Gaiden` / `SD Gundam` / `SD Sengokuden` / `Yu Yu Hakusho Dai-2/3/4-dan`、忍者神龟 8 条、辛普森一家 4 条、`Looney Tunes` / `Tiny Toon` / `Mickey Mouse II/IV/V`、`Pocket Monsters` 红/蓝/绿/皮卡丘、`Zelda` 梦见岛、`Super Donkey Kong GB`、星之卡比 1/2。
+- **series 65 条改写成纯中文**：`Bomberman GB` → 炸弹人 GB、`Castlevania - The Adventure` → 恶魔城 冒险、`Pokemon - Rote Edition` → 宝可梦 红版（德版）。
+
+### GBC（Game Boy Color）全量中文化（1 524 / 1 524，100%）
+
+GBC 的 823 个唯一空名以**欧美版权作 + 日本独占恋爱/育成/柏青哥**为主，同一个作品往往有英/法/德/西/意多语言卡带，中文名共用一套、只用括号标语种。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_gbc.csv` 1 524 行：exact 701 / series 80 / none 743（空名唯一 823 个，series 唯一 80 条） |
+| 译名文件 | 3 片（`gbc_cn_part1..3.txt`：280 / 280 / 263 条）+ `gbc_series_cn.txt` 80 条 |
+| 校验 | `build_key_cn.py gbc 823`：series 80 == 80、假名 0；曾因分片第 22 行 TAB 打成空格被拦下，修正后通过 |
+| 并入词库 | `apply_key_cn.py gbc 823 80`：候选 903 条，新增 884、跳过 19；词库 31 012 → 31 896 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 1 524 / series 0 / none 0** |
+
+**GBC（Game Boy Color） 译名要点**
+
+- **多语言多区域只加语种括号**：`Harvest Moon GBC 2/3`、`Dragon Ball Z` 五种语言版、`Harry Potter` 系列均共用一套中文名。
+- **韩版宝可梦按对应版本命名**：`Pocket Monsters Eun/Geum` → 宝可梦 银/金（韩版）。
+- **series 80 条改写重点**：`Biohazard Gaiden` → 生化危机 外传、`Metal Gear - Ghost Babel` → 合金装备 幽灵通天塔、`Rockman X - Cyber Mission` → 洛克人X 网络任务、`Super Mario Bros. Deluxe` → 超级马力欧兄弟 豪华版、`Legend of Zelda DX` → 塞尔达传说 梦见岛 DX。
+
+### NGC（GameCube）全量中文化（1 954 / 1 954，100%）
+
+NGC 的 267 个唯一空名里，**金手指碟与二合一合辑占了一大块**（Action Replay 14 条、2 Games in 1 12 条），剩下是任天堂自家作 + 日本独占动画改编 + 五语种哈利波特。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_ngc.csv` 1 954 行：exact 1 687 / series 48 / none 219（空名唯一 267 个，series 唯一 48 条） |
+| 译名文件 | `ngc_cn_part1.txt`（267 条）+ `ngc_series_cn.txt` 48 条 |
+| 校验 | `build_key_cn.py ngc 267`：series 48 == 48、假名 0；首片曾误存为 `ngc_cn_all_src.txt`，改名后才被自动发现 |
+| 并入词库 | `apply_key_cn.py ngc 267 48`：候选 315 条，新增 315（0 跳过）；词库 31 896 → 32 211 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 1 954 / series 0 / none 0** |
+
+**NGC（GameCube） 译名要点**
+
+- **金手指碟统一前缀**：`Action Replay` 14 条一律「Action Replay 终极代码 / 终极金手指 + 作品名」。
+- **二合一合辑统一写法**：`2 Games in 1 - A + B` → 「二合一 + 两作中文名（括号语种）」。
+- **任天堂自家品牌**：`Dairantou Smash Brothers DX` → 大乱斗 斯马什兄弟 DX（保留原写法）、`Bokujou Monogatari` → 牧场物语系列、`Naruto - Gekitou Ninja Taisen!` → 火影忍者 激斗忍者大战！1–4、`Star Wars Rogue Squadron` → 星球大战 侠盗中队2/3、`Zoids Vs.` → 机兽VS. I/II/III。
+- **series 48 条改写重点**：`Baten Kaitos` → 霸天开拓史 系列、`Fire Emblem - Souen no Kiseki` → 火焰纹章 苍炎之轨迹、`Phantasy Star Online` → 梦幻之星在线 第1与2章 / 第3章 卡片革命、`Sonic Adventure DX` → 索尼克大冒险 DX 导演剪辑版。
+
+### DC（Dreamcast）全量中文化（1 332 / 1 332，100%）
+
+DC 的 567 个唯一空名以**日本独占恋爱/柏青哥/将棋/麻将/偶像碟 + 世嘉自家作**为主，还有大量「杂志附录碟」按卷号排列。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_dc.csv` 1 332 行：exact 743 / series 22 / none 567（空名唯一 567 个，series 唯一 22 条） |
+| 译名文件 | 2 片（`dc_cn_part1..2.txt`：290 / 277 条）+ `dc_series_cn.txt` 22 条 |
+| 校验 | `build_key_cn.py dc 567`：series 22 == 22、假名 0 |
+| 并入词库 | `apply_key_cn.py dc 567 22`：候选 589 条，新增 581、跳过 8；词库 32 211 → 32 792 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 1 332 / series 0 / none 0** |
+
+**DC（Dreamcast） 译名要点**
+
+- **杂志附录碟按卷号统一**：`Dream Passport` / `Dreamkey` / `Dorimaga GD` / `Generator` / `Official Sega Dreamcast Magazine` 一律「多利杂志 GD 第N卷」「官方世嘉DC杂志 第N卷 年月」。
+- **版本号原样保留**：`VR射手2 Ver.2000.1` / `v1.000`–`v1.003` / `Ver.2000` 不翻译。
+- **世嘉品牌统一**：`Virtua Tennis` → 虚拟网球、`Sega Rally 2` → 世嘉拉力2、`Daytona USA 2001` → 戴通纳USA 2001、`Sakura Taisen` → 樱花大战、`Sakura Wars 3 - Les Chattes Noires` → 樱花大战3 黑猫馆、`Jojo no Kimyou na Bouken` → JOJO的奇妙冒险 未来的遗产（3 条 + 对战服务版）。
+- **series 22 条**：`Biohazard - Code - Veronica` → 生化危机 代号维罗妮卡（体验版）、`Shenmue - Ichishou Yokosuka` → 莎木 第一章 横须贺、`Street Fighter III` → 街霸3 三度冲击 / 双重冲击、`Street Fighter Zero 3` → 街霸ZERO 3 最强流道场。
+
+### PCE-CD（PC Engine CD）全量中文化（946 / 946，100%）
+
+PCE-CD 的 451 个唯一空名是**纯日本独占 CD 作品**，罗马字与片假名满屏，另有卡拉OK碟与「PC Engine 超级目录」这类资料碟按卷号成组出现。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_pcecd.csv` 946 行：exact 491 / series 4 / none 451（空名唯一 451 个，series 唯一 4 条） |
+| 译名文件 | 2 片（`pcecd_cn_part1..2.txt`：240 / 211 条）+ `pcecd_series_cn.txt` 4 条 |
+| 校验 | `build_key_cn.py pcecd 451`：series 4 == 4、假名 0、含拉丁字母 78 条抽查 |
+| 并入词库 | `apply_key_cn.py pcecd 451 4`：候选 455 条，新增 454、跳过 1；词库 32 792 → 33 246 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 946 / series 0 / none 0** |
+
+**PCE-CD（PC Engine CD） 译名要点**
+
+- **卡拉OK碟两组各 5 条 + 重复 10 条统一**：`ROM2 Karaoke Volume 1–5` 与 `ROM^2 Karaoke Vol. 1–5` 全部「ROM²卡拉OK 第N集 / 第N卷 + 副标」。
+- **资料碟按年份季节**：`PC Engine Hyper Catalog CD-ROM` 6 条统一「PC Engine超级目录 CD-ROM + 年份季节」。
+- **系列作统一**：`Tengai Makyou` → 天外魔境 系列、`Cosmic Fantasy` → 宇宙幻想 1–4、`Valis` → 瓦利斯 2–4 幻想战士、`Tengai Makyou - Ziria` → 天外魔境 自来也（含非卖品）。
+- **日本独占 CD 作按原名直译、不补意译副标**。series 4 条：炸弹人'94 体验版、炸弹人 恐慌轰炸、宇宙巡航机2 高法的野望、双蜂 归来。
+
+### N64（Nintendo 64）全量中文化（1 115 / 1 115，100%）
+
+N64 的 347 个唯一空名里有一批**中文拼音条目**（`Shen You Mario` / `Zhì Piàn Mario` / `Sai Er Da Chuan Shuo` 这类），是当年神游机与港台版留下的汉化名，译文直接还原成正式中文名。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_n64.csv` 1 115 行：exact 739 / series 29 / none 347（空名唯一 347 个，series 唯一 29 条） |
+| 译名文件 | 2 片（`n64_cn_part1..2.txt`：180 / 167 条）+ `n64_series_cn.txt` 29 条 |
+| 校验 | `build_key_cn.py n64 347`：series 29 == 29、假名 0、含拉丁字母 49 条抽查、重复中文名 6 个 |
+| 并入词库 | `apply_key_cn.py n64 347 29`：候选 376 条，新增 331、跳过 45；词库 33 246 → 33 577 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 1 115 / series 0 / none 0** |
+
+**N64（Nintendo 64） 译名要点**
+
+- **拼音条目还原正式名**：`Shen You Mario` / `Shenyou Maliou` → 神游马力欧、`Zhi Pian Mario` → 纸片马力欧、`Sai Er Da Chuan Shuo - Shiguang zhi Di` / `Zelda Chuanshuo Shiguang Zhi Di` → 塞尔达传说 时光之笛、`Xing Ji Huo Hu` → 星际火狐、`Yao Xi Gu Shi` → 耀西故事、`Zui Yu Fa Diqiu De Jicheng Zhe` → 罪与罚 地球的继承者。
+- **日版与欧美版分开走**：`Akumajou Dracula Mokushiroku` → 恶魔城 默示录（+ 外传 科内尔的传说）、`Banjo to Kazooie no Daibouken` → 班卓与卡祖的大冒险、`F-Zero X - Weilai Saiche` → F-Zero X 未来赛车。
+- **体育/摔角按真实品牌**：`Jikkyou Powerful Pro Yakyuu` 5 条（2000 / 4 / 5 / 6 + 基础版2001）、`J.League` 4 条、`International Superstar Soccer` 3 条、`Virtual Pro Wrestling` 2 条。
+- **series 29 条**：塞尔达三作（姆吉拉的假面 重制版 / 时光之笛 里时之笛 / 时光之笛 重制版）、炸弹人 3 条、马力欧派对 2/3、宝可梦竞技场 2 与 金·银。
+
+### XBOX（初代 Xbox）全量中文化（1 324 / 1 324，100%）
+
+Xbox 的 337 个唯一空名基本是**欧美版权作 + 世嘉/特库摩移植 + 车球年货**，最大的一坨是 `Club Football` 按俱乐部拆出来的 20 条。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_xbox.csv` 1 324 行：exact 965 / series 22 / none 337（空名唯一 337 个，series 唯一 22 条） |
+| 译名文件 | 2 片（`xbox_cn_part1..2.txt`：180 / 157 条）+ `xbox_series_cn.txt` 22 条 |
+| 校验 | `build_key_cn.py xbox 337`：series 22 == 22、假名 0、含拉丁字母 49 条抽查 |
+| 并入词库 | `apply_key_cn.py xbox 337 22`：候选 359 条，新增 341、跳过 18；词库 33 577 → 33 918 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 1 324 / series 0 / none 0** |
+
+**XBOX（初代 Xbox） 译名要点**
+
+- **按俱乐部拆的版本统一格式**：`Club Football - 2003-04 Season [ACM]` → 俱乐部足球 2003-04赛季 [AC米兰]，16 家俱乐部（AC米兰/阿贾克斯/阿斯顿维拉/多特蒙德/凯尔特人/切尔西/巴塞罗那/拜仁/汉堡/国际米兰/尤文图斯/利兹联/利物浦/曼联/流浪者/皇马）逐个对应，`Club Football 2005` 4 条同法。
+- **车球年货按品牌**：`ESPN` 系列 6 条、`NFL / NHL / NBA` 系列各 3–5 条、`NASCAR / IHRA` 赛车线。
+- **汤姆·克兰西品牌统一**：`Ghost Recon` → 幽灵行动、`Rainbow Six` → 彩虹六号、`Splinter Cell` 归入同一套译法。
+- **series 22 条**：光环三碟装 / 光环2 多人地图包、侠盗猎车手 双碟装 / 三部曲 / 罪恶都市与3的 XBOX合集、拳皇 2002-2003 与 极限冲击狂热、合金弹头4&5、梦幻之星在线 第1与2章。
+
+### PCE（PC Engine HuCard）全量中文化（479 / 479，100%）
+
+PCE 的 243 个唯一空名是**日本独占 HuCard 卡带作**：射击、麻将、柏青哥、棒球、将棋占绝大多数，译名按原名直译。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_pce.csv` 479 行：exact 231 / series 5 / none 243（空名唯一 243 个，series 唯一 5 条） |
+| 译名文件 | `pce_cn_part1.txt`（243 条）+ `pce_series_cn.txt` 5 条 |
+| 校验 | `build_key_cn.py pce 243`：series 5 == 5、假名 0、含拉丁字母 18 条抽查 |
+| 并入词库 | `apply_key_cn.py pce 243 5`：候选 248 条，新增 242、跳过 6；词库 33 918 → 34 160 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 479 / series 0 / none 0** |
+
+**PCE（PC Engine HuCard） 译名要点**
+
+- **同一作品的美日两名并存**：`PC Genjin` → PC原人、`PC Denjin` → PC电人 朋克赛博格、`Bonk` 线统一「邦克」。
+- **日本麻将/柏青哥/将棋线统一**：`Mahjong Gakuen` → 麻将学园、`Kyuukyoku Mahjong` → 究极麻将、`Pachio-kun` → 柏青哥君、`Morita Shougi` → 森田将棋。
+- **体育年货按品牌**：`Power League` 5 条、`Pro Yakyuu World Stadium` 2 条、`F1 Circus` 3 条、`TV Sports` 3 条。
+- **series 5 条**：炸弹人'93 特别版、炸弹人 玩家对战、大流士 Alpha / Plus、索尼克扣杀 世界锦标赛沙滩排球。
+
+### SMS（Master System）全量中文化（559 / 559，100%）
+
+SMS 的 238 个唯一空名里有一批**巴西/韩国独占版本**（葡版 `Sapo Xule`、`Turma da Monica`，韩版 `Agigongnyong Dooly`、`Hwarang-ui Geom`），统一在中文名后加括号标注版本。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_sms.csv` 559 行：exact 317 / series 4 / none 238（空名唯一 238 个，series 唯一 4 条） |
+| 译名文件 | `sms_cn_part1.txt`（238 条）+ `sms_series_cn.txt` 4 条 |
+| 校验 | `build_key_cn.py sms 238`：series 4 == 4、假名 0、含拉丁字母 7 条抽查 |
+| 并入词库 | `apply_key_cn.py sms 238 4`：候选 242 条，新增 239、跳过 3；词库 34 160 → 34 399 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 559 / series 0 / none 0** |
+
+**SMS（Master System） 译名要点**
+
+- **合卡按内容直译**：`20 em 1` → 20合1、`4 PAK All Action` → 4合1 全能行动、`Astro Warrior _ Pit Pot` → 星际战士与皮特波特。
+- **世嘉自家品牌**：`Alex Kidd` → 阿历克斯小子、`Wonder Boy` → 神奇男孩、`Phantasy Zone` → 幻想地带、`Golden Axe Warrior` → 战斧勇士、`Hang On` → 悬挂赛车。
+- **地区版本标括号**：`Sapo Xule` 3 条、`Turma da Monica` 2 条标（葡版）；`Agigongnyong Dooly`、`Hwarang-ui Geom`、`Samgukji III` 等标（韩版）；`Ys US Master System FM sound patch` 标「美版FM音源补丁」。
+- **series 4 条**：索尼克1 改良版、索尼克 爆破、索尼克 教育软件、VR战士 动画版。
+
+### MCD（Mega-CD / Sega CD）全量中文化（609 / 609，100%）
+
+Mega-CD 的 203 个唯一空名以**FMV 实拍游戏与日本独占 CD 作**为主，同一作品常见两种拼写（`Anett / Annet / Annett Futatabi`），译名合并成一套。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_segacd.csv` 609 行：exact 399 / series 7 / none 203（空名唯一 203 个，series 唯一 7 条） |
+| 译名文件 | `segacd_cn_part1.txt`（203 条）+ `segacd_series_cn.txt` 7 条 |
+| 校验 | `build_key_cn.py segacd 203`：series 7 == 7、假名 0、重复中文名 17 个（拼写变体合并，正常） |
+| 并入词库 | `apply_key_cn.py segacd 203 7`：候选 210 条，新增 198、跳过 12；词库 34 399 → 34 597 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 609 / series 0 / none 0** |
+
+**MCD（Mega-CD / Sega CD） 译名要点**
+
+- **FMV 实拍作按原名直译**：`Ground Zero Texas` → 零点 德克萨斯、`Night Trap` → 夜间陷阱、`Sewer Shark` → 下水道鲨鱼、`Time Gal` → 时光少女、`Road Avenger` → 公路复仇者。
+- **拼写变体合并**：`Anett / Annet / Annett Futatabi` 三条统一「安妮特 再临」；`Bakuden / Baku-Den` 统一「爆传 失衡地带」；`Blackhole / Black Hole Assault` 统一「黑洞强袭」。
+- **世嘉经典合集按合卡数**：`Sega Classics Arcade Collection 4-in-1 / 5-in-1` 保留合卡个数。
+- **series 7 条**：蚯蚓吉姆 特别版、海豚艾柯 CD、FIFA国际足球 锦标赛版、快打旋风 CD、露娜 永恒之蓝、光明力量 CD、索尼克 CD。
+
+### GG（Game Gear）全量中文化（1 056 / 1 056，100%）
+
+Game Gear 的 202 个唯一空名里**汉化版/修正版占了不少**（`[t +1 Mystic]`、`[b2]`、`[tr fr]`、`[tr ru]` 这类标记），处理方式是中文名 + 括号标注汉化组或修订号。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_gg.csv` 1 056 行：exact 875 / series 21 / none 202（空名唯一 202 个，series 唯一 21 条） |
+| 译名文件 | `gg_cn_part1.txt`（202 条）+ `gg_series_cn.txt` 21 条 |
+| 校验 | `build_key_cn.py gg 202`：series 21 == 21、假名 0、含拉丁字母 23 条抽查 |
+| 并入词库 | `apply_key_cn.py gg 202 21`：候选 223 条，新增 185、跳过 38；词库 34 597 → 34 782 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 1 056 / series 0 / none 0** |
+
+**GG（Game Gear） 译名要点**
+
+- **标记翻译规则**：`[t +1 Mystic]` → （Mystic汉化版）、`[tr fr]` → （法语汉化版）、`[tr ru]` → （俄语汉化版）、`[tr pt ERTrans]` → （葡语汉化版）、`[b2]` → （修正版）、`[o]` → （修正）、`[h]` → 保留原意。
+- **世嘉自家品牌**：`GG Aleste` → GG阿雷斯特、`GG Shinobi` → GG忍者、`Sonic` 线 → 索尼克、`Tails` 线 → 塔尔斯、`Puyo` 线 → 魔法气泡。
+- **动画改编**：`Crayon Shin-chan` → 蜡笔小新、`Sailor Moon` → 美少女战士 水手月亮、`Doraemon` 2 条、`Slam Dunk` → 灌篮高手、`Yu Yu Hakusho` 3 条。
+- **series 21 条**：光明力量外传 4 条、索尼克 6 条、梦幻之星 2 条、VR战士 Mini / 动画版、铁甲飞龙 Mini。
+
+### WiiU（Wii U）全量中文化（454 / 454，100%）
+
+Wii U 的 109 个唯一空名以**任天堂自家作 + 乐高/迪士尼授权作**为主，series 里 43 条多是「数字版/豪华版/合集」这类后缀需要中文化。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_wiiu.csv` 454 行：exact 302 / series 43 / none 109（空名唯一 109 个，series 唯一 43 条） |
+| 译名文件 | `wiiu_cn_part1.txt`（109 条）+ `wiiu_series_cn.txt` 43 条 |
+| 校验 | `build_key_cn.py wiiu 109`：series 43 == 43、假名 0、含拉丁字母 22 条抽查 |
+| 并入词库 | `apply_key_cn.py wiiu 109 43`：候选 152 条，新增 152（0 跳过）；词库 34 782 → 34 934 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 454 / series 0 / none 0** |
+
+**WiiU（Wii U） 译名要点**
+
+- **任天堂自家品牌**：`New Super Mario Bros. U` → 新超级马力欧兄弟U、`Paper Mario - Color Splash` → 纸片马力欧 色彩飞溅、`Zelda no Densetsu` 3 条（荒野之息 / 风之律动 HD / 黄昏公主 HD）、`Zero - Nuregarasu no Miko` → 零 濡鸦之巫女。
+- **授权 IP 按中国叫法**：`Disney Infinity` → 迪士尼无限、`Skylanders` → 天空之城、`LEGO` → 乐高、`Marvel Avengers` → 漫威复仇者、`Adventure Time` → 探险活宝。
+- **日式合集后缀中文化**：`Musou Orochi 2 Hyper` → 无双大蛇2 终极版、`Warriors Orochi 3 Hyper` → 无双大蛇3 终极版、`Famicom Remix 1 + 2` → 红白机重制 1+2、`NES Remix Pack` → NES重制合集。
+- **series 43 条重点**：勇者斗恶龙10 五个版本线、怪物猎人 Frontier G 8 条高级包、马力欧与索尼克 奥运 4 条、光明系列（`Monster Hunter` 之外全部按官方中文）。
+
+### WS（WonderSwan）全量中文化（299 / 299，100%）
+
+WonderSwan 的 122 个唯一空名以**日本独占 + 万代授权改编**为主，大量 `Rev 1/2/3` 是同一 ROM 的修订版，中文名保留修订号。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_ws.csv` 299 行：exact 174 / series 3 / none 122（空名唯一 122 个，series 唯一 3 条） |
+| 译名文件 | `ws_cn_part1.txt`（122 条）+ `ws_series_cn.txt` 3 条 |
+| 校验 | `build_key_cn.py ws 122`：series 3 == 3、假名 0、含拉丁字母 44 条抽查 |
+| 并入词库 | `apply_key_cn.py ws 122 3`：候选 125 条，新增 124、跳过 1；词库 34 934 → 35 058 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 299 / series 0 / none 0** |
+
+**WS（WonderSwan） 译名要点**
+
+- **万代改编线**：`Digimon` → 数码宝贝、`Gundam` → 高达、`One Piece` → 海贼王、`Hunter X Hunter` → 全职猎人、`Naruto` → 火影忍者、`Medarot` → 徽章机器人。
+- **修订版保留编号**：`Rev 1/2/3` 一律「修订1/2/3」跟在中文名后，不删不改。
+- **麻将/将棋/花札线统一**：`Mahjong Touryuumon` → 麻将登龙门、`Shougi Touryuumon` → 将棋登龙门、`Hanafuda Shiyouyo` → 来玩花札吧。
+- **series 3 条**：洛克人与佛鲁迪 来自未来的挑战者（2 种写法合并）、铁拳 卡牌挑战。
+
+### NEOGEO（Neo Geo AES/MVS）全量中文化（257 / 257，100%）
+
+Neo Geo 的 118 个唯一空名几乎全是 **SNK 自家街机作的双名并列写法**（`英文 _ 日文`），译名要按作品正式中文名走，不把两种写法都翻一遍。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_neogeo.csv` 257 行：exact 139 / series 26 / none 118（空名唯一 118 个，series 唯一 26 条） |
+| 译名文件 | `neogeo_cn_part1.txt`（118 条）+ `neogeo_series_cn.txt` 26 条 |
+| 校验 | `build_key_cn.py neogeo 118`：series 26 == 26、假名 0、含拉丁字母 9 条抽查 |
+| 并入词库 | `apply_key_cn.py neogeo 118 26`：候选 144 条，新增 141、跳过 3；词库 35 058 → 35 199 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 257 / series 0 / none 0** |
+
+**NEOGEO（Neo Geo AES/MVS） 译名要点**
+
+- **双名并列只译正式名**：`Art of Fighting _ Ryuuko no Ken` → 龙虎之拳、`Fatal Fury _ Garou Densetsu` → 饿狼传说、`Samurai Shodown _ Samurai Spirits` → 侍魂。
+- **SNK 品牌线统一**：`King of Fighters` → 拳皇、`Metal Slug` → 合金弹头、`Real Bout Fatal Fury` → 饿狼传说 真实对决、`Sengoku` → 战国传承、`Super Sidekicks` → 超级侧踢（+ 得点王）。
+- **盗版/加强版标注**：`[Bootleg]` → （盗版）、`Plus / Super Plus` → 加强版 / 超级加强版，`Crouching Tiger Hidden Dragon 2003` → 卧虎藏龙2003。
+- **series 26 条重点**：饿狼传说 4 条、侍魂 6 条（1–5 + 特别版）、拳皇 13 条（'97–2004 各加强版）、合金弹头 4/5 加强版。
+
+### WSC（WonderSwan Color）全量中文化（239 / 239，100%）
+
+WonderSwan Color 的 101 个唯一空名依旧以**万代改编 + SNK 移植 + 日本独占**为主，同一作品常有拼写变体（`Eiyuu Den / Eiyuuden`、`Koujo / Oujo`）。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_wsc.csv` 239 行：exact 136 / series 2 / none 101（空名唯一 101 个，series 唯一 2 条） |
+| 译名文件 | `wsc_cn_part1.txt`（101 条）+ `wsc_series_cn.txt` 2 条 |
+| 校验 | `build_key_cn.py wsc 101`：series 2 == 2、假名 0、重复中文名 9 个（拼写变体合并，正常） |
+| 并入词库 | `apply_key_cn.py wsc 101 2`：候选 103 条，新增 102、跳过 1；词库 35 199 → 35 301 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 239 / series 0 / none 0** |
+
+**WSC（WonderSwan Color） 译名要点**
+
+- **拼写变体合并**：`Kinnikuman II-Sei / IIsei` 4 条统一「筋肉人二世」、`SD Gundam Eiyuu Den / Eiyuuden` 4 条统一「SD高达英雄传」、`Meitantei Conan - Yuugure no Koujo / Oujo` 统一「黄昏的公主」。
+- **动画改编线**：`One Piece` 7 条（乔巴的大冒险 / 天鹅斗技场 / 虹之岛 / 宝藏战争 1–2）、`Inuyasha` 3 条、`Hunter X Hunter` 3 条、`Shaman King` 3 条、`Digimon` 6 条。
+- **版本号原样保留**：`v1.0` / `v1.1` / `v1.5` / `v1.6` / `v.rsc21` 不翻译。
+- **series 2 条**：洛克人EXE N1战斗、洛克人EXE WS。
+
+### 32X（Sega 32X）全量中文化（209 / 209，100%）
+
+32X 只有 33 个唯一空名，但**一半是开发用示例程序与检测程序**（`Mars Sample Program`、`32X Sample Program`），译名保留程序名并加中文说明。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_32x.csv` 209 行：exact 176 / series 0 / none 33（空名唯一 33 个，无 series） |
+| 译名文件 | `32x_cn_part1.txt`（33 条）+ 空的 `32x_series_cn.txt` |
+| 校验 | `build_key_cn.py 32x 33`：series 0 == 0、假名 0 |
+| 并入词库 | `apply_key_cn.py 32x 33 0`：候选 33 条，新增 32、跳过 1；词库 35 385 → 35 417 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 209 / series 0 / none 0** |
+
+**32X（Sega 32X） 译名要点**
+
+- **开发程序按功能直译**：`Mars Sample Program - Gnu Sierra` → 火星示例程序 角马山脉、`Mars Sample Program - Runlength Mode Test` → 火星示例程序 游程编码模式测试、`Mars Check Program Version 1.0` → 火星检测程序 1.0版。
+- **世嘉自家作**：`After Burner Complete` → 火力压制 完全版、`Virtua Racing Deluxe` → 虚拟赛车 豪华版、`Soulstar X` → 灵魂之星 X、`Knuckles' Chaotix` → 纳克鲁斯 混乱队。
+
+### NGPC（Neo Geo Pocket Color）全量中文化（118 / 118，100%）
+
+NGPC 的 76 个唯一空名以**SNK 自家作 + 柏青嫂/赌场模拟 + 日本独占育成**为主，`Real Casino Series` 8 条是同一套赌场线。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_ngpc.csv` 118 行：exact 42 / series 9 / none 76（空名唯一 76 个，series 唯一 9 条） |
+| 译名文件 | `ngpc_cn_part1.txt`（76 条）+ `ngpc_series_cn.txt` 9 条 |
+| 校验 | `build_key_cn.py ngpc 76`：series 9 == 9、假名 0、含拉丁字母 26 条抽查 |
+| 并入词库 | `apply_key_cn.py ngpc 76 9`：候选 84 条，新增 84（0 跳过）；词库 35 301 → 35 385 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 118 / series 0 / none 0** |
+
+**NGPC（Neo Geo Pocket Color） 译名要点**
+
+- **赌场线统一格式**：`Neo 21 / Neo Baccarat / Neo Cherry Master Color / Neo Dragon's Wild / `Neo Mystery Bonus` 全部「NEO + 玩法 + 真实赌场系列」。
+- **柏青嫂王国 8 条**：`Pachi-Slot Aruze Oukoku Pocket - Azteca / Dekahel 2 / Delsol 2 / e-Cup / Hanabi / Oohanabi / Porcano 2 / Ward of Lights` 统一「柏青嫂 阿鲁泽王国 口袋版 + 机种名」。
+- **SNK 卡牌线**：`SNK vs. Capcom - Card Fighters` 6 条（Clash 两版 / Gekitotsu 三版 / 2 扩展版）+ `The Match of the Millennium` → 千年之战。
+- **series 9 条**：拳皇 R-2 两版、饿狼传说 F-Contact、合金弹头 1st/2nd Mission、洛克人 战斗斗士、侍魂！2、索尼克 口袋冒险。
+
+### PS3（PlayStation 3）全量中文化（67 / 67，100%）
+
+PS3 只有 37 个唯一空名，但**全是知名大作**（黑暗之魂、暴雨、神秘海域、如龙、尼尔），必须用官方中文名而不是直译。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_ps3.csv` 67 行：exact 30 / series 17 / none 37（空名唯一 37 个，series 唯一 17 条） |
+| 译名文件 | `ps3_cn_part1.txt`（37 条）+ `ps3_series_cn.txt` 17 条 |
+| 校验 | `build_key_cn.py ps3 37`：series 17 == 17、假名 0 |
+| 并入词库 | `apply_key_cn.py ps3 37 17`：候选 54 条，新增 52、跳过 2；词库 35 417 → 35 469 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 67 / series 0 / none 0** |
+
+**PS3（PlayStation 3） 译名要点**
+
+- **一律用官方中文名**：`Dark Souls` → 黑暗之魂、`Demon's Souls` → 恶魔之魂、`Heavy Rain` → 暴雨、`Beyond Good & Evil` 之外的 `Remember Me` → 记住我、`NIER` → 尼尔、`Vanquish` → 征服。
+- **日式 RPG 用既有品牌译法**：`Atelier` 线 → 炼金工房、`Disgaea D2` → 魔界战记D2、`Tales of` 线 → 圣恩传说 f / 无限传说2、`Valkyria Chronicles` → 战场女武神。
+- **格斗线**：`Super Street Fighter IV Arcade Edition` → 超级街头霸王4 街机版、`Ultra Street Fighter IV` → 终极街头霸王4、`Yaiba - Ninja Gaiden Z` → 刃 忍者龙剑传Z。
+- **series 17 条**：生化危机 2 条、恶魔城 暗影之王、死或生5、最终幻想13-2、侠盗猎车手5、王国之心 HD 两版、合金装备5 原爆点、忍者龙剑传 2 条、女神异闻录4 竞技场 2 条、寂静岭 暴雨、传说 2 条、铁拳 混合版。
+
+### PSV（PlayStation Vita）全量中文化（9 / 9，100%）
+
+PS Vita 只剩 4 个唯一空名，一轮就清完。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_psvita.csv` 9 行：exact 2 / series 3 / none 4（空名唯一 4 个，series 唯一 3 条） |
+| 译名文件 | `psvita_cn_part1.txt`（4 条）+ `psvita_series_cn.txt` 3 条 |
+| 校验并入库 | `build_key_cn.py psvita 4` + `apply_key_cn.py psvita 4 3`：候选 7 条全部新增；词库 35 469 → 35 476 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 9 / series 0 / none 0** |
+
+**PSV（PlayStation Vita） 译名要点**
+
+- **官方中文名**：`Child of Light` → 光之子、`Gravity Rush` → 重力异想世界、`Totori no Atelier Plus` → 托托莉的炼金工房 Plus 亚兰德炼金术士2、`Zettai Zetsubou Shoujo - Dangan-Ronpa` → 绝对绝望少女 弹丸论破 另一章。
+- **series 3 条**：死或生5 Plus、寂静岭 记忆之书、街头霸王X铁拳。
+
+### PS3DL（PS3 数字下载版）全量中文化（1 / 1，100%）
+
+PS3 数字下载版只剩 1 条，顺手清掉。
+
+| 步骤 | 结果 |
+|---|---|
+| 起点 | `mapping_ps3dl.csv` 1 行：exact 0 / none 1 |
+| 译名文件 | `ps3dl_cn_part1.txt`（1 条）+ 空的 `ps3dl_series_cn.txt` |
+| 校验并入库 | `build_key_cn.py ps3dl 1` + `apply_key_cn.py ps3dl 1 0`：新增 1；词库 35 476 → 35 477 行 |
+| 重建 | `zh_localize.py` 全量 → **exact 1 / series 0 / none 0** |
+
+**PS3DL（PS3 数字下载版） 译名要点**
+
+- `Far Cry 3` → 孤岛惊魂3（与 Xbox/PCE 等平台的同一作品共用词条）。
+
 ---
 
 ## 六、传到 GitHub 的正确姿势
@@ -714,6 +1089,11 @@ GitHub 单文件上限 100 MB，最大的一份是 `mapping/mapping_nes.csv`（9
 
 - 中文名带英文字母是常态（FIFA、NBA、WWE、CLANNAD、Fate/Extra、DJMAX、.hack//Link
    这类品牌缩写按惯例保留原文），不算未翻译。
+- 覆盖率 100.0% 与「唯一英文名有中文 96.1%」是两个口径：前者按**记录条数**算（31 个平台 77 661 条），
+   后者按 `index/` 里 `game_name` 的**原始写法去重**再和词库折叠后的 `search_key` 比，
+   同一作品的多区域 / 多语言写法在词库侧已合并成一条，所以后者会略低，并不代表有漏译。
+- 冷门日系、韩版、巴西葡版标题**不是官方中文名，是按作品原名直译**，可读、可检索，
+   但不要当作发行商官方译名引用；有官方中文名的作品（任天堂、世嘉、SNK 主力作等）一律用官方名。
 
 ---
 
@@ -742,6 +1122,10 @@ GitHub 单文件上限 100 MB，最大的一份是 `mapping/mapping_nes.csv`（9
 
 ## 九、更新日志
 
+- **2026-11**：剩余 20 个平台一次性全部中文化（gb / gbc / ngc / dc / pcecd / n64 / xbox / pce / sms / segacd / gg / wiiu / ws / neogeo / wsc / 32x / ngpc / ps3 / psvita / ps3dl），
+  逐平台「导出空名 → 分批写译名 → 校验 → 并库」，候选 5 525 条、新增 5 166 条；
+  词库 30 111 → 35 477 行；全量重建后 exact 69 214 → **77 661（100.0%）**，none 7 683 → **0**，
+  中文覆盖 90.1% → **100.0%**，唯一英文名有中文比例 82.6% → 96.1%；**31 个平台全部 100%**。
 - **2026-11**：SS（Sega Saturn）全量中文化（2 294 / 2 294，100%），29 个 series 半成品整行替换；
   候选 764 条全部新增；词库 29 347 → 30 111 行；全量重建后 exact 67 921 → 69 214（89.1%），
   中文覆盖 88.5% → 90.1%，唯一英文名有中文比例 80.6% → 82.6%；十一个平台 100%。

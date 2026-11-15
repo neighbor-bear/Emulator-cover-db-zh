@@ -1,0 +1,8 @@
+cache/
+manifest/
+match/
+logs/
+__pycache__/
+*.pyc
+mapping/all_games.csv
+index/all_games.csv
